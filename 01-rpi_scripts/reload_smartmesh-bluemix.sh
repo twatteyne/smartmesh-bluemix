@@ -50,6 +50,10 @@ printf "    downloading new Node-RED flow... "
 wget -q -O ~/.node-red/flows_raspberrypi.json https://raw.githubusercontent.com/twatteyne/smartmesh-bluemix/master/02-node-red/flows.json
 printf "done.\n"
 
+printf "    changing new Node-RED flow to connect as manager "$WATSON_MANAGER"... "
+sed -i 's/00-17-0d-00-00-58-2f-e4/'$WATSON_MANAGER'/g' ~/.node-red/flows_raspberrypi.json
+printf "done.\n"
+
 printf "    starting Node-RED... "
 node-red-start &
 printf "done.\n"

@@ -47,7 +47,7 @@ node-red-stop
 printf "done.\n"
 
 printf "    downloading new Node-RED flow... "
-wget -q -O ~/.node-red/flows_raspberrypi.json https://raw.githubusercontent.com/twatteyne/smartmesh-bluemix/master/02-node-red/flows.json
+wget -q -O ~/.node-red/flows_raspberrypi.json https://raw.githubusercontent.com/twatteyne/smartmesh-bluemix/master/01-gateway/02-node-red/flows.json
 printf "done.\n"
 
 printf "    changing new Node-RED flow to connect as manager "$WATSON_MANAGER"... "

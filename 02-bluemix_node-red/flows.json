@@ -1,1 +1,186 @@
-[{"id":"6dd8815f.e6654","type":"ibmiot in","z":"83c64010.34e6f","authentication":"boundService","apiKey":"","inputType":"devsts","deviceId":"","applicationId":"","deviceType":"+","eventType":"+","commandType":"","format":"json","name":"status all devices","service":"registered","allDevices":true,"allApplications":"","allDeviceTypes":true,"allEvents":true,"allCommands":"","allFormats":"","qos":0,"x":117,"y":78,"wires":[["add6bcd.4e3c34"]]},{"id":"add6bcd.4e3c34","type":"debug","z":"83c64010.34e6f","name":"status all devices","active":true,"console":"false","complete":"payload","x":386,"y":79,"wires":[]},{"id":"233b49ce.f85486","type":"ibmiot in","z":"83c64010.34e6f","authentication":"boundService","apiKey":"","inputType":"appsts","deviceId":"","applicationId":"","deviceType":"+","eventType":"+","commandType":"","format":"json","name":"status all applications","service":"registered","allDevices":true,"allApplications":true,"allDeviceTypes":true,"allEvents":true,"allCommands":"","allFormats":"","qos":0,"x":136,"y":143,"wires":[["a3b9a815.a4e8f8"]]},{"id":"a3b9a815.a4e8f8","type":"debug","z":"83c64010.34e6f","name":"status all applications","active":true,"console":"false","complete":"payload","x":398,"y":145,"wires":[]}]
+[
+  {
+    "id": "83c64010.34e6f",
+    "type": "tab",
+    "label": "bluemix"
+  },
+  {
+    "id": "6dd8815f.e6654",
+    "type": "ibmiot in",
+    "z": "83c64010.34e6f",
+    "authentication": "boundService",
+    "apiKey": "",
+    "inputType": "devsts",
+    "deviceId": "",
+    "applicationId": "",
+    "deviceType": "+",
+    "eventType": "+",
+    "commandType": "",
+    "format": "json",
+    "name": "status all devices",
+    "service": "registered",
+    "allDevices": true,
+    "allApplications": "",
+    "allDeviceTypes": true,
+    "allEvents": true,
+    "allCommands": "",
+    "allFormats": "",
+    "qos": 0,
+    "x": 159,
+    "y": 115,
+    "wires": [
+      [
+        "add6bcd.4e3c34"
+      ]
+    ]
+  },
+  {
+    "id": "add6bcd.4e3c34",
+    "type": "debug",
+    "z": "83c64010.34e6f",
+    "name": "status all devices",
+    "active": false,
+    "console": "false",
+    "complete": "payload",
+    "x": 428,
+    "y": 116,
+    "wires": []
+  },
+  {
+    "id": "233b49ce.f85486",
+    "type": "ibmiot in",
+    "z": "83c64010.34e6f",
+    "authentication": "boundService",
+    "apiKey": "",
+    "inputType": "appsts",
+    "deviceId": "",
+    "applicationId": "",
+    "deviceType": "+",
+    "eventType": "+",
+    "commandType": "",
+    "format": "json",
+    "name": "status all applications",
+    "service": "registered",
+    "allDevices": true,
+    "allApplications": true,
+    "allDeviceTypes": true,
+    "allEvents": true,
+    "allCommands": "",
+    "allFormats": "",
+    "qos": 0,
+    "x": 174,
+    "y": 171,
+    "wires": [
+      [
+        "a3b9a815.a4e8f8"
+      ]
+    ]
+  },
+  {
+    "id": "a3b9a815.a4e8f8",
+    "type": "debug",
+    "z": "83c64010.34e6f",
+    "name": "status all applications",
+    "active": false,
+    "console": "false",
+    "complete": "payload",
+    "x": 430,
+    "y": 171,
+    "wires": []
+  },
+  {
+    "id": "64f1e90f.600658",
+    "type": "comment",
+    "z": "83c64010.34e6f",
+    "name": "monitor status",
+    "info": "",
+    "x": 100,
+    "y": 69,
+    "wires": []
+  },
+  {
+    "id": "731925e1.35e6cc",
+    "type": "comment",
+    "z": "83c64010.34e6f",
+    "name": "update metadata motes",
+    "info": "",
+    "x": 143,
+    "y": 242,
+    "wires": []
+  },
+  {
+    "id": "fa311ddf.89b3d",
+    "type": "ibmiot in",
+    "z": "83c64010.34e6f",
+    "authentication": "boundService",
+    "apiKey": "",
+    "inputType": "evt",
+    "deviceId": "",
+    "applicationId": "",
+    "deviceType": "mote",
+    "eventType": "hr.Device",
+    "commandType": "",
+    "format": "json",
+    "name": "all hr.Device events",
+    "service": "registered",
+    "allDevices": true,
+    "allApplications": "",
+    "allDeviceTypes": true,
+    "allEvents": "",
+    "allCommands": "",
+    "allFormats": "",
+    "qos": 0,
+    "x": 189,
+    "y": 289,
+    "wires": [
+      [
+        "d8f1735f.64b9d"
+      ]
+    ]
+  },
+  {
+    "id": "d8f1735f.64b9d",
+    "type": "function",
+    "z": "83c64010.34e6f",
+    "name": "create request",
+    "func": "msg.url     = \"https://0o6f49.internetofthings.ibmcloud.com/api/v0002/device/types/mote/devices/\"+msg.deviceId\nmsg.payload = {\n    \"metadata\": msg.payload['d']\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 432,
+    "y": 288,
+    "wires": [
+      [
+        "d4eab625.663898"
+      ]
+    ]
+  },
+  {
+    "id": "d4eab625.663898",
+    "type": "http request",
+    "z": "83c64010.34e6f",
+    "name": "",
+    "method": "PUT",
+    "ret": "txt",
+    "url": "",
+    "tls": "",
+    "x": 635,
+    "y": 286,
+    "wires": [
+      [
+        "681474f4.4bf68c"
+      ]
+    ]
+  },
+  {
+    "id": "681474f4.4bf68c",
+    "type": "debug",
+    "z": "83c64010.34e6f",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "statusCode",
+    "x": 830,
+    "y": 287,
+    "wires": []
+  }
+]

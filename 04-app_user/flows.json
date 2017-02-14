@@ -1,0 +1,778 @@
+[
+  {
+    "id": "bab94a09.38efb8",
+    "type": "tab",
+    "label": "user"
+  },
+  {
+    "id": "7cfe4d2e.c4da14",
+    "type": "ibmiot",
+    "z": "",
+    "name": "application debug",
+    "keepalive": "60",
+    "cleansession": true,
+    "appId": "",
+    "shared": false
+  },
+  {
+    "id": "78661e7e.b7b5b",
+    "type": "ibmiot",
+    "z": "",
+    "name": "application user",
+    "keepalive": "60",
+    "cleansession": true,
+    "appId": "",
+    "shared": false
+  },
+  {
+    "id": "b8e0c091.b6c3f",
+    "type": "comment",
+    "z": "bab94a09.38efb8",
+    "name": "=== events",
+    "info": "",
+    "x": 72,
+    "y": 34,
+    "wires": []
+  },
+  {
+    "id": "ec189e17.40277",
+    "type": "ibmiot in",
+    "z": "bab94a09.38efb8",
+    "authentication": "apiKey",
+    "apiKey": "78661e7e.b7b5b",
+    "inputType": "evt",
+    "deviceId": "00-17-0d-00-00-60-37-b3",
+    "applicationId": "",
+    "deviceType": "manager",
+    "eventType": "+",
+    "commandType": "",
+    "format": "json",
+    "name": "all manager events",
+    "service": "registered",
+    "allDevices": true,
+    "allApplications": "",
+    "allDeviceTypes": false,
+    "allEvents": true,
+    "allCommands": "",
+    "allFormats": true,
+    "qos": 0,
+    "x": 261,
+    "y": 109,
+    "wires": [
+      [
+        "a9b7ea32.b67c18"
+      ]
+    ]
+  },
+  {
+    "id": "a9b7ea32.b67c18",
+    "type": "debug",
+    "z": "bab94a09.38efb8",
+    "name": "manager events",
+    "active": false,
+    "console": "false",
+    "complete": "payload",
+    "x": 477,
+    "y": 112,
+    "wires": []
+  },
+  {
+    "id": "f32b05a4.9a6308",
+    "type": "comment",
+    "z": "bab94a09.38efb8",
+    "name": "=== commands",
+    "info": "",
+    "x": 85,
+    "y": 233,
+    "wires": []
+  },
+  {
+    "id": "5d7cf3c3.4f414c",
+    "type": "comment",
+    "z": "bab94a09.38efb8",
+    "name": "manager events",
+    "info": "",
+    "x": 130,
+    "y": 70,
+    "wires": []
+  },
+  {
+    "id": "4e092169.446b6",
+    "type": "ibmiot in",
+    "z": "bab94a09.38efb8",
+    "authentication": "apiKey",
+    "apiKey": "78661e7e.b7b5b",
+    "inputType": "evt",
+    "deviceId": "00-17-0d-00-00-60-37-b3",
+    "applicationId": "",
+    "deviceType": "mote",
+    "eventType": "oapResponse",
+    "commandType": "",
+    "format": "json",
+    "name": "all mote events",
+    "service": "registered",
+    "allDevices": true,
+    "allApplications": "",
+    "allDeviceTypes": false,
+    "allEvents": false,
+    "allCommands": "",
+    "allFormats": true,
+    "qos": 0,
+    "x": 256,
+    "y": 194,
+    "wires": [
+      [
+        "2aafec0b.578594"
+      ]
+    ]
+  },
+  {
+    "id": "2aafec0b.578594",
+    "type": "debug",
+    "z": "bab94a09.38efb8",
+    "name": "mote events",
+    "active": true,
+    "console": "false",
+    "complete": "payload",
+    "x": 469,
+    "y": 194,
+    "wires": []
+  },
+  {
+    "id": "7704cf91.fde5",
+    "type": "comment",
+    "z": "bab94a09.38efb8",
+    "name": "mote events",
+    "info": "",
+    "x": 125,
+    "y": 159,
+    "wires": []
+  },
+  {
+    "id": "13e840c4.48e22f",
+    "type": "comment",
+    "z": "bab94a09.38efb8",
+    "name": "manager commands",
+    "info": "",
+    "x": 150,
+    "y": 272,
+    "wires": []
+  },
+  {
+    "id": "d04b07d2.ab9018",
+    "type": "comment",
+    "z": "bab94a09.38efb8",
+    "name": "mote commands",
+    "info": "",
+    "x": 251,
+    "y": 864,
+    "wires": []
+  },
+  {
+    "id": "9b49ccf4.231e4",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "set manager/mote",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 231,
+    "y": 351,
+    "wires": [
+      [
+        "5b89d526.50aebc"
+      ]
+    ]
+  },
+  {
+    "id": "5b89d526.50aebc",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "",
+    "func": "flow.set('manager','00-17-0d-00-00-58-2f-e4');\nflow.set('mote',   '00-17-0d-00-00-38-07-18');",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 437,
+    "y": 351,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "2dab3c9a.81b3a4",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "get manager/mote",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 231,
+    "y": 390,
+    "wires": [
+      [
+        "88f2a466.3d7fd8"
+      ]
+    ]
+  },
+  {
+    "id": "88f2a466.3d7fd8",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "",
+    "func": "msg.payload = {\n    'manager': flow.get('manager'),\n    'mote':    flow.get('mote')\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 437,
+    "y": 389,
+    "wires": [
+      [
+        "6d2b5ee1.e2fb5"
+      ]
+    ]
+  },
+  {
+    "id": "cb0626a1.c704a8",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "JsonServer status",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 236,
+    "y": 531,
+    "wires": [
+      [
+        "9e2334ef.046908"
+      ]
+    ]
+  },
+  {
+    "id": "9e2334ef.046908",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "",
+    "func": "msg.deviceType         = 'manager'\nmsg.deviceId           = flow.get('manager')\nmsg.eventOrCommandType = 'JsonServer'\nmsg.payload            = {\n    \"method\" :  \"GET\",\n    \"url\" :     \"/api/v1/status\",\n    \"body\":     {},\n    \"token\":    \"myToken\",\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 444,
+    "y": 528,
+    "wires": [
+      [
+        "656a8ba.47c4274"
+      ]
+    ]
+  },
+  {
+    "id": "2c9bc4ea.370acc",
+    "type": "ibmiot out",
+    "z": "bab94a09.38efb8",
+    "authentication": "apiKey",
+    "apiKey": "7cfe4d2e.c4da14",
+    "outputType": "cmd",
+    "deviceId": "0",
+    "deviceType": "0",
+    "eventCommandType": "0",
+    "format": "json",
+    "data": "0",
+    "qos": 0,
+    "name": "manager JsonServer commands",
+    "service": "registered",
+    "x": 882,
+    "y": 685,
+    "wires": []
+  },
+  {
+    "id": "6d2b5ee1.e2fb5",
+    "type": "debug",
+    "z": "bab94a09.38efb8",
+    "name": "current manager/mote",
+    "active": true,
+    "console": "false",
+    "complete": "payload",
+    "x": 670,
+    "y": 387,
+    "wires": []
+  },
+  {
+    "id": "b16ee236.49148",
+    "type": "debug",
+    "z": "bab94a09.38efb8",
+    "name": "command sent",
+    "active": true,
+    "console": "false",
+    "complete": "payload",
+    "x": 818,
+    "y": 640,
+    "wires": []
+  },
+  {
+    "id": "2afcad85.c500e2",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "manager getNetworkConfig",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 213,
+    "y": 714,
+    "wires": [
+      [
+        "803a2fb9.e7483"
+      ]
+    ]
+  },
+  {
+    "id": "803a2fb9.e7483",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "",
+    "func": "msg.deviceType         = 'manager'\nmsg.deviceId           = flow.get('manager')\nmsg.eventOrCommandType = 'JsonServer'\nmsg.payload            = {\n    \"method\" :  \"POST\",\n    \"url\" :     \"/api/v1/raw\",\n    \"body\":     {\n        \"manager\": 0,\n        \"command\": \"getNetworkConfig\",\n        \"fields\":  {}\n    },\n    \"token\":    \"myToken\",\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 434,
+    "y": 714,
+    "wires": [
+      [
+        "656a8ba.47c4274"
+      ]
+    ]
+  },
+  {
+    "id": "656a8ba.47c4274",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "duplicate",
+    "func": "\nreturn msg",
+    "outputs": "1",
+    "noerr": 0,
+    "x": 656,
+    "y": 664,
+    "wires": [
+      [
+        "2c9bc4ea.370acc",
+        "b16ee236.49148"
+      ]
+    ]
+  },
+  {
+    "id": "65682a31.7ed954",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "manager getManagerStatistics",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 203,
+    "y": 602,
+    "wires": [
+      [
+        "96a34671.9d0968"
+      ]
+    ]
+  },
+  {
+    "id": "96a34671.9d0968",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "",
+    "func": "msg.deviceType         = 'manager'\nmsg.deviceId           = flow.get('manager')\nmsg.eventOrCommandType = 'JsonServer'\nmsg.payload            = {\n    \"method\" :  \"POST\",\n    \"url\" :     \"/api/v1/raw\",\n    \"body\":     {\n        \"manager\": 0,\n        \"command\": \"getManagerStatistics\",\n        \"fields\":  {}\n    },\n    \"token\":    \"myToken\",\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 433,
+    "y": 601,
+    "wires": [
+      [
+        "656a8ba.47c4274"
+      ]
+    ]
+  },
+  {
+    "id": "fdf61ba8.21fcc8",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "manager getMoteConfig",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 222,
+    "y": 640,
+    "wires": [
+      [
+        "1db11c89.524593"
+      ]
+    ]
+  },
+  {
+    "id": "1db11c89.524593",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "",
+    "func": "msg.deviceType         = 'manager'\nmsg.deviceId           = flow.get('manager')\nmsg.eventOrCommandType = 'JsonServer'\nmsg.payload            = {\n    \"method\" :  \"POST\",\n    \"url\" :     \"/api/v1/raw\",\n    \"body\":     {\n        \"manager\": 0,\n        \"command\": \"getMoteConfig\",\n        \"fields\": {\n            \"macAddress\": flow.get('mote'),\n            \"next\":       false\n        }\n    },\n    \"token\":    \"myToken\",\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 431,
+    "y": 639,
+    "wires": [
+      [
+        "656a8ba.47c4274"
+      ]
+    ]
+  },
+  {
+    "id": "4e73b20a.91220c",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "manager getMoteInfo",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 235,
+    "y": 676,
+    "wires": [
+      [
+        "eb68407c.3e4d8"
+      ]
+    ]
+  },
+  {
+    "id": "eb68407c.3e4d8",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "",
+    "func": "msg.deviceType         = 'manager'\nmsg.deviceId           = flow.get('manager')\nmsg.eventOrCommandType = 'JsonServer'\nmsg.payload            = {\n    \"method\" :  \"POST\",\n    \"url\" :     \"/api/v1/raw\",\n    \"body\":     {\n        \"manager\": 0,\n        \"command\": \"getMoteInfo\",\n        \"fields\": {\n            \"macAddress\": flow.get('mote')\n        }\n    },\n    \"token\":    \"myToken\",\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 433,
+    "y": 677,
+    "wires": [
+      [
+        "656a8ba.47c4274"
+      ]
+    ]
+  },
+  {
+    "id": "171a7378.dc874d",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "manager getNetworkInfo",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 218,
+    "y": 752,
+    "wires": [
+      [
+        "9a98e08a.de269"
+      ]
+    ]
+  },
+  {
+    "id": "9a98e08a.de269",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "",
+    "func": "msg.deviceType         = 'manager'\nmsg.deviceId           = flow.get('manager')\nmsg.eventOrCommandType = 'JsonServer'\nmsg.payload            = {\n    \"method\" :  \"POST\",\n    \"url\" :     \"/api/v1/raw\",\n    \"body\":     {\n        \"manager\": 0,\n        \"command\": \"getNetworkInfo\",\n        \"fields\":  {}\n    },\n    \"token\":    \"myToken\",\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 433,
+    "y": 753,
+    "wires": [
+      [
+        "656a8ba.47c4274"
+      ]
+    ]
+  },
+  {
+    "id": "db3e342.dae15c8",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "manager getSystemInfo",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 221,
+    "y": 790,
+    "wires": [
+      [
+        "176cfb20.5c8235"
+      ]
+    ]
+  },
+  {
+    "id": "176cfb20.5c8235",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "",
+    "func": "msg.deviceType         = 'manager'\nmsg.deviceId           = flow.get('manager')\nmsg.eventOrCommandType = 'JsonServer'\nmsg.payload            = {\n    \"method\" :  \"POST\",\n    \"url\" :     \"/api/v1/raw\",\n    \"body\":     {\n        \"manager\": 0,\n        \"command\": \"getSystemInfo\",\n        \"fields\":  {}\n    },\n    \"token\":    \"myToken\",\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 438,
+    "y": 790,
+    "wires": [
+      [
+        "656a8ba.47c4274"
+      ]
+    ]
+  },
+  {
+    "id": "b3cc8d1b.152a9",
+    "type": "comment",
+    "z": "bab94a09.38efb8",
+    "name": "global variables",
+    "info": "",
+    "x": 238,
+    "y": 312,
+    "wires": []
+  },
+  {
+    "id": "5fc8137a.fffeac",
+    "type": "comment",
+    "z": "bab94a09.38efb8",
+    "name": "JsonServer status",
+    "info": "",
+    "x": 240,
+    "y": 493,
+    "wires": []
+  },
+  {
+    "id": "72bb6ef1.dd0c8",
+    "type": "comment",
+    "z": "bab94a09.38efb8",
+    "name": "manager API commands",
+    "info": "",
+    "x": 216,
+    "y": 567,
+    "wires": []
+  },
+  {
+    "id": "39c9cac.551f236",
+    "type": "comment",
+    "z": "bab94a09.38efb8",
+    "name": "Node-RED commands",
+    "info": "",
+    "x": 230,
+    "y": 425,
+    "wires": []
+  },
+  {
+    "id": "aadefb9c.89e338",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "Node-RED activeMotes",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 228,
+    "y": 457,
+    "wires": [
+      [
+        "337b8a33.960686"
+      ]
+    ]
+  },
+  {
+    "id": "337b8a33.960686",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "",
+    "func": "msg.deviceType         = 'manager'\nmsg.deviceId           = flow.get('manager')\nmsg.eventOrCommandType = 'activeMotes'\nmsg.payload            = {\n    \"token\": \"myToken\"\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 442,
+    "y": 456,
+    "wires": [
+      [
+        "656a8ba.47c4274"
+      ]
+    ]
+  },
+  {
+    "id": "f4ca350e.dfa108",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "manager pingMote",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 241,
+    "y": 827,
+    "wires": [
+      [
+        "6a55683c.e7baf8"
+      ]
+    ]
+  },
+  {
+    "id": "6a55683c.e7baf8",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "",
+    "func": "msg.deviceType         = 'manager'\nmsg.deviceId           = flow.get('manager')\nmsg.eventOrCommandType = 'JsonServer'\nmsg.payload            = {\n    \"method\" :  \"POST\",\n    \"url\" :     \"/api/v1/raw\",\n    \"body\":     {\n        \"manager\": 0,\n        \"command\": \"pingMote\",\n        \"fields\":  {\n            \"macAddress\": flow.get('mote'),\n        }\n    },\n    \"token\":    \"myToken\",\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 443,
+    "y": 830,
+    "wires": [
+      [
+        "656a8ba.47c4274"
+      ]
+    ]
+  },
+  {
+    "id": "38d8382.af751c8",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "mote GET /info",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 248,
+    "y": 903,
+    "wires": [
+      [
+        "631ee068.0758b"
+      ]
+    ]
+  },
+  {
+    "id": "631ee068.0758b",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "",
+    "func": "msg.deviceType         = 'mote'\nmsg.deviceId           = flow.get('mote')\nmsg.eventOrCommandType = 'oap'\nmsg.payload            = {\n    \"method\" :  \"GET\",\n    \"url\" :     \"/info\",\n    \"body\":     {},\n    \"token\":    \"myToken\",\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 439,
+    "y": 902,
+    "wires": [
+      [
+        "656a8ba.47c4274"
+      ]
+    ]
+  },
+  {
+    "id": "bdfde193.174b9",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "mote GET /pkgen/echo",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 230,
+    "y": 943,
+    "wires": [
+      [
+        "5c28b4c.442794c"
+      ]
+    ]
+  },
+  {
+    "id": "5c28b4c.442794c",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "",
+    "func": "msg.deviceType         = 'mote'\nmsg.deviceId           = flow.get('mote')\nmsg.eventOrCommandType = 'oap'\nmsg.payload            = {\n    \"method\" :  \"GET\",\n    \"url\" :     \"/pkgen/echo\",\n    \"body\":     {},\n    \"token\":    \"myToken\",\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 436,
+    "y": 943,
+    "wires": [
+      [
+        "656a8ba.47c4274"
+      ]
+    ]
+  },
+  {
+    "id": "964661e8.eeb25",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "set LED",
+    "topic": "",
+    "payload": "1",
+    "payloadType": "num",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 276,
+    "y": 980,
+    "wires": [
+      [
+        "94ca3c28.136f8"
+      ]
+    ]
+  },
+  {
+    "id": "eb9f83d7.a72ce",
+    "type": "inject",
+    "z": "bab94a09.38efb8",
+    "name": "clear LED",
+    "topic": "",
+    "payload": "0",
+    "payloadType": "num",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 268,
+    "y": 1020,
+    "wires": [
+      [
+        "94ca3c28.136f8"
+      ]
+    ]
+  },
+  {
+    "id": "94ca3c28.136f8",
+    "type": "function",
+    "z": "bab94a09.38efb8",
+    "name": "",
+    "func": "msg.deviceType         = 'mote'\nmsg.deviceId           = flow.get('mote')\nmsg.eventOrCommandType = 'oap'\nmsg.payload            = {\n    \"method\" :  \"PUT\",\n    \"url\" :     \"/digital_out/INDICATOR_0\",\n    \"body\":     {\n        'value': msg.payload,\n    },\n    \"token\":    \"myToken\",\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 435,
+    "y": 997,
+    "wires": [
+      [
+        "656a8ba.47c4274"
+      ]
+    ]
+  }
+]

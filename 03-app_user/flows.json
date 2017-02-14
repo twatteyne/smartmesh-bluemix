@@ -69,7 +69,7 @@
     "type": "debug",
     "z": "bab94a09.38efb8",
     "name": "manager events",
-    "active": false,
+    "active": true,
     "console": "false",
     "complete": "payload",
     "x": 477,
@@ -164,8 +164,8 @@
     "z": "bab94a09.38efb8",
     "name": "mote commands",
     "info": "",
-    "x": 251,
-    "y": 864,
+    "x": 126,
+    "y": 865,
     "wires": []
   },
   {
@@ -191,11 +191,11 @@
     "id": "5b89d526.50aebc",
     "type": "function",
     "z": "bab94a09.38efb8",
-    "name": "",
+    "name": "configure here first",
     "func": "flow.set('manager','00-17-0d-00-00-58-2f-e4');\nflow.set('mote',   '00-17-0d-00-00-38-07-18');",
     "outputs": 1,
     "noerr": 0,
-    "x": 437,
+    "x": 477,
     "y": 351,
     "wires": [
       []
@@ -662,8 +662,8 @@
     "repeat": "",
     "crontab": "",
     "once": false,
-    "x": 248,
-    "y": 903,
+    "x": 249,
+    "y": 941,
     "wires": [
       [
         "631ee068.0758b"
@@ -678,8 +678,8 @@
     "func": "msg.deviceType         = 'mote'\nmsg.deviceId           = flow.get('mote')\nmsg.eventOrCommandType = 'oap'\nmsg.payload            = {\n    \"method\" :  \"GET\",\n    \"url\" :     \"/info\",\n    \"body\":     {},\n    \"token\":    \"myToken\",\n}\n\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
-    "x": 439,
-    "y": 902,
+    "x": 440,
+    "y": 940,
     "wires": [
       [
         "656a8ba.47c4274"
@@ -697,8 +697,8 @@
     "repeat": "",
     "crontab": "",
     "once": false,
-    "x": 230,
-    "y": 943,
+    "x": 231,
+    "y": 981,
     "wires": [
       [
         "5c28b4c.442794c"
@@ -713,8 +713,8 @@
     "func": "msg.deviceType         = 'mote'\nmsg.deviceId           = flow.get('mote')\nmsg.eventOrCommandType = 'oap'\nmsg.payload            = {\n    \"method\" :  \"GET\",\n    \"url\" :     \"/pkgen/echo\",\n    \"body\":     {},\n    \"token\":    \"myToken\",\n}\n\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
-    "x": 436,
-    "y": 943,
+    "x": 437,
+    "y": 981,
     "wires": [
       [
         "656a8ba.47c4274"
@@ -732,8 +732,8 @@
     "repeat": "",
     "crontab": "",
     "once": false,
-    "x": 276,
-    "y": 980,
+    "x": 277,
+    "y": 1018,
     "wires": [
       [
         "94ca3c28.136f8"
@@ -751,8 +751,8 @@
     "repeat": "",
     "crontab": "",
     "once": false,
-    "x": 268,
-    "y": 1020,
+    "x": 269,
+    "y": 1058,
     "wires": [
       [
         "94ca3c28.136f8"
@@ -767,12 +767,22 @@
     "func": "msg.deviceType         = 'mote'\nmsg.deviceId           = flow.get('mote')\nmsg.eventOrCommandType = 'oap'\nmsg.payload            = {\n    \"method\" :  \"PUT\",\n    \"url\" :     \"/digital_out/INDICATOR_0\",\n    \"body\":     {\n        'value': msg.payload,\n    },\n    \"token\":    \"myToken\",\n}\n\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
-    "x": 435,
-    "y": 997,
+    "x": 436,
+    "y": 1035,
     "wires": [
       [
         "656a8ba.47c4274"
       ]
     ]
+  },
+  {
+    "id": "16138b6e.5e72c5",
+    "type": "comment",
+    "z": "bab94a09.38efb8",
+    "name": "OAP",
+    "info": "",
+    "x": 280,
+    "y": 902,
+    "wires": []
   }
 ]

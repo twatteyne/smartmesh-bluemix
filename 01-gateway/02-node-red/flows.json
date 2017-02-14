@@ -811,8 +811,7 @@
     "y": 1093,
     "wires": [
       [
-        "5e2bc630.6a2ee8",
-        "e9915212.eb565"
+        "5e2bc630.6a2ee8"
       ]
     ]
   },
@@ -828,68 +827,8 @@
     "y": 1093,
     "wires": [
       [
-        "2f336aec.5b0d4e",
-        "e9915212.eb565"
+        "2f336aec.5b0d4e"
       ]
     ]
-  },
-  {
-    "id": "e9915212.eb565",
-    "type": "debug",
-    "z": "90125f1d.7cf8e8",
-    "name": "",
-    "active": true,
-    "console": "false",
-    "complete": "true",
-    "x": 977,
-    "y": 1176,
-    "wires": []
-  },
-  {
-    "id": "d92d9b94.d26bc8",
-    "type": "inject",
-    "z": "90125f1d.7cf8e8",
-    "name": "",
-    "topic": "",
-    "payload": "",
-    "payloadType": "date",
-    "repeat": "",
-    "crontab": "",
-    "once": false,
-    "x": 186,
-    "y": 1251,
-    "wires": [
-      [
-        "9e31b19f.930d6"
-      ]
-    ]
-  },
-  {
-    "id": "9e31b19f.930d6",
-    "type": "function",
-    "z": "90125f1d.7cf8e8",
-    "name": "",
-    "func": "var patt = new RegExp(\"http://127.0.0.1:8080/api/v1/oap/([0-9a-f\\-])/.*\");\n\nmsg.payload = patt.exec(\"http://127.0.0.1:8080/api/v1/oap/00-17-0d-00-00-38-07-18/info\")\n\nreturn msg;",
-    "outputs": 1,
-    "noerr": 0,
-    "x": 360,
-    "y": 1245,
-    "wires": [
-      [
-        "f02c29b2.cdb398"
-      ]
-    ]
-  },
-  {
-    "id": "f02c29b2.cdb398",
-    "type": "debug",
-    "z": "90125f1d.7cf8e8",
-    "name": "",
-    "active": true,
-    "console": "false",
-    "complete": "false",
-    "x": 558,
-    "y": 1248,
-    "wires": []
   }
 ]

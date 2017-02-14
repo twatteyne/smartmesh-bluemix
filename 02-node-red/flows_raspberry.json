@@ -21,12 +21,13 @@
     "url": "/hr",
     "method": "post",
     "swaggerDoc": "",
-    "x": 185,
-    "y": 347,
+    "x": 195,
+    "y": 292,
     "wires": [
       [
         "434735b2.9581e4",
-        "c3ae8367.7e9af"
+        "c3ae8367.7e9af",
+        "52e36d7.38eff94"
       ]
     ]
   },
@@ -43,8 +44,8 @@
     "event": "",
     "format": "json",
     "name": "to IBM Watson IoT",
-    "x": 1060,
-    "y": 469,
+    "x": 1045,
+    "y": 447,
     "wires": []
   },
   {
@@ -55,8 +56,8 @@
     "func": "msg.payload    = {\"d\": msg.payload.fields}\n\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
-    "x": 804,
-    "y": 455,
+    "x": 800,
+    "y": 439,
     "wires": [
       [
         "2f336aec.5b0d4e"
@@ -71,12 +72,13 @@
     "url": "/notifData",
     "method": "post",
     "swaggerDoc": "",
-    "x": 165,
-    "y": 386,
+    "x": 175,
+    "y": 331,
     "wires": [
       [
         "434735b2.9581e4",
-        "ec421331.9a879"
+        "ec421331.9a879",
+        "845d8cb3.98ca9"
       ]
     ]
   },
@@ -88,12 +90,13 @@
     "url": "/oap",
     "method": "post",
     "swaggerDoc": "",
-    "x": 187,
-    "y": 503,
+    "x": 197,
+    "y": 448,
     "wires": [
       [
         "434735b2.9581e4",
-        "14f5089b.dd873f"
+        "14f5089b.dd873f",
+        "52e36d7.38eff94"
       ]
     ]
   },
@@ -105,8 +108,8 @@
     "url": "/notifLog",
     "method": "post",
     "swaggerDoc": "",
-    "x": 167,
-    "y": 588,
+    "x": 177,
+    "y": 533,
     "wires": [
       [
         "434735b2.9581e4",
@@ -122,12 +125,13 @@
     "url": "/notifIpData",
     "method": "post",
     "swaggerDoc": "",
-    "x": 155,
-    "y": 426,
+    "x": 165,
+    "y": 371,
     "wires": [
       [
         "434735b2.9581e4",
-        "ec421331.9a879"
+        "ec421331.9a879",
+        "845d8cb3.98ca9"
       ]
     ]
   },
@@ -139,12 +143,13 @@
     "url": "/event",
     "method": "post",
     "swaggerDoc": "",
-    "x": 174,
-    "y": 625,
+    "x": 184,
+    "y": 570,
     "wires": [
       [
         "434735b2.9581e4",
-        "6409cd0.3adac34"
+        "6409cd0.3adac34",
+        "611f77d.dc51988"
       ]
     ]
   },
@@ -156,12 +161,13 @@
     "url": "/notifHealthReport",
     "method": "get",
     "swaggerDoc": "",
-    "x": 145,
-    "y": 464,
+    "x": 155,
+    "y": 409,
     "wires": [
       [
         "434735b2.9581e4",
-        "ec421331.9a879"
+        "ec421331.9a879",
+        "845d8cb3.98ca9"
       ]
     ]
   },
@@ -170,8 +176,8 @@
     "type": "http response",
     "z": "90125f1d.7cf8e8",
     "name": "",
-    "x": 215,
-    "y": 696,
+    "x": 225,
+    "y": 641,
     "wires": []
   },
   {
@@ -182,8 +188,8 @@
     "func": "msg.deviceId   = msg.payload.mac\nmsg.event      = 'oap.'+msg.payload.fields.channel_str\n\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
-    "x": 414,
-    "y": 502,
+    "x": 424,
+    "y": 447,
     "wires": [
       [
         "310f64fe.b1d14c"
@@ -198,8 +204,8 @@
     "func": "msg.deviceId   = msg.payload.fields.macAddress\nmsg.event      = msg.payload.name\n\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
-    "x": 426,
-    "y": 417,
+    "x": 436,
+    "y": 362,
     "wires": [
       [
         "310f64fe.b1d14c"
@@ -214,8 +220,8 @@
     "func": "msg.deviceType = \"mote\"\n\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
-    "x": 639,
-    "y": 455,
+    "x": 632,
+    "y": 397,
     "wires": [
       [
         "dc1a9cc8.afcde8"
@@ -228,8 +234,8 @@
     "z": "90125f1d.7cf8e8",
     "name": "mote notifications",
     "info": "",
-    "x": 156,
-    "y": 307,
+    "x": 166,
+    "y": 252,
     "wires": []
   },
   {
@@ -238,8 +244,8 @@
     "z": "90125f1d.7cf8e8",
     "name": "manager notifications",
     "info": "",
-    "x": 147,
-    "y": 547,
+    "x": 157,
+    "y": 492,
     "wires": []
   },
   {
@@ -250,8 +256,8 @@
     "func": "msg.event      = msg.payload.name\n\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
-    "x": 581,
-    "y": 610,
+    "x": 591,
+    "y": 555,
     "wires": [
       [
         "dc1a9cc8.afcde8"
@@ -268,9 +274,9 @@
     "deviceId": "",
     "command": "JsonServer",
     "commandType": "g",
-    "name": "JsonServer commands",
-    "x": 152,
-    "y": 797,
+    "name": "JsonServer manager commands",
+    "x": 213,
+    "y": 998,
     "wires": [
       [
         "5bac06cb.6b06c"
@@ -283,8 +289,8 @@
     "z": "90125f1d.7cf8e8",
     "name": "=== commands",
     "info": "",
-    "x": 101,
-    "y": 752,
+    "x": 130,
+    "y": 945,
     "wires": []
   },
   {
@@ -296,8 +302,8 @@
     "ret": "obj",
     "url": "",
     "tls": "",
-    "x": 584,
-    "y": 798,
+    "x": 623,
+    "y": 996,
     "wires": [
       [
         "a4a7b79b.01bdf"
@@ -308,12 +314,12 @@
     "id": "5bac06cb.6b06c",
     "type": "function",
     "z": "90125f1d.7cf8e8",
-    "name": "create http request",
+    "name": "create request",
     "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8080'+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
     "outputs": 1,
     "noerr": 0,
-    "x": 387,
-    "y": 799,
+    "x": 440,
+    "y": 996,
     "wires": [
       [
         "46f5fae2.5763d4"
@@ -324,12 +330,12 @@
     "id": "a4a7b79b.01bdf",
     "type": "function",
     "z": "90125f1d.7cf8e8",
-    "name": "format http response",
+    "name": "format response",
     "func": "mqttMsg = {}\nmqttMsg.event             = 'JsonServerResponse'\nmqttMsg.payload           = {}\nmqttMsg.payload.token     = msg.headers['x-correlation-id']\nmqttMsg.payload.response  = msg.payload\n\nreturn mqttMsg;",
     "outputs": 1,
     "noerr": 0,
-    "x": 801,
-    "y": 800,
+    "x": 807,
+    "y": 993,
     "wires": [
       [
         "2f336aec.5b0d4e"
@@ -342,8 +348,8 @@
     "z": "90125f1d.7cf8e8",
     "name": "",
     "splt": "\\n",
-    "x": 563,
-    "y": 342,
+    "x": 573,
+    "y": 287,
     "wires": [
       [
         "b2f160e6.83e078"
@@ -358,8 +364,8 @@
     "func": "var payloads = [];\n\nfor (var hrname in msg.payload.hr) {\n    payloads.push(\n        {\n            'deviceType':  \"mote\",\n            'deviceId':    msg.payload.mac,\n            'payload':     msg.payload.hr[hrname],\n            'event':       'hr.'+hrname,\n        }\n    );\n}\n\nreturn {\"payload\": payloads};",
     "outputs": 1,
     "noerr": 0,
-    "x": 417,
-    "y": 345,
+    "x": 427,
+    "y": 290,
     "wires": [
       [
         "27ae49b2.fe6866"
@@ -374,8 +380,8 @@
     "func": "var returnMsg = {};\nreturnMsg.deviceType = msg.payload.deviceType;\nreturnMsg.deviceId   = msg.payload.deviceId;\nreturnMsg.event      = msg.payload.event;\nreturnMsg.payload    = msg.payload.payload;\nreturn returnMsg;",
     "outputs": 1,
     "noerr": 0,
-    "x": 743,
-    "y": 344,
+    "x": 753,
+    "y": 289,
     "wires": [
       [
         "2f336aec.5b0d4e"
@@ -544,8 +550,179 @@
     "z": "90125f1d.7cf8e8",
     "name": "=== events",
     "info": "",
-    "x": 76,
-    "y": 252,
+    "x": 71,
+    "y": 207,
     "wires": []
+  },
+  {
+    "id": "52e36d7.38eff94",
+    "type": "function",
+    "z": "90125f1d.7cf8e8",
+    "name": "msg.payload.mac",
+    "func": "msg.payload = {\n    'mac': msg.payload.mac,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 194,
+    "y": 723,
+    "wires": [
+      [
+        "6a6f8312.6fdb5c"
+      ]
+    ]
+  },
+  {
+    "id": "845d8cb3.98ca9",
+    "type": "function",
+    "z": "90125f1d.7cf8e8",
+    "name": "msg.payload.fields.macAddress",
+    "func": "msg.payload = {\n    'mac':   msg.payload.fields.macAddress,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 233,
+    "y": 769,
+    "wires": [
+      [
+        "6a6f8312.6fdb5c"
+      ]
+    ]
+  },
+  {
+    "id": "611f77d.dc51988",
+    "type": "function",
+    "z": "90125f1d.7cf8e8",
+    "name": "discovery events",
+    "func": "var alive;\nvar mac;\n\nswitch(msg.payload.name) {\n    case 'eventMoteDelete':\n    case 'eventMoteLost':\n    case 'eventMoteReset':\n        alive = false;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    case 'eventMoteCreate':\n    case 'eventMoteJoin':\n    case 'eventMoteOperational':\n        alive = true;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    default:\n        return;\n}\n\nmsg.payload = {\n    'mac':   mac,\n    'alive': alive\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 192,
+    "y": 815,
+    "wires": [
+      [
+        "6a6f8312.6fdb5c"
+      ]
+    ]
+  },
+  {
+    "id": "ab2bfad5.c76728",
+    "type": "comment",
+    "z": "90125f1d.7cf8e8",
+    "name": "maintain activeMotes list",
+    "info": "",
+    "x": 160,
+    "y": 681,
+    "wires": []
+  },
+  {
+    "id": "6a6f8312.6fdb5c",
+    "type": "function",
+    "z": "90125f1d.7cf8e8",
+    "name": "maintain active nodes list",
+    "func": "var activeMotes = flow.get('activeMotes');\nif (typeof activeMotes == 'undefined') {\n    activeMotes = [];\n}\n\nvar idx = activeMotes.indexOf(msg.payload.mac);\nif (msg.payload.alive===true) {\n    // mote is alive\n    \n    if (idx === -1) {\n        // NOT in the database: add\n        activeMotes.push(msg.payload.mac);\n    }\n} else {\n    // mote is NOT alive\n    \n    if (idx != -1) {\n        // in the database: remove\n        activeMotes.splice(activeMotes.indexOf(msg.payload.mac), 1);\n    }\n}\n\nflow.set('activeMotes',activeMotes)\n\nmsg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 645,
+    "y": 779,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "d100a3a2.cf33e",
+    "type": "inject",
+    "z": "90125f1d.7cf8e8",
+    "name": "get activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 203,
+    "y": 858,
+    "wires": [
+      [
+        "7f6cca47.850024"
+      ]
+    ]
+  },
+  {
+    "id": "7f6cca47.850024",
+    "type": "function",
+    "z": "90125f1d.7cf8e8",
+    "name": "get activeMotes list",
+    "func": "msg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 463,
+    "y": 858,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "b25524e3.0a6878",
+    "type": "function",
+    "z": "90125f1d.7cf8e8",
+    "name": "for activeMotes?",
+    "func": "if (flow.get('activeMotes').indexOf(msg.payload.mac) != -1) {\n        return msg;\n    }\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 447,
+    "y": 1056,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f5385fe9.d73b",
+    "type": "wiotp in",
+    "z": "90125f1d.7cf8e8",
+    "authType": "g",
+    "deviceKey": "e046d9e1.133038",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "JsonServer",
+    "commandType": "g",
+    "name": "JsonServer commands",
+    "x": 184,
+    "y": 1056,
+    "wires": [
+      [
+        "b25524e3.0a6878"
+      ]
+    ]
+  },
+  {
+    "id": "8c27f22c.6d005",
+    "type": "inject",
+    "z": "90125f1d.7cf8e8",
+    "name": "reset activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 215,
+    "y": 901,
+    "wires": [
+      [
+        "57cd0829.d0dcf8"
+      ]
+    ]
+  },
+  {
+    "id": "57cd0829.d0dcf8",
+    "type": "function",
+    "z": "90125f1d.7cf8e8",
+    "name": "reset activeMotes list",
+    "func": "flow.set('activeMotes',[]);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 475,
+    "y": 901,
+    "wires": [
+      []
+    ]
   }
 ]

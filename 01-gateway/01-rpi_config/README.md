@@ -15,8 +15,8 @@ export WATSON_MANAGER=00-17-0d-00-00-60-37-b3
 ```
 
 ```
-wget -O ~/reload_smartmesh-bluemix.sh https://raw.githubusercontent.com/twatteyne/smartmesh-bluemix/master/01-gateway/01-rpi_scripts/reload_smartmesh-bluemix.sh
-dos2unix ~/reload_smartmesh-bluemix.sh
-chmod u+x ~/reload_smartmesh-bluemix.sh
-~/reload_smartmesh-bluemix.sh
+wget -O ~/update_smartmesh-bluemix.sh https://raw.githubusercontent.com/twatteyne/smartmesh-bluemix/master/01-gateway/01-rpi_config/update_smartmesh-bluemix.sh
+dos2unix ~/update_smartmesh-bluemix.sh
+chmod u+x ~/update_smartmesh-bluemix.sh
+~/update_smartmesh-bluemix.sh
 ```

@@ -1,0 +1,8322 @@
+[
+  {
+    "id": "88f3f727.a0f518",
+    "type": "tab",
+    "label": "manager1"
+  },
+  {
+    "id": "dcc3e5b5.dda138",
+    "type": "tab",
+    "label": "manager2"
+  },
+  {
+    "id": "7915bfb9.9f848",
+    "type": "tab",
+    "label": "manager3"
+  },
+  {
+    "id": "894685a.9137678",
+    "type": "tab",
+    "label": "manager4"
+  },
+  {
+    "id": "8a9a84fa.c24858",
+    "type": "tab",
+    "label": "manager5"
+  },
+  {
+    "id": "ffe584e6.6943d8",
+    "type": "tab",
+    "label": "manager6"
+  },
+  {
+    "id": "ab88960c.4bc948",
+    "type": "tab",
+    "label": "manager7"
+  },
+  {
+    "id": "a9df3bdc.1c1798",
+    "type": "tab",
+    "label": "manager8"
+  },
+  {
+    "id": "a6b29d0e.41136",
+    "type": "tab",
+    "label": "manager9"
+  },
+  {
+    "id": "125c3ab4.fcc445",
+    "type": "tab",
+    "label": "manager10"
+  },
+  {
+    "id": "e046d9e1.133038",
+    "type": "wiotp-credentials",
+    "z": "",
+    "name": "inria_manager01",
+    "org": "0o6f49",
+    "devType": "manager",
+    "devId": "00-17-0d-00-00-38-04-25"
+  },
+  {
+    "id": "37deef45.fe784",
+    "type": "wiotp-credentials",
+    "z": "",
+    "name": "inria_manager02",
+    "org": "0o6f49",
+    "devType": "manager",
+    "devId": "00-17-0d-00-00-38-03-ca"
+  },
+  {
+    "id": "dc36b88e.d84e18",
+    "type": "wiotp-credentials",
+    "z": "",
+    "name": "inria_manager03",
+    "org": "0o6f49",
+    "devType": "manager",
+    "devId": "00-17-0d-00-00-38-04-3b"
+  },
+  {
+    "id": "8dea9043.70714",
+    "type": "wiotp-credentials",
+    "z": "",
+    "name": "inria_manager04",
+    "org": "0o6f49",
+    "devType": "manager",
+    "devId": "00-17-0d-00-00-38-03-dd"
+  },
+  {
+    "id": "e58003a5.b3ef3",
+    "type": "wiotp-credentials",
+    "z": "",
+    "name": "inria_manager05",
+    "org": "0o6f49",
+    "devType": "manager",
+    "devId": "00-17-0d-00-00-38-03-69"
+  },
+  {
+    "id": "94a74cd9.a0372",
+    "type": "wiotp-credentials",
+    "z": "",
+    "name": "inria_manager06",
+    "org": "0o6f49",
+    "devType": "manager",
+    "devId": "00-17-0d-00-00-38-05-da"
+  },
+  {
+    "id": "e03a482.057d9b8",
+    "type": "wiotp-credentials",
+    "z": "",
+    "name": "inria_manager07",
+    "org": "0o6f49",
+    "devType": "manager",
+    "devId": "00-17-0d-00-00-38-03-87"
+  },
+  {
+    "id": "a7c94d54.a431f",
+    "type": "wiotp-credentials",
+    "z": "",
+    "name": "inria_manager08",
+    "org": "0o6f49",
+    "devType": "manager",
+    "devId": "00-17-0d-00-00-58-32-69"
+  },
+  {
+    "id": "5299434d.60d2ec",
+    "type": "wiotp-credentials",
+    "z": "",
+    "name": "inria_manager10",
+    "org": "0o6f49",
+    "devType": "manager",
+    "devId": "00-17-0d-00-00-58-2f-e4"
+  },
+  {
+    "id": "d29a13b5.e7e8e",
+    "type": "wiotp-credentials",
+    "z": "",
+    "name": "inria_manager09",
+    "org": "0o6f49",
+    "devType": "manager",
+    "devId": "00-17-0d-00-00-38-05-f1"
+  },
+  {
+    "id": "394e6d96.537f52",
+    "type": "http in",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "url": "/manager1/hr",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 201,
+    "y": 545,
+    "wires": [
+      [
+        "b9af1c06.68576",
+        "491a39d.6be48c8",
+        "2d26800f.25ba5"
+      ]
+    ]
+  },
+  {
+    "id": "90707543.d47178",
+    "type": "wiotp out",
+    "z": "88f3f727.a0f518",
+    "authType": "g",
+    "qs": "false",
+    "qsDeviceId": "",
+    "deviceKey": "e046d9e1.133038",
+    "deviceType": "",
+    "deviceId": "",
+    "event": "",
+    "format": "json",
+    "name": "to IBM Watson IoT",
+    "x": 1045,
+    "y": 652,
+    "wires": []
+  },
+  {
+    "id": "30bb544f.3a4a8c",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "payload",
+    "func": "msg.payload    = {\"d\": msg.payload.fields}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 804,
+    "y": 382,
+    "wires": [
+      [
+        "90707543.d47178"
+      ]
+    ]
+  },
+  {
+    "id": "9edf580a.861898",
+    "type": "http in",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "url": "/manager1/notifData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 180,
+    "y": 388,
+    "wires": [
+      [
+        "b9af1c06.68576",
+        "aab2f910.b64198",
+        "46bd4b17.b870c4"
+      ]
+    ]
+  },
+  {
+    "id": "896e6bd5.b006d8",
+    "type": "http in",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "url": "/manager1/oap",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 202,
+    "y": 505,
+    "wires": [
+      [
+        "b9af1c06.68576",
+        "fae2be9c.834c3",
+        "2d26800f.25ba5"
+      ]
+    ]
+  },
+  {
+    "id": "ab896684.a3a0a8",
+    "type": "http in",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "url": "/manager1/notifLog",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 177,
+    "y": 268,
+    "wires": [
+      [
+        "b9af1c06.68576",
+        "92ce2039.8a07f"
+      ]
+    ]
+  },
+  {
+    "id": "81d5a8c8.1a0698",
+    "type": "http in",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "url": "/manager1/notifIpData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 170,
+    "y": 428,
+    "wires": [
+      [
+        "b9af1c06.68576",
+        "aab2f910.b64198",
+        "46bd4b17.b870c4"
+      ]
+    ]
+  },
+  {
+    "id": "b0c8aa4b.1d9888",
+    "type": "http in",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "url": "/manager1/event",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 184,
+    "y": 305,
+    "wires": [
+      [
+        "b9af1c06.68576",
+        "92ce2039.8a07f",
+        "2188a8d8.ec53f8"
+      ]
+    ]
+  },
+  {
+    "id": "6f7f0774.b58f48",
+    "type": "http in",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "url": "/manager1/notifHealthReport",
+    "method": "get",
+    "swaggerDoc": "",
+    "x": 160,
+    "y": 466,
+    "wires": [
+      [
+        "b9af1c06.68576",
+        "aab2f910.b64198",
+        "46bd4b17.b870c4"
+      ]
+    ]
+  },
+  {
+    "id": "b9af1c06.68576",
+    "type": "http response",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "x": 289,
+    "y": 598,
+    "wires": []
+  },
+  {
+    "id": "fae2be9c.834c3",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "[oap] deviceId event",
+    "func": "msg.deviceId   = msg.payload.mac\nmsg.event      = 'oap.'+msg.payload.fields.channel_str\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 429,
+    "y": 504,
+    "wires": [
+      [
+        "80c3479c.a66ea8"
+      ]
+    ]
+  },
+  {
+    "id": "aab2f910.b64198",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "deviceId event",
+    "func": "msg.deviceId   = msg.payload.fields.macAddress\nmsg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 441,
+    "y": 419,
+    "wires": [
+      [
+        "80c3479c.a66ea8"
+      ]
+    ]
+  },
+  {
+    "id": "80c3479c.a66ea8",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "deviceType",
+    "func": "msg.deviceType = \"mote\"\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 637,
+    "y": 454,
+    "wires": [
+      [
+        "30bb544f.3a4a8c"
+      ]
+    ]
+  },
+  {
+    "id": "7aef14b4.a9523c",
+    "type": "comment",
+    "z": "88f3f727.a0f518",
+    "name": "mote events",
+    "info": "",
+    "x": 185,
+    "y": 350,
+    "wires": []
+  },
+  {
+    "id": "e344724e.a4d47",
+    "type": "comment",
+    "z": "88f3f727.a0f518",
+    "name": "manager events",
+    "info": "",
+    "x": 177,
+    "y": 227,
+    "wires": []
+  },
+  {
+    "id": "92ce2039.8a07f",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "event",
+    "func": "msg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 658,
+    "y": 314,
+    "wires": [
+      [
+        "30bb544f.3a4a8c"
+      ]
+    ]
+  },
+  {
+    "id": "59ce48b0.cf7888",
+    "type": "wiotp in",
+    "z": "88f3f727.a0f518",
+    "authType": "g",
+    "deviceKey": "e046d9e1.133038",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "JsonServer",
+    "commandType": "g",
+    "name": "gateway JsonServer commands",
+    "x": 174,
+    "y": 1014,
+    "wires": [
+      [
+        "39189b49.18e8a4"
+      ]
+    ]
+  },
+  {
+    "id": "7ab37cdd.1ad0c4",
+    "type": "comment",
+    "z": "88f3f727.a0f518",
+    "name": "=== commands",
+    "info": "",
+    "x": 101,
+    "y": 891,
+    "wires": []
+  },
+  {
+    "id": "cf1a314e.09c64",
+    "type": "http request",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 597,
+    "y": 1020,
+    "wires": [
+      [
+        "9386e3c9.e8952"
+      ]
+    ]
+  },
+  {
+    "id": "39189b49.18e8a4",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8081'+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 410,
+    "y": 1016,
+    "wires": [
+      [
+        "cf1a314e.09c64"
+      ]
+    ]
+  },
+  {
+    "id": "9386e3c9.e8952",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'JsonServerResponse'\nmqttMsg.payload           = {}\nmqttMsg.payload.token     = msg.headers['x-correlation-id']\nmqttMsg.payload.response  = msg.payload\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 781,
+    "y": 1017,
+    "wires": [
+      [
+        "90707543.d47178"
+      ]
+    ]
+  },
+  {
+    "id": "ceb5ecdd.df8e8",
+    "type": "split",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "splt": "\\n",
+    "x": 579,
+    "y": 540,
+    "wires": [
+      [
+        "1efce6ca.30f3f9"
+      ]
+    ]
+  },
+  {
+    "id": "491a39d.6be48c8",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "split HR",
+    "func": "var payloads = [];\n\nfor (var hrname in msg.payload.hr) {\n    payloads.push(\n        {\n            'deviceType':  \"mote\",\n            'deviceId':    msg.payload.mac,\n            'payload':     msg.payload.hr[hrname],\n            'event':       'hr.'+hrname,\n        }\n    );\n}\n\nreturn {\"payload\": payloads};",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 433,
+    "y": 543,
+    "wires": [
+      [
+        "ceb5ecdd.df8e8"
+      ]
+    ]
+  },
+  {
+    "id": "1efce6ca.30f3f9",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "create final hr",
+    "func": "var returnMsg = {};\nreturnMsg.deviceType = msg.payload.deviceType;\nreturnMsg.deviceId   = msg.payload.deviceId;\nreturnMsg.event      = msg.payload.event;\nreturnMsg.payload    = msg.payload.payload;\nreturn returnMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 759,
+    "y": 542,
+    "wires": [
+      [
+        "90707543.d47178"
+      ]
+    ]
+  },
+  {
+    "id": "a463f766.1fecc8",
+    "type": "comment",
+    "z": "88f3f727.a0f518",
+    "name": "=== configure/check JsonServer",
+    "info": "",
+    "x": 150,
+    "y": 35,
+    "wires": []
+  },
+  {
+    "id": "70a2d220.239ddc",
+    "type": "inject",
+    "z": "88f3f727.a0f518",
+    "name": "add manager",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 73,
+    "wires": [
+      [
+        "1c9c81f.df8a37e"
+      ]
+    ]
+  },
+  {
+    "id": "9918e471.317368",
+    "type": "http request",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "method": "PUT",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8081/api/v1/config/managers",
+    "tls": "",
+    "x": 558,
+    "y": 69,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "c4e37f2a.5076d",
+    "type": "inject",
+    "z": "88f3f727.a0f518",
+    "name": "get status",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 193,
+    "y": 113,
+    "wires": [
+      [
+        "d8692942.be6728"
+      ]
+    ]
+  },
+  {
+    "id": "d8692942.be6728",
+    "type": "http request",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8081/api/v1/status",
+    "tls": "",
+    "x": 559,
+    "y": 110,
+    "wires": [
+      [
+        "7d8361fb.0470b"
+      ]
+    ]
+  },
+  {
+    "id": "1c9c81f.df8a37e",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "func": "msg.payload = {\n    \"managers\": [\"/dev/ttyUSB3\"]\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 371,
+    "y": 71,
+    "wires": [
+      [
+        "9918e471.317368"
+      ]
+    ]
+  },
+  {
+    "id": "48c873bb.6ba35c",
+    "type": "inject",
+    "z": "88f3f727.a0f518",
+    "name": "get serial ports",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 214,
+    "y": 154,
+    "wires": [
+      [
+        "c60656f6.35ba68"
+      ]
+    ]
+  },
+  {
+    "id": "c60656f6.35ba68",
+    "type": "http request",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8081/api/v1/helpers/serialports",
+    "tls": "",
+    "x": 565,
+    "y": 152,
+    "wires": [
+      [
+        "47a32ee6.e6713"
+      ]
+    ]
+  },
+  {
+    "id": "7d8361fb.0470b",
+    "type": "debug",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 754,
+    "y": 110,
+    "wires": []
+  },
+  {
+    "id": "47a32ee6.e6713",
+    "type": "debug",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 755,
+    "y": 152,
+    "wires": []
+  },
+  {
+    "id": "7eb78374.27d85c",
+    "type": "comment",
+    "z": "88f3f727.a0f518",
+    "name": "=== events",
+    "info": "",
+    "x": 72,
+    "y": 190,
+    "wires": []
+  },
+  {
+    "id": "2d26800f.25ba5",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "msg.payload.mac",
+    "func": "msg.payload = {\n    'mac': msg.payload.mac,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 187,
+    "y": 676,
+    "wires": [
+      [
+        "84511580.70dbf8"
+      ]
+    ]
+  },
+  {
+    "id": "46bd4b17.b870c4",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "msg.payload.fields.macAddress",
+    "func": "msg.payload = {\n    'mac':   msg.payload.fields.macAddress,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 226,
+    "y": 722,
+    "wires": [
+      [
+        "84511580.70dbf8"
+      ]
+    ]
+  },
+  {
+    "id": "2188a8d8.ec53f8",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "discovery events",
+    "func": "var alive;\nvar mac;\n\nswitch(msg.payload.name) {\n    case 'eventMoteDelete':\n    case 'eventMoteLost':\n    case 'eventMoteReset':\n        alive = false;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    case 'eventMoteCreate':\n    case 'eventMoteJoin':\n    case 'eventMoteOperational':\n        alive = true;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    default:\n        return;\n}\n\nmsg.payload = {\n    'mac':   mac,\n    'alive': alive\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 185,
+    "y": 768,
+    "wires": [
+      [
+        "84511580.70dbf8"
+      ]
+    ]
+  },
+  {
+    "id": "67c73d65.4c09a4",
+    "type": "comment",
+    "z": "88f3f727.a0f518",
+    "name": "maintain activeMotes list",
+    "info": "",
+    "x": 153,
+    "y": 634,
+    "wires": []
+  },
+  {
+    "id": "84511580.70dbf8",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "maintain active nodes list",
+    "func": "var activeMotes = flow.get('activeMotes');\nif (typeof activeMotes == 'undefined') {\n    activeMotes = [];\n}\n\nvar idx = activeMotes.indexOf(msg.payload.mac);\nif (msg.payload.alive===true) {\n    // mote is alive\n    \n    if (idx === -1) {\n        // NOT in the database: add\n        activeMotes.push(msg.payload.mac);\n    }\n} else {\n    // mote is NOT alive\n    \n    if (idx != -1) {\n        // in the database: remove\n        activeMotes.splice(activeMotes.indexOf(msg.payload.mac), 1);\n    }\n}\n\nflow.set('activeMotes',activeMotes)\n\nmsg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 638,
+    "y": 732,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "ee51f19f.d318e",
+    "type": "inject",
+    "z": "88f3f727.a0f518",
+    "name": "get activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 196,
+    "y": 811,
+    "wires": [
+      [
+        "bac96528.93ce08"
+      ]
+    ]
+  },
+  {
+    "id": "bac96528.93ce08",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "get activeMotes list",
+    "func": "msg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 456,
+    "y": 811,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "34fdf4ce.fbfa4c",
+    "type": "inject",
+    "z": "88f3f727.a0f518",
+    "name": "reset activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 854,
+    "wires": [
+      [
+        "552a3c08.b9cd74"
+      ]
+    ]
+  },
+  {
+    "id": "552a3c08.b9cd74",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "reset activeMotes list",
+    "func": "flow.set('activeMotes',[]);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 468,
+    "y": 854,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "c50fe53d.019578",
+    "type": "comment",
+    "z": "88f3f727.a0f518",
+    "name": "manager commands",
+    "info": "",
+    "x": 210,
+    "y": 930,
+    "wires": []
+  },
+  {
+    "id": "e14aef19.61f0b",
+    "type": "comment",
+    "z": "88f3f727.a0f518",
+    "name": "mote commands",
+    "info": "",
+    "x": 222,
+    "y": 1052,
+    "wires": []
+  },
+  {
+    "id": "1a6dcc0f.a96834",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "for activeMotes?",
+    "func": "if (flow.get('activeMotes').indexOf(msg.deviceId) != -1) {\n    return msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 360,
+    "y": 1092,
+    "wires": [
+      [
+        "cadf12b2.80aa"
+      ]
+    ]
+  },
+  {
+    "id": "afe7aef0.3bfd5",
+    "type": "wiotp in",
+    "z": "88f3f727.a0f518",
+    "authType": "g",
+    "deviceKey": "e046d9e1.133038",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "activeMotes",
+    "commandType": "g",
+    "name": "gateway activeMotes commands",
+    "x": 173,
+    "y": 969,
+    "wires": [
+      [
+        "6d82eb10.91d174"
+      ]
+    ]
+  },
+  {
+    "id": "6d82eb10.91d174",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'activeMotesResponse'\nmqttMsg.payload           = {\n    \"token\":     msg.payload.token,\n    \"response\":  flow.get('activeMotes')\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 688,
+    "y": 969,
+    "wires": [
+      [
+        "90707543.d47178"
+      ]
+    ]
+  },
+  {
+    "id": "e5d169af.9291d8",
+    "type": "wiotp in",
+    "z": "88f3f727.a0f518",
+    "authType": "g",
+    "deviceKey": "e046d9e1.133038",
+    "deviceType": "mote",
+    "deviceId": "+",
+    "command": "oap",
+    "commandType": "d",
+    "name": "mote oap commands",
+    "x": 140,
+    "y": 1094,
+    "wires": [
+      [
+        "1a6dcc0f.a96834"
+      ]
+    ]
+  },
+  {
+    "id": "cadf12b2.80aa",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8081/api/v1/oap/'+msg.deviceId+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 551,
+    "y": 1092,
+    "wires": [
+      [
+        "ffa49d98.f0491"
+      ]
+    ]
+  },
+  {
+    "id": "ffa49d98.f0491",
+    "type": "http request",
+    "z": "88f3f727.a0f518",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 730,
+    "y": 1093,
+    "wires": [
+      [
+        "8022836b.0820b"
+      ]
+    ]
+  },
+  {
+    "id": "8022836b.0820b",
+    "type": "function",
+    "z": "88f3f727.a0f518",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.deviceType        = 'mote'\nmqttMsg.deviceId          = msg.url.split('/')[6];\nmqttMsg.event             = 'oapResponse'\nmqttMsg.payload           = {\n    \"response\" :  msg.payload,\n    \"token\":      msg.headers['x-correlation-id'],\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 918,
+    "y": 1093,
+    "wires": [
+      [
+        "90707543.d47178"
+      ]
+    ]
+  },
+  {
+    "id": "e10e562f.bfce38",
+    "type": "http in",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "url": "/manager2/hr",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 201,
+    "y": 545,
+    "wires": [
+      [
+        "d0051f66.620ae",
+        "a84326e2.d651b8",
+        "5bcd2f80.f07c"
+      ]
+    ]
+  },
+  {
+    "id": "85ebb905.2a77a8",
+    "type": "wiotp out",
+    "z": "dcc3e5b5.dda138",
+    "authType": "g",
+    "qs": "false",
+    "qsDeviceId": "",
+    "deviceKey": "37deef45.fe784",
+    "deviceType": "",
+    "deviceId": "",
+    "event": "",
+    "format": "json",
+    "name": "to IBM Watson IoT",
+    "x": 1045,
+    "y": 652,
+    "wires": []
+  },
+  {
+    "id": "e50fb189.58cf9",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "payload",
+    "func": "msg.payload    = {\"d\": msg.payload.fields}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 804,
+    "y": 382,
+    "wires": [
+      [
+        "85ebb905.2a77a8"
+      ]
+    ]
+  },
+  {
+    "id": "f2e2597b.8bfa38",
+    "type": "http in",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "url": "/manager2/notifData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 180,
+    "y": 388,
+    "wires": [
+      [
+        "d0051f66.620ae",
+        "28303762.890ad8",
+        "bbd5b4ee.5ac698"
+      ]
+    ]
+  },
+  {
+    "id": "a77cc334.f5096",
+    "type": "http in",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "url": "/manager2/oap",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 202,
+    "y": 505,
+    "wires": [
+      [
+        "d0051f66.620ae",
+        "e60d8ad5.691b48",
+        "5bcd2f80.f07c"
+      ]
+    ]
+  },
+  {
+    "id": "3a58790d.4cd356",
+    "type": "http in",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "url": "/manager2/notifLog",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 177,
+    "y": 268,
+    "wires": [
+      [
+        "d0051f66.620ae",
+        "b3a5868.b8dc278"
+      ]
+    ]
+  },
+  {
+    "id": "7c692f1.9f3d8d",
+    "type": "http in",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "url": "/manager2/notifIpData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 170,
+    "y": 428,
+    "wires": [
+      [
+        "d0051f66.620ae",
+        "28303762.890ad8",
+        "bbd5b4ee.5ac698"
+      ]
+    ]
+  },
+  {
+    "id": "a0071868.e6bd18",
+    "type": "http in",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "url": "/manager2/event",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 184,
+    "y": 305,
+    "wires": [
+      [
+        "d0051f66.620ae",
+        "b3a5868.b8dc278",
+        "3b44a542.643dca"
+      ]
+    ]
+  },
+  {
+    "id": "564cc182.caad",
+    "type": "http in",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "url": "/manager2/notifHealthReport",
+    "method": "get",
+    "swaggerDoc": "",
+    "x": 160,
+    "y": 466,
+    "wires": [
+      [
+        "d0051f66.620ae",
+        "28303762.890ad8",
+        "bbd5b4ee.5ac698"
+      ]
+    ]
+  },
+  {
+    "id": "d0051f66.620ae",
+    "type": "http response",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "x": 289,
+    "y": 598,
+    "wires": []
+  },
+  {
+    "id": "e60d8ad5.691b48",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "[oap] deviceId event",
+    "func": "msg.deviceId   = msg.payload.mac\nmsg.event      = 'oap.'+msg.payload.fields.channel_str\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 429,
+    "y": 504,
+    "wires": [
+      [
+        "379a4239.17f54e"
+      ]
+    ]
+  },
+  {
+    "id": "28303762.890ad8",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "deviceId event",
+    "func": "msg.deviceId   = msg.payload.fields.macAddress\nmsg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 441,
+    "y": 419,
+    "wires": [
+      [
+        "379a4239.17f54e"
+      ]
+    ]
+  },
+  {
+    "id": "379a4239.17f54e",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "deviceType",
+    "func": "msg.deviceType = \"mote\"\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 637,
+    "y": 454,
+    "wires": [
+      [
+        "e50fb189.58cf9"
+      ]
+    ]
+  },
+  {
+    "id": "b0a387d7.95ac18",
+    "type": "comment",
+    "z": "dcc3e5b5.dda138",
+    "name": "mote events",
+    "info": "",
+    "x": 185,
+    "y": 350,
+    "wires": []
+  },
+  {
+    "id": "9338c4b8.a1e458",
+    "type": "comment",
+    "z": "dcc3e5b5.dda138",
+    "name": "manager events",
+    "info": "",
+    "x": 177,
+    "y": 227,
+    "wires": []
+  },
+  {
+    "id": "b3a5868.b8dc278",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "event",
+    "func": "msg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 658,
+    "y": 314,
+    "wires": [
+      [
+        "e50fb189.58cf9"
+      ]
+    ]
+  },
+  {
+    "id": "6892928.5399c6c",
+    "type": "wiotp in",
+    "z": "dcc3e5b5.dda138",
+    "authType": "g",
+    "deviceKey": "37deef45.fe784",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "JsonServer",
+    "commandType": "g",
+    "name": "gateway JsonServer commands",
+    "x": 174,
+    "y": 1014,
+    "wires": [
+      [
+        "15f0151c.2db65b"
+      ]
+    ]
+  },
+  {
+    "id": "f08be7f7.cff0d8",
+    "type": "comment",
+    "z": "dcc3e5b5.dda138",
+    "name": "=== commands",
+    "info": "",
+    "x": 101,
+    "y": 891,
+    "wires": []
+  },
+  {
+    "id": "b1022836.6ee758",
+    "type": "http request",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 597,
+    "y": 1020,
+    "wires": [
+      [
+        "4f3d7be0.3164c4"
+      ]
+    ]
+  },
+  {
+    "id": "15f0151c.2db65b",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8082'+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 410,
+    "y": 1016,
+    "wires": [
+      [
+        "b1022836.6ee758"
+      ]
+    ]
+  },
+  {
+    "id": "4f3d7be0.3164c4",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'JsonServerResponse'\nmqttMsg.payload           = {}\nmqttMsg.payload.token     = msg.headers['x-correlation-id']\nmqttMsg.payload.response  = msg.payload\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 781,
+    "y": 1017,
+    "wires": [
+      [
+        "85ebb905.2a77a8"
+      ]
+    ]
+  },
+  {
+    "id": "82a5e0bc.c0cef",
+    "type": "split",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "splt": "\\n",
+    "x": 579,
+    "y": 540,
+    "wires": [
+      [
+        "71dcc119.c04d3"
+      ]
+    ]
+  },
+  {
+    "id": "a84326e2.d651b8",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "split HR",
+    "func": "var payloads = [];\n\nfor (var hrname in msg.payload.hr) {\n    payloads.push(\n        {\n            'deviceType':  \"mote\",\n            'deviceId':    msg.payload.mac,\n            'payload':     msg.payload.hr[hrname],\n            'event':       'hr.'+hrname,\n        }\n    );\n}\n\nreturn {\"payload\": payloads};",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 433,
+    "y": 543,
+    "wires": [
+      [
+        "82a5e0bc.c0cef"
+      ]
+    ]
+  },
+  {
+    "id": "71dcc119.c04d3",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "create final hr",
+    "func": "var returnMsg = {};\nreturnMsg.deviceType = msg.payload.deviceType;\nreturnMsg.deviceId   = msg.payload.deviceId;\nreturnMsg.event      = msg.payload.event;\nreturnMsg.payload    = msg.payload.payload;\nreturn returnMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 759,
+    "y": 542,
+    "wires": [
+      [
+        "85ebb905.2a77a8"
+      ]
+    ]
+  },
+  {
+    "id": "796b1856.bc9ee8",
+    "type": "comment",
+    "z": "dcc3e5b5.dda138",
+    "name": "=== configure/check JsonServer",
+    "info": "",
+    "x": 150,
+    "y": 35,
+    "wires": []
+  },
+  {
+    "id": "9780ba97.40ddc8",
+    "type": "inject",
+    "z": "dcc3e5b5.dda138",
+    "name": "add manager",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 73,
+    "wires": [
+      [
+        "89d25f84.ed6ad"
+      ]
+    ]
+  },
+  {
+    "id": "249d1014.60768",
+    "type": "http request",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "method": "PUT",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8082/api/v1/config/managers",
+    "tls": "",
+    "x": 558,
+    "y": 69,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "e76ce3ee.6b11d",
+    "type": "inject",
+    "z": "dcc3e5b5.dda138",
+    "name": "get status",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 193,
+    "y": 113,
+    "wires": [
+      [
+        "b52e2626.9d2788"
+      ]
+    ]
+  },
+  {
+    "id": "b52e2626.9d2788",
+    "type": "http request",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8082/api/v1/status",
+    "tls": "",
+    "x": 559,
+    "y": 110,
+    "wires": [
+      [
+        "65fd2f9b.700d3"
+      ]
+    ]
+  },
+  {
+    "id": "89d25f84.ed6ad",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "func": "msg.payload = {\n    \"managers\": [\"/dev/ttyUSB3\"]\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 371,
+    "y": 71,
+    "wires": [
+      [
+        "249d1014.60768"
+      ]
+    ]
+  },
+  {
+    "id": "9c287579.a01588",
+    "type": "inject",
+    "z": "dcc3e5b5.dda138",
+    "name": "get serial ports",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 214,
+    "y": 154,
+    "wires": [
+      [
+        "4e334c8a.2b70c4"
+      ]
+    ]
+  },
+  {
+    "id": "4e334c8a.2b70c4",
+    "type": "http request",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8082/api/v1/helpers/serialports",
+    "tls": "",
+    "x": 565,
+    "y": 152,
+    "wires": [
+      [
+        "9c6b2d1c.0933a"
+      ]
+    ]
+  },
+  {
+    "id": "65fd2f9b.700d3",
+    "type": "debug",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 754,
+    "y": 110,
+    "wires": []
+  },
+  {
+    "id": "9c6b2d1c.0933a",
+    "type": "debug",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 755,
+    "y": 152,
+    "wires": []
+  },
+  {
+    "id": "23596e90.b86ba2",
+    "type": "comment",
+    "z": "dcc3e5b5.dda138",
+    "name": "=== events",
+    "info": "",
+    "x": 72,
+    "y": 190,
+    "wires": []
+  },
+  {
+    "id": "5bcd2f80.f07c",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "msg.payload.mac",
+    "func": "msg.payload = {\n    'mac': msg.payload.mac,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 187,
+    "y": 676,
+    "wires": [
+      [
+        "210f9d91.a14992"
+      ]
+    ]
+  },
+  {
+    "id": "bbd5b4ee.5ac698",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "msg.payload.fields.macAddress",
+    "func": "msg.payload = {\n    'mac':   msg.payload.fields.macAddress,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 226,
+    "y": 722,
+    "wires": [
+      [
+        "210f9d91.a14992"
+      ]
+    ]
+  },
+  {
+    "id": "3b44a542.643dca",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "discovery events",
+    "func": "var alive;\nvar mac;\n\nswitch(msg.payload.name) {\n    case 'eventMoteDelete':\n    case 'eventMoteLost':\n    case 'eventMoteReset':\n        alive = false;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    case 'eventMoteCreate':\n    case 'eventMoteJoin':\n    case 'eventMoteOperational':\n        alive = true;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    default:\n        return;\n}\n\nmsg.payload = {\n    'mac':   mac,\n    'alive': alive\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 185,
+    "y": 768,
+    "wires": [
+      [
+        "210f9d91.a14992"
+      ]
+    ]
+  },
+  {
+    "id": "c973a068.c7362",
+    "type": "comment",
+    "z": "dcc3e5b5.dda138",
+    "name": "maintain activeMotes list",
+    "info": "",
+    "x": 153,
+    "y": 634,
+    "wires": []
+  },
+  {
+    "id": "210f9d91.a14992",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "maintain active nodes list",
+    "func": "var activeMotes = flow.get('activeMotes');\nif (typeof activeMotes == 'undefined') {\n    activeMotes = [];\n}\n\nvar idx = activeMotes.indexOf(msg.payload.mac);\nif (msg.payload.alive===true) {\n    // mote is alive\n    \n    if (idx === -1) {\n        // NOT in the database: add\n        activeMotes.push(msg.payload.mac);\n    }\n} else {\n    // mote is NOT alive\n    \n    if (idx != -1) {\n        // in the database: remove\n        activeMotes.splice(activeMotes.indexOf(msg.payload.mac), 1);\n    }\n}\n\nflow.set('activeMotes',activeMotes)\n\nmsg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 638,
+    "y": 732,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "8de9ce6d.d85b4",
+    "type": "inject",
+    "z": "dcc3e5b5.dda138",
+    "name": "get activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 196,
+    "y": 811,
+    "wires": [
+      [
+        "d48562b8.74b2f"
+      ]
+    ]
+  },
+  {
+    "id": "d48562b8.74b2f",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "get activeMotes list",
+    "func": "msg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 456,
+    "y": 811,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "27f19db3.285cc2",
+    "type": "inject",
+    "z": "dcc3e5b5.dda138",
+    "name": "reset activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 854,
+    "wires": [
+      [
+        "cfc076f2.d9b638"
+      ]
+    ]
+  },
+  {
+    "id": "cfc076f2.d9b638",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "reset activeMotes list",
+    "func": "flow.set('activeMotes',[]);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 468,
+    "y": 854,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "3222cefa.1406c2",
+    "type": "comment",
+    "z": "dcc3e5b5.dda138",
+    "name": "manager commands",
+    "info": "",
+    "x": 210,
+    "y": 930,
+    "wires": []
+  },
+  {
+    "id": "438da3b8.dfe20c",
+    "type": "comment",
+    "z": "dcc3e5b5.dda138",
+    "name": "mote commands",
+    "info": "",
+    "x": 222,
+    "y": 1052,
+    "wires": []
+  },
+  {
+    "id": "f7425f47.c17c3",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "for activeMotes?",
+    "func": "if (flow.get('activeMotes').indexOf(msg.deviceId) != -1) {\n    return msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 360,
+    "y": 1092,
+    "wires": [
+      [
+        "9cdd097c.28cf78"
+      ]
+    ]
+  },
+  {
+    "id": "3320e70a.1ab078",
+    "type": "wiotp in",
+    "z": "dcc3e5b5.dda138",
+    "authType": "g",
+    "deviceKey": "37deef45.fe784",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "activeMotes",
+    "commandType": "g",
+    "name": "gateway activeMotes commands",
+    "x": 173,
+    "y": 969,
+    "wires": [
+      [
+        "900f7f14.bc307"
+      ]
+    ]
+  },
+  {
+    "id": "900f7f14.bc307",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'activeMotesResponse'\nmqttMsg.payload           = {\n    \"token\":     msg.payload.token,\n    \"response\":  flow.get('activeMotes')\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 688,
+    "y": 969,
+    "wires": [
+      [
+        "85ebb905.2a77a8"
+      ]
+    ]
+  },
+  {
+    "id": "efacf319.b3e74",
+    "type": "wiotp in",
+    "z": "dcc3e5b5.dda138",
+    "authType": "g",
+    "deviceKey": "37deef45.fe784",
+    "deviceType": "mote",
+    "deviceId": "+",
+    "command": "oap",
+    "commandType": "d",
+    "name": "mote oap commands",
+    "x": 140,
+    "y": 1094,
+    "wires": [
+      [
+        "f7425f47.c17c3"
+      ]
+    ]
+  },
+  {
+    "id": "9cdd097c.28cf78",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8082/api/v1/oap/'+msg.deviceId+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 551,
+    "y": 1092,
+    "wires": [
+      [
+        "127cdab4.a89db5"
+      ]
+    ]
+  },
+  {
+    "id": "127cdab4.a89db5",
+    "type": "http request",
+    "z": "dcc3e5b5.dda138",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 730,
+    "y": 1093,
+    "wires": [
+      [
+        "b2392d86.144a9"
+      ]
+    ]
+  },
+  {
+    "id": "b2392d86.144a9",
+    "type": "function",
+    "z": "dcc3e5b5.dda138",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.deviceType        = 'mote'\nmqttMsg.deviceId          = msg.url.split('/')[6];\nmqttMsg.event             = 'oapResponse'\nmqttMsg.payload           = {\n    \"response\" :  msg.payload,\n    \"token\":      msg.headers['x-correlation-id'],\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 918,
+    "y": 1093,
+    "wires": [
+      [
+        "85ebb905.2a77a8"
+      ]
+    ]
+  },
+  {
+    "id": "e5d822f3.c5626",
+    "type": "http in",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "url": "/manager3/hr",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 201,
+    "y": 545,
+    "wires": [
+      [
+        "5494afd1.ab46c",
+        "689e7f60.f7504",
+        "c335a797.ef9368"
+      ]
+    ]
+  },
+  {
+    "id": "287ba47b.8a8d2c",
+    "type": "wiotp out",
+    "z": "7915bfb9.9f848",
+    "authType": "g",
+    "qs": "false",
+    "qsDeviceId": "",
+    "deviceKey": "dc36b88e.d84e18",
+    "deviceType": "",
+    "deviceId": "",
+    "event": "",
+    "format": "json",
+    "name": "to IBM Watson IoT",
+    "x": 1045,
+    "y": 652,
+    "wires": []
+  },
+  {
+    "id": "9ef8a73d.66c9c8",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "payload",
+    "func": "msg.payload    = {\"d\": msg.payload.fields}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 804,
+    "y": 382,
+    "wires": [
+      [
+        "287ba47b.8a8d2c"
+      ]
+    ]
+  },
+  {
+    "id": "2c5ad98e.5b3e56",
+    "type": "http in",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "url": "/manager3/notifData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 180,
+    "y": 388,
+    "wires": [
+      [
+        "5494afd1.ab46c",
+        "10f2a211.4e2b9e",
+        "73f2c93b.925838"
+      ]
+    ]
+  },
+  {
+    "id": "5fdf1f9c.66738",
+    "type": "http in",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "url": "/manager3/oap",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 202,
+    "y": 505,
+    "wires": [
+      [
+        "5494afd1.ab46c",
+        "5b59c22b.caa6dc",
+        "c335a797.ef9368"
+      ]
+    ]
+  },
+  {
+    "id": "7f477557.ab7e1c",
+    "type": "http in",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "url": "/manager3/notifLog",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 177,
+    "y": 268,
+    "wires": [
+      [
+        "5494afd1.ab46c",
+        "3b45ae5c.142ff2"
+      ]
+    ]
+  },
+  {
+    "id": "338b13c8.e935ac",
+    "type": "http in",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "url": "/manager3/notifIpData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 170,
+    "y": 428,
+    "wires": [
+      [
+        "5494afd1.ab46c",
+        "10f2a211.4e2b9e",
+        "73f2c93b.925838"
+      ]
+    ]
+  },
+  {
+    "id": "c07fba0e.2845e8",
+    "type": "http in",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "url": "/manager3/event",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 184,
+    "y": 305,
+    "wires": [
+      [
+        "5494afd1.ab46c",
+        "3b45ae5c.142ff2",
+        "62ea52c.7bd99ac"
+      ]
+    ]
+  },
+  {
+    "id": "cb5a500.48d9ab",
+    "type": "http in",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "url": "/manager3/notifHealthReport",
+    "method": "get",
+    "swaggerDoc": "",
+    "x": 160,
+    "y": 466,
+    "wires": [
+      [
+        "5494afd1.ab46c",
+        "10f2a211.4e2b9e",
+        "73f2c93b.925838"
+      ]
+    ]
+  },
+  {
+    "id": "5494afd1.ab46c",
+    "type": "http response",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "x": 289,
+    "y": 598,
+    "wires": []
+  },
+  {
+    "id": "5b59c22b.caa6dc",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "[oap] deviceId event",
+    "func": "msg.deviceId   = msg.payload.mac\nmsg.event      = 'oap.'+msg.payload.fields.channel_str\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 429,
+    "y": 504,
+    "wires": [
+      [
+        "a77abfd3.eee01"
+      ]
+    ]
+  },
+  {
+    "id": "10f2a211.4e2b9e",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "deviceId event",
+    "func": "msg.deviceId   = msg.payload.fields.macAddress\nmsg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 441,
+    "y": 419,
+    "wires": [
+      [
+        "a77abfd3.eee01"
+      ]
+    ]
+  },
+  {
+    "id": "a77abfd3.eee01",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "deviceType",
+    "func": "msg.deviceType = \"mote\"\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 637,
+    "y": 454,
+    "wires": [
+      [
+        "9ef8a73d.66c9c8"
+      ]
+    ]
+  },
+  {
+    "id": "6449b04f.8b032",
+    "type": "comment",
+    "z": "7915bfb9.9f848",
+    "name": "mote events",
+    "info": "",
+    "x": 185,
+    "y": 350,
+    "wires": []
+  },
+  {
+    "id": "6d61ab1f.c3edd4",
+    "type": "comment",
+    "z": "7915bfb9.9f848",
+    "name": "manager events",
+    "info": "",
+    "x": 177,
+    "y": 227,
+    "wires": []
+  },
+  {
+    "id": "3b45ae5c.142ff2",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "event",
+    "func": "msg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 658,
+    "y": 314,
+    "wires": [
+      [
+        "9ef8a73d.66c9c8"
+      ]
+    ]
+  },
+  {
+    "id": "5b858ccd.f93d54",
+    "type": "wiotp in",
+    "z": "7915bfb9.9f848",
+    "authType": "g",
+    "deviceKey": "dc36b88e.d84e18",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "JsonServer",
+    "commandType": "g",
+    "name": "gateway JsonServer commands",
+    "x": 174,
+    "y": 1014,
+    "wires": [
+      [
+        "a769e586.b79b08"
+      ]
+    ]
+  },
+  {
+    "id": "36b8ae34.3c78e2",
+    "type": "comment",
+    "z": "7915bfb9.9f848",
+    "name": "=== commands",
+    "info": "",
+    "x": 101,
+    "y": 891,
+    "wires": []
+  },
+  {
+    "id": "3490bb2f.937424",
+    "type": "http request",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 597,
+    "y": 1020,
+    "wires": [
+      [
+        "c0a60c9f.b3c5a"
+      ]
+    ]
+  },
+  {
+    "id": "a769e586.b79b08",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8083'+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 410,
+    "y": 1016,
+    "wires": [
+      [
+        "3490bb2f.937424"
+      ]
+    ]
+  },
+  {
+    "id": "c0a60c9f.b3c5a",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'JsonServerResponse'\nmqttMsg.payload           = {}\nmqttMsg.payload.token     = msg.headers['x-correlation-id']\nmqttMsg.payload.response  = msg.payload\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 781,
+    "y": 1017,
+    "wires": [
+      [
+        "287ba47b.8a8d2c"
+      ]
+    ]
+  },
+  {
+    "id": "bcf2d5c3.9ff2b8",
+    "type": "split",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "splt": "\\n",
+    "x": 579,
+    "y": 540,
+    "wires": [
+      [
+        "91dee6d2.9e90b8"
+      ]
+    ]
+  },
+  {
+    "id": "689e7f60.f7504",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "split HR",
+    "func": "var payloads = [];\n\nfor (var hrname in msg.payload.hr) {\n    payloads.push(\n        {\n            'deviceType':  \"mote\",\n            'deviceId':    msg.payload.mac,\n            'payload':     msg.payload.hr[hrname],\n            'event':       'hr.'+hrname,\n        }\n    );\n}\n\nreturn {\"payload\": payloads};",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 433,
+    "y": 543,
+    "wires": [
+      [
+        "bcf2d5c3.9ff2b8"
+      ]
+    ]
+  },
+  {
+    "id": "91dee6d2.9e90b8",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "create final hr",
+    "func": "var returnMsg = {};\nreturnMsg.deviceType = msg.payload.deviceType;\nreturnMsg.deviceId   = msg.payload.deviceId;\nreturnMsg.event      = msg.payload.event;\nreturnMsg.payload    = msg.payload.payload;\nreturn returnMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 759,
+    "y": 542,
+    "wires": [
+      [
+        "287ba47b.8a8d2c"
+      ]
+    ]
+  },
+  {
+    "id": "1b5cc35.1be2b3d",
+    "type": "comment",
+    "z": "7915bfb9.9f848",
+    "name": "=== configure/check JsonServer",
+    "info": "",
+    "x": 150,
+    "y": 35,
+    "wires": []
+  },
+  {
+    "id": "adc2db86.91de78",
+    "type": "inject",
+    "z": "7915bfb9.9f848",
+    "name": "add manager",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 73,
+    "wires": [
+      [
+        "baa421c7.2e60a"
+      ]
+    ]
+  },
+  {
+    "id": "f238907a.6ab1b",
+    "type": "http request",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "method": "PUT",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8083/api/v1/config/managers",
+    "tls": "",
+    "x": 558,
+    "y": 69,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "90b50b21.5e37c8",
+    "type": "inject",
+    "z": "7915bfb9.9f848",
+    "name": "get status",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 193,
+    "y": 113,
+    "wires": [
+      [
+        "4eb8d355.2b104c"
+      ]
+    ]
+  },
+  {
+    "id": "4eb8d355.2b104c",
+    "type": "http request",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8083/api/v1/status",
+    "tls": "",
+    "x": 559,
+    "y": 110,
+    "wires": [
+      [
+        "c1dbc773.b11f28"
+      ]
+    ]
+  },
+  {
+    "id": "baa421c7.2e60a",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "func": "msg.payload = {\n    \"managers\": [\"/dev/ttyUSB3\"]\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 371,
+    "y": 71,
+    "wires": [
+      [
+        "f238907a.6ab1b"
+      ]
+    ]
+  },
+  {
+    "id": "1fee4f69.e87311",
+    "type": "inject",
+    "z": "7915bfb9.9f848",
+    "name": "get serial ports",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 214,
+    "y": 154,
+    "wires": [
+      [
+        "a2aced81.29017"
+      ]
+    ]
+  },
+  {
+    "id": "a2aced81.29017",
+    "type": "http request",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8083/api/v1/helpers/serialports",
+    "tls": "",
+    "x": 565,
+    "y": 152,
+    "wires": [
+      [
+        "3ce12fb8.33fcd"
+      ]
+    ]
+  },
+  {
+    "id": "c1dbc773.b11f28",
+    "type": "debug",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 754,
+    "y": 110,
+    "wires": []
+  },
+  {
+    "id": "3ce12fb8.33fcd",
+    "type": "debug",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 755,
+    "y": 152,
+    "wires": []
+  },
+  {
+    "id": "eeabb2e9.5a4d1",
+    "type": "comment",
+    "z": "7915bfb9.9f848",
+    "name": "=== events",
+    "info": "",
+    "x": 72,
+    "y": 190,
+    "wires": []
+  },
+  {
+    "id": "c335a797.ef9368",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "msg.payload.mac",
+    "func": "msg.payload = {\n    'mac': msg.payload.mac,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 187,
+    "y": 676,
+    "wires": [
+      [
+        "35808414.8553cc"
+      ]
+    ]
+  },
+  {
+    "id": "73f2c93b.925838",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "msg.payload.fields.macAddress",
+    "func": "msg.payload = {\n    'mac':   msg.payload.fields.macAddress,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 226,
+    "y": 722,
+    "wires": [
+      [
+        "35808414.8553cc"
+      ]
+    ]
+  },
+  {
+    "id": "62ea52c.7bd99ac",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "discovery events",
+    "func": "var alive;\nvar mac;\n\nswitch(msg.payload.name) {\n    case 'eventMoteDelete':\n    case 'eventMoteLost':\n    case 'eventMoteReset':\n        alive = false;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    case 'eventMoteCreate':\n    case 'eventMoteJoin':\n    case 'eventMoteOperational':\n        alive = true;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    default:\n        return;\n}\n\nmsg.payload = {\n    'mac':   mac,\n    'alive': alive\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 185,
+    "y": 768,
+    "wires": [
+      [
+        "35808414.8553cc"
+      ]
+    ]
+  },
+  {
+    "id": "29756ca3.073154",
+    "type": "comment",
+    "z": "7915bfb9.9f848",
+    "name": "maintain activeMotes list",
+    "info": "",
+    "x": 153,
+    "y": 634,
+    "wires": []
+  },
+  {
+    "id": "35808414.8553cc",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "maintain active nodes list",
+    "func": "var activeMotes = flow.get('activeMotes');\nif (typeof activeMotes == 'undefined') {\n    activeMotes = [];\n}\n\nvar idx = activeMotes.indexOf(msg.payload.mac);\nif (msg.payload.alive===true) {\n    // mote is alive\n    \n    if (idx === -1) {\n        // NOT in the database: add\n        activeMotes.push(msg.payload.mac);\n    }\n} else {\n    // mote is NOT alive\n    \n    if (idx != -1) {\n        // in the database: remove\n        activeMotes.splice(activeMotes.indexOf(msg.payload.mac), 1);\n    }\n}\n\nflow.set('activeMotes',activeMotes)\n\nmsg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 638,
+    "y": 732,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "ec4091bd.8e86",
+    "type": "inject",
+    "z": "7915bfb9.9f848",
+    "name": "get activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 196,
+    "y": 811,
+    "wires": [
+      [
+        "6f5ec5e.246543c"
+      ]
+    ]
+  },
+  {
+    "id": "6f5ec5e.246543c",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "get activeMotes list",
+    "func": "msg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 456,
+    "y": 811,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "75cf4b57.c4a354",
+    "type": "inject",
+    "z": "7915bfb9.9f848",
+    "name": "reset activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 854,
+    "wires": [
+      [
+        "b2b44792.89ba18"
+      ]
+    ]
+  },
+  {
+    "id": "b2b44792.89ba18",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "reset activeMotes list",
+    "func": "flow.set('activeMotes',[]);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 468,
+    "y": 854,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f971f777.561e48",
+    "type": "comment",
+    "z": "7915bfb9.9f848",
+    "name": "manager commands",
+    "info": "",
+    "x": 210,
+    "y": 930,
+    "wires": []
+  },
+  {
+    "id": "ff3d1c89.10032",
+    "type": "comment",
+    "z": "7915bfb9.9f848",
+    "name": "mote commands",
+    "info": "",
+    "x": 222,
+    "y": 1052,
+    "wires": []
+  },
+  {
+    "id": "7e1d6f0c.95513",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "for activeMotes?",
+    "func": "if (flow.get('activeMotes').indexOf(msg.deviceId) != -1) {\n    return msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 360,
+    "y": 1092,
+    "wires": [
+      [
+        "e31a581e.cd5c98"
+      ]
+    ]
+  },
+  {
+    "id": "fba85efe.8919c",
+    "type": "wiotp in",
+    "z": "7915bfb9.9f848",
+    "authType": "g",
+    "deviceKey": "dc36b88e.d84e18",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "activeMotes",
+    "commandType": "g",
+    "name": "gateway activeMotes commands",
+    "x": 173,
+    "y": 969,
+    "wires": [
+      [
+        "6d6a8be4.22b844"
+      ]
+    ]
+  },
+  {
+    "id": "6d6a8be4.22b844",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'activeMotesResponse'\nmqttMsg.payload           = {\n    \"token\":     msg.payload.token,\n    \"response\":  flow.get('activeMotes')\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 688,
+    "y": 969,
+    "wires": [
+      [
+        "287ba47b.8a8d2c"
+      ]
+    ]
+  },
+  {
+    "id": "42e0b69e.af1988",
+    "type": "wiotp in",
+    "z": "7915bfb9.9f848",
+    "authType": "g",
+    "deviceKey": "dc36b88e.d84e18",
+    "deviceType": "mote",
+    "deviceId": "+",
+    "command": "oap",
+    "commandType": "d",
+    "name": "mote oap commands",
+    "x": 140,
+    "y": 1094,
+    "wires": [
+      [
+        "7e1d6f0c.95513"
+      ]
+    ]
+  },
+  {
+    "id": "e31a581e.cd5c98",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8083/api/v1/oap/'+msg.deviceId+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 551,
+    "y": 1092,
+    "wires": [
+      [
+        "e0a71882.8e0738"
+      ]
+    ]
+  },
+  {
+    "id": "e0a71882.8e0738",
+    "type": "http request",
+    "z": "7915bfb9.9f848",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 730,
+    "y": 1093,
+    "wires": [
+      [
+        "be749d82.30b98"
+      ]
+    ]
+  },
+  {
+    "id": "be749d82.30b98",
+    "type": "function",
+    "z": "7915bfb9.9f848",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.deviceType        = 'mote'\nmqttMsg.deviceId          = msg.url.split('/')[6];\nmqttMsg.event             = 'oapResponse'\nmqttMsg.payload           = {\n    \"response\" :  msg.payload,\n    \"token\":      msg.headers['x-correlation-id'],\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 918,
+    "y": 1093,
+    "wires": [
+      [
+        "287ba47b.8a8d2c"
+      ]
+    ]
+  },
+  {
+    "id": "b706d87b.212008",
+    "type": "http in",
+    "z": "894685a.9137678",
+    "name": "",
+    "url": "/manager4/hr",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 201,
+    "y": 545,
+    "wires": [
+      [
+        "a30df030.18e3f",
+        "9022c95.9178338",
+        "a4ab74a0.031f18"
+      ]
+    ]
+  },
+  {
+    "id": "bbedf2d2.d9d01",
+    "type": "wiotp out",
+    "z": "894685a.9137678",
+    "authType": "g",
+    "qs": "false",
+    "qsDeviceId": "",
+    "deviceKey": "8dea9043.70714",
+    "deviceType": "",
+    "deviceId": "",
+    "event": "",
+    "format": "json",
+    "name": "to IBM Watson IoT",
+    "x": 1045,
+    "y": 652,
+    "wires": []
+  },
+  {
+    "id": "40170a85.408584",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "payload",
+    "func": "msg.payload    = {\"d\": msg.payload.fields}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 804,
+    "y": 382,
+    "wires": [
+      [
+        "bbedf2d2.d9d01"
+      ]
+    ]
+  },
+  {
+    "id": "50775b60.c10754",
+    "type": "http in",
+    "z": "894685a.9137678",
+    "name": "",
+    "url": "/manager4/notifData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 180,
+    "y": 388,
+    "wires": [
+      [
+        "a30df030.18e3f",
+        "2c4984c8.2d221c",
+        "f4929050.6392f"
+      ]
+    ]
+  },
+  {
+    "id": "75312b32.9e49d4",
+    "type": "http in",
+    "z": "894685a.9137678",
+    "name": "",
+    "url": "/manager4/oap",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 202,
+    "y": 505,
+    "wires": [
+      [
+        "a30df030.18e3f",
+        "2fa28a71.7b5bd6",
+        "a4ab74a0.031f18"
+      ]
+    ]
+  },
+  {
+    "id": "5f1fe569.7aa3dc",
+    "type": "http in",
+    "z": "894685a.9137678",
+    "name": "",
+    "url": "/manager4/notifLog",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 177,
+    "y": 268,
+    "wires": [
+      [
+        "a30df030.18e3f",
+        "a3cdbf1a.eb826"
+      ]
+    ]
+  },
+  {
+    "id": "80c322d0.e38e7",
+    "type": "http in",
+    "z": "894685a.9137678",
+    "name": "",
+    "url": "/manager4/notifIpData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 170,
+    "y": 428,
+    "wires": [
+      [
+        "a30df030.18e3f",
+        "2c4984c8.2d221c",
+        "f4929050.6392f"
+      ]
+    ]
+  },
+  {
+    "id": "b0b83ce5.73a76",
+    "type": "http in",
+    "z": "894685a.9137678",
+    "name": "",
+    "url": "/manager4/event",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 184,
+    "y": 305,
+    "wires": [
+      [
+        "a30df030.18e3f",
+        "a3cdbf1a.eb826",
+        "e3a750b3.081d"
+      ]
+    ]
+  },
+  {
+    "id": "2dda6a07.37e696",
+    "type": "http in",
+    "z": "894685a.9137678",
+    "name": "",
+    "url": "/manager4/notifHealthReport",
+    "method": "get",
+    "swaggerDoc": "",
+    "x": 160,
+    "y": 466,
+    "wires": [
+      [
+        "a30df030.18e3f",
+        "2c4984c8.2d221c",
+        "f4929050.6392f"
+      ]
+    ]
+  },
+  {
+    "id": "a30df030.18e3f",
+    "type": "http response",
+    "z": "894685a.9137678",
+    "name": "",
+    "x": 289,
+    "y": 598,
+    "wires": []
+  },
+  {
+    "id": "2fa28a71.7b5bd6",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "[oap] deviceId event",
+    "func": "msg.deviceId   = msg.payload.mac\nmsg.event      = 'oap.'+msg.payload.fields.channel_str\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 429,
+    "y": 504,
+    "wires": [
+      [
+        "e956d9e6.9fa938"
+      ]
+    ]
+  },
+  {
+    "id": "2c4984c8.2d221c",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "deviceId event",
+    "func": "msg.deviceId   = msg.payload.fields.macAddress\nmsg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 441,
+    "y": 419,
+    "wires": [
+      [
+        "e956d9e6.9fa938"
+      ]
+    ]
+  },
+  {
+    "id": "e956d9e6.9fa938",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "deviceType",
+    "func": "msg.deviceType = \"mote\"\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 637,
+    "y": 454,
+    "wires": [
+      [
+        "40170a85.408584"
+      ]
+    ]
+  },
+  {
+    "id": "766ec273.5a4a7c",
+    "type": "comment",
+    "z": "894685a.9137678",
+    "name": "mote events",
+    "info": "",
+    "x": 185,
+    "y": 350,
+    "wires": []
+  },
+  {
+    "id": "9fceefe0.e8df1",
+    "type": "comment",
+    "z": "894685a.9137678",
+    "name": "manager events",
+    "info": "",
+    "x": 177,
+    "y": 227,
+    "wires": []
+  },
+  {
+    "id": "a3cdbf1a.eb826",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "event",
+    "func": "msg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 658,
+    "y": 314,
+    "wires": [
+      [
+        "40170a85.408584"
+      ]
+    ]
+  },
+  {
+    "id": "a969b937.a16a48",
+    "type": "wiotp in",
+    "z": "894685a.9137678",
+    "authType": "g",
+    "deviceKey": "8dea9043.70714",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "JsonServer",
+    "commandType": "g",
+    "name": "gateway JsonServer commands",
+    "x": 174,
+    "y": 1014,
+    "wires": [
+      [
+        "e9df4842.e47a48"
+      ]
+    ]
+  },
+  {
+    "id": "12a6a427.7e448c",
+    "type": "comment",
+    "z": "894685a.9137678",
+    "name": "=== commands",
+    "info": "",
+    "x": 101,
+    "y": 891,
+    "wires": []
+  },
+  {
+    "id": "b86b354f.665558",
+    "type": "http request",
+    "z": "894685a.9137678",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 597,
+    "y": 1020,
+    "wires": [
+      [
+        "91db91c0.606b7"
+      ]
+    ]
+  },
+  {
+    "id": "e9df4842.e47a48",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8084'+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 410,
+    "y": 1016,
+    "wires": [
+      [
+        "b86b354f.665558"
+      ]
+    ]
+  },
+  {
+    "id": "91db91c0.606b7",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'JsonServerResponse'\nmqttMsg.payload           = {}\nmqttMsg.payload.token     = msg.headers['x-correlation-id']\nmqttMsg.payload.response  = msg.payload\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 781,
+    "y": 1017,
+    "wires": [
+      [
+        "bbedf2d2.d9d01"
+      ]
+    ]
+  },
+  {
+    "id": "2b2b6104.1dc41e",
+    "type": "split",
+    "z": "894685a.9137678",
+    "name": "",
+    "splt": "\\n",
+    "x": 579,
+    "y": 540,
+    "wires": [
+      [
+        "fe2dfa0.2ab7e08"
+      ]
+    ]
+  },
+  {
+    "id": "9022c95.9178338",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "split HR",
+    "func": "var payloads = [];\n\nfor (var hrname in msg.payload.hr) {\n    payloads.push(\n        {\n            'deviceType':  \"mote\",\n            'deviceId':    msg.payload.mac,\n            'payload':     msg.payload.hr[hrname],\n            'event':       'hr.'+hrname,\n        }\n    );\n}\n\nreturn {\"payload\": payloads};",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 433,
+    "y": 543,
+    "wires": [
+      [
+        "2b2b6104.1dc41e"
+      ]
+    ]
+  },
+  {
+    "id": "fe2dfa0.2ab7e08",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "create final hr",
+    "func": "var returnMsg = {};\nreturnMsg.deviceType = msg.payload.deviceType;\nreturnMsg.deviceId   = msg.payload.deviceId;\nreturnMsg.event      = msg.payload.event;\nreturnMsg.payload    = msg.payload.payload;\nreturn returnMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 759,
+    "y": 542,
+    "wires": [
+      [
+        "bbedf2d2.d9d01"
+      ]
+    ]
+  },
+  {
+    "id": "5bb90314.77fe8c",
+    "type": "comment",
+    "z": "894685a.9137678",
+    "name": "=== configure/check JsonServer",
+    "info": "",
+    "x": 150,
+    "y": 35,
+    "wires": []
+  },
+  {
+    "id": "2c00d7bc.939e88",
+    "type": "inject",
+    "z": "894685a.9137678",
+    "name": "add manager",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 73,
+    "wires": [
+      [
+        "a62290a9.296f9"
+      ]
+    ]
+  },
+  {
+    "id": "648fa8a.5116d58",
+    "type": "http request",
+    "z": "894685a.9137678",
+    "name": "",
+    "method": "PUT",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8084/api/v1/config/managers",
+    "tls": "",
+    "x": 558,
+    "y": 69,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "62d19d04.09ffe4",
+    "type": "inject",
+    "z": "894685a.9137678",
+    "name": "get status",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 193,
+    "y": 113,
+    "wires": [
+      [
+        "bb621aba.255308"
+      ]
+    ]
+  },
+  {
+    "id": "bb621aba.255308",
+    "type": "http request",
+    "z": "894685a.9137678",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8084/api/v1/status",
+    "tls": "",
+    "x": 559,
+    "y": 110,
+    "wires": [
+      [
+        "39aa368e.1ca18a"
+      ]
+    ]
+  },
+  {
+    "id": "a62290a9.296f9",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "",
+    "func": "msg.payload = {\n    \"managers\": [\"/dev/ttyUSB3\"]\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 371,
+    "y": 71,
+    "wires": [
+      [
+        "648fa8a.5116d58"
+      ]
+    ]
+  },
+  {
+    "id": "7e9a0aee.bc4b24",
+    "type": "inject",
+    "z": "894685a.9137678",
+    "name": "get serial ports",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 214,
+    "y": 154,
+    "wires": [
+      [
+        "1faa7bb.bdbde84"
+      ]
+    ]
+  },
+  {
+    "id": "1faa7bb.bdbde84",
+    "type": "http request",
+    "z": "894685a.9137678",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8084/api/v1/helpers/serialports",
+    "tls": "",
+    "x": 565,
+    "y": 152,
+    "wires": [
+      [
+        "1e6f1344.d27b7d"
+      ]
+    ]
+  },
+  {
+    "id": "39aa368e.1ca18a",
+    "type": "debug",
+    "z": "894685a.9137678",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 754,
+    "y": 110,
+    "wires": []
+  },
+  {
+    "id": "1e6f1344.d27b7d",
+    "type": "debug",
+    "z": "894685a.9137678",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 755,
+    "y": 152,
+    "wires": []
+  },
+  {
+    "id": "13b38599.c2568a",
+    "type": "comment",
+    "z": "894685a.9137678",
+    "name": "=== events",
+    "info": "",
+    "x": 72,
+    "y": 190,
+    "wires": []
+  },
+  {
+    "id": "a4ab74a0.031f18",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "msg.payload.mac",
+    "func": "msg.payload = {\n    'mac': msg.payload.mac,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 187,
+    "y": 676,
+    "wires": [
+      [
+        "132f2d24.8b6f73"
+      ]
+    ]
+  },
+  {
+    "id": "f4929050.6392f",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "msg.payload.fields.macAddress",
+    "func": "msg.payload = {\n    'mac':   msg.payload.fields.macAddress,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 226,
+    "y": 722,
+    "wires": [
+      [
+        "132f2d24.8b6f73"
+      ]
+    ]
+  },
+  {
+    "id": "e3a750b3.081d",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "discovery events",
+    "func": "var alive;\nvar mac;\n\nswitch(msg.payload.name) {\n    case 'eventMoteDelete':\n    case 'eventMoteLost':\n    case 'eventMoteReset':\n        alive = false;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    case 'eventMoteCreate':\n    case 'eventMoteJoin':\n    case 'eventMoteOperational':\n        alive = true;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    default:\n        return;\n}\n\nmsg.payload = {\n    'mac':   mac,\n    'alive': alive\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 185,
+    "y": 768,
+    "wires": [
+      [
+        "132f2d24.8b6f73"
+      ]
+    ]
+  },
+  {
+    "id": "68b94af8.cf7234",
+    "type": "comment",
+    "z": "894685a.9137678",
+    "name": "maintain activeMotes list",
+    "info": "",
+    "x": 153,
+    "y": 634,
+    "wires": []
+  },
+  {
+    "id": "132f2d24.8b6f73",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "maintain active nodes list",
+    "func": "var activeMotes = flow.get('activeMotes');\nif (typeof activeMotes == 'undefined') {\n    activeMotes = [];\n}\n\nvar idx = activeMotes.indexOf(msg.payload.mac);\nif (msg.payload.alive===true) {\n    // mote is alive\n    \n    if (idx === -1) {\n        // NOT in the database: add\n        activeMotes.push(msg.payload.mac);\n    }\n} else {\n    // mote is NOT alive\n    \n    if (idx != -1) {\n        // in the database: remove\n        activeMotes.splice(activeMotes.indexOf(msg.payload.mac), 1);\n    }\n}\n\nflow.set('activeMotes',activeMotes)\n\nmsg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 638,
+    "y": 732,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "24532d16.3fe302",
+    "type": "inject",
+    "z": "894685a.9137678",
+    "name": "get activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 196,
+    "y": 811,
+    "wires": [
+      [
+        "6ac07ad5.6d76a4"
+      ]
+    ]
+  },
+  {
+    "id": "6ac07ad5.6d76a4",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "get activeMotes list",
+    "func": "msg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 456,
+    "y": 811,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "ac8d8b4e.759e48",
+    "type": "inject",
+    "z": "894685a.9137678",
+    "name": "reset activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 854,
+    "wires": [
+      [
+        "ccecafb4.38575"
+      ]
+    ]
+  },
+  {
+    "id": "ccecafb4.38575",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "reset activeMotes list",
+    "func": "flow.set('activeMotes',[]);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 468,
+    "y": 854,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "300b9229.1e7f1e",
+    "type": "comment",
+    "z": "894685a.9137678",
+    "name": "manager commands",
+    "info": "",
+    "x": 210,
+    "y": 930,
+    "wires": []
+  },
+  {
+    "id": "c76fdf30.1690d",
+    "type": "comment",
+    "z": "894685a.9137678",
+    "name": "mote commands",
+    "info": "",
+    "x": 222,
+    "y": 1052,
+    "wires": []
+  },
+  {
+    "id": "aa008ce1.0a311",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "for activeMotes?",
+    "func": "if (flow.get('activeMotes').indexOf(msg.deviceId) != -1) {\n    return msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 360,
+    "y": 1092,
+    "wires": [
+      [
+        "583f686f.55ffc8"
+      ]
+    ]
+  },
+  {
+    "id": "8420c53.633ae38",
+    "type": "wiotp in",
+    "z": "894685a.9137678",
+    "authType": "g",
+    "deviceKey": "8dea9043.70714",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "activeMotes",
+    "commandType": "g",
+    "name": "gateway activeMotes commands",
+    "x": 173,
+    "y": 969,
+    "wires": [
+      [
+        "ed653f9f.351da"
+      ]
+    ]
+  },
+  {
+    "id": "ed653f9f.351da",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'activeMotesResponse'\nmqttMsg.payload           = {\n    \"token\":     msg.payload.token,\n    \"response\":  flow.get('activeMotes')\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 688,
+    "y": 969,
+    "wires": [
+      [
+        "bbedf2d2.d9d01"
+      ]
+    ]
+  },
+  {
+    "id": "7c5cc2b9.764e1c",
+    "type": "wiotp in",
+    "z": "894685a.9137678",
+    "authType": "g",
+    "deviceKey": "8dea9043.70714",
+    "deviceType": "mote",
+    "deviceId": "+",
+    "command": "oap",
+    "commandType": "d",
+    "name": "mote oap commands",
+    "x": 140,
+    "y": 1094,
+    "wires": [
+      [
+        "aa008ce1.0a311"
+      ]
+    ]
+  },
+  {
+    "id": "583f686f.55ffc8",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8084/api/v1/oap/'+msg.deviceId+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 551,
+    "y": 1092,
+    "wires": [
+      [
+        "bcdbfebf.6ceb9"
+      ]
+    ]
+  },
+  {
+    "id": "bcdbfebf.6ceb9",
+    "type": "http request",
+    "z": "894685a.9137678",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 730,
+    "y": 1093,
+    "wires": [
+      [
+        "c1738f3d.245eb"
+      ]
+    ]
+  },
+  {
+    "id": "c1738f3d.245eb",
+    "type": "function",
+    "z": "894685a.9137678",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.deviceType        = 'mote'\nmqttMsg.deviceId          = msg.url.split('/')[6];\nmqttMsg.event             = 'oapResponse'\nmqttMsg.payload           = {\n    \"response\" :  msg.payload,\n    \"token\":      msg.headers['x-correlation-id'],\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 918,
+    "y": 1093,
+    "wires": [
+      [
+        "bbedf2d2.d9d01"
+      ]
+    ]
+  },
+  {
+    "id": "1ab2a728.0f8549",
+    "type": "http in",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "url": "/manager5/hr",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 201,
+    "y": 545,
+    "wires": [
+      [
+        "c7b4666e.201fd8",
+        "10b6c6e0.20f149",
+        "9f6ad641.9a84d8"
+      ]
+    ]
+  },
+  {
+    "id": "1cec78df.4cc417",
+    "type": "wiotp out",
+    "z": "8a9a84fa.c24858",
+    "authType": "g",
+    "qs": "false",
+    "qsDeviceId": "",
+    "deviceKey": "e58003a5.b3ef3",
+    "deviceType": "",
+    "deviceId": "",
+    "event": "",
+    "format": "json",
+    "name": "to IBM Watson IoT",
+    "x": 1045,
+    "y": 652,
+    "wires": []
+  },
+  {
+    "id": "4ab6db66.f66224",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "payload",
+    "func": "msg.payload    = {\"d\": msg.payload.fields}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 804,
+    "y": 382,
+    "wires": [
+      [
+        "1cec78df.4cc417"
+      ]
+    ]
+  },
+  {
+    "id": "bf532c97.6b959",
+    "type": "http in",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "url": "/manager5/notifData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 180,
+    "y": 388,
+    "wires": [
+      [
+        "c7b4666e.201fd8",
+        "7ccb6b44.9dada4",
+        "9f22b3f7.913bc"
+      ]
+    ]
+  },
+  {
+    "id": "3b95e772.1147c8",
+    "type": "http in",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "url": "/manager5/oap",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 202,
+    "y": 505,
+    "wires": [
+      [
+        "c7b4666e.201fd8",
+        "e75c19f7.1d10e8",
+        "9f6ad641.9a84d8"
+      ]
+    ]
+  },
+  {
+    "id": "96407ec3.178c6",
+    "type": "http in",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "url": "/manager5/notifLog",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 177,
+    "y": 268,
+    "wires": [
+      [
+        "c7b4666e.201fd8",
+        "2188f944.c7c9b6"
+      ]
+    ]
+  },
+  {
+    "id": "1ccd3d82.aae742",
+    "type": "http in",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "url": "/manager5/notifIpData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 170,
+    "y": 428,
+    "wires": [
+      [
+        "c7b4666e.201fd8",
+        "7ccb6b44.9dada4",
+        "9f22b3f7.913bc"
+      ]
+    ]
+  },
+  {
+    "id": "4a1b5b8f.18b934",
+    "type": "http in",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "url": "/manager5/event",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 184,
+    "y": 305,
+    "wires": [
+      [
+        "c7b4666e.201fd8",
+        "2188f944.c7c9b6",
+        "dd2fcfc5.e38e1"
+      ]
+    ]
+  },
+  {
+    "id": "d8572d66.c7e57",
+    "type": "http in",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "url": "/manager5/notifHealthReport",
+    "method": "get",
+    "swaggerDoc": "",
+    "x": 160,
+    "y": 466,
+    "wires": [
+      [
+        "c7b4666e.201fd8",
+        "7ccb6b44.9dada4",
+        "9f22b3f7.913bc"
+      ]
+    ]
+  },
+  {
+    "id": "c7b4666e.201fd8",
+    "type": "http response",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "x": 289,
+    "y": 598,
+    "wires": []
+  },
+  {
+    "id": "e75c19f7.1d10e8",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "[oap] deviceId event",
+    "func": "msg.deviceId   = msg.payload.mac\nmsg.event      = 'oap.'+msg.payload.fields.channel_str\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 429,
+    "y": 504,
+    "wires": [
+      [
+        "8e164210.16607"
+      ]
+    ]
+  },
+  {
+    "id": "7ccb6b44.9dada4",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "deviceId event",
+    "func": "msg.deviceId   = msg.payload.fields.macAddress\nmsg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 441,
+    "y": 419,
+    "wires": [
+      [
+        "8e164210.16607"
+      ]
+    ]
+  },
+  {
+    "id": "8e164210.16607",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "deviceType",
+    "func": "msg.deviceType = \"mote\"\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 637,
+    "y": 454,
+    "wires": [
+      [
+        "4ab6db66.f66224"
+      ]
+    ]
+  },
+  {
+    "id": "70fb6740.94caf8",
+    "type": "comment",
+    "z": "8a9a84fa.c24858",
+    "name": "mote events",
+    "info": "",
+    "x": 185,
+    "y": 350,
+    "wires": []
+  },
+  {
+    "id": "74ec9d22.568604",
+    "type": "comment",
+    "z": "8a9a84fa.c24858",
+    "name": "manager events",
+    "info": "",
+    "x": 177,
+    "y": 227,
+    "wires": []
+  },
+  {
+    "id": "2188f944.c7c9b6",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "event",
+    "func": "msg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 658,
+    "y": 314,
+    "wires": [
+      [
+        "4ab6db66.f66224"
+      ]
+    ]
+  },
+  {
+    "id": "fc774858.b8c018",
+    "type": "wiotp in",
+    "z": "8a9a84fa.c24858",
+    "authType": "g",
+    "deviceKey": "e58003a5.b3ef3",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "JsonServer",
+    "commandType": "g",
+    "name": "gateway JsonServer commands",
+    "x": 174,
+    "y": 1014,
+    "wires": [
+      [
+        "a4a3c150.acaf4"
+      ]
+    ]
+  },
+  {
+    "id": "4916a92b.1d8328",
+    "type": "comment",
+    "z": "8a9a84fa.c24858",
+    "name": "=== commands",
+    "info": "",
+    "x": 101,
+    "y": 891,
+    "wires": []
+  },
+  {
+    "id": "9565aa8b.be3f48",
+    "type": "http request",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 597,
+    "y": 1020,
+    "wires": [
+      [
+        "326f3547.cd30ca"
+      ]
+    ]
+  },
+  {
+    "id": "a4a3c150.acaf4",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8085'+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 410,
+    "y": 1016,
+    "wires": [
+      [
+        "9565aa8b.be3f48"
+      ]
+    ]
+  },
+  {
+    "id": "326f3547.cd30ca",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'JsonServerResponse'\nmqttMsg.payload           = {}\nmqttMsg.payload.token     = msg.headers['x-correlation-id']\nmqttMsg.payload.response  = msg.payload\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 781,
+    "y": 1017,
+    "wires": [
+      [
+        "1cec78df.4cc417"
+      ]
+    ]
+  },
+  {
+    "id": "cfe79e81.05254",
+    "type": "split",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "splt": "\\n",
+    "x": 579,
+    "y": 540,
+    "wires": [
+      [
+        "5aef8012.e7203"
+      ]
+    ]
+  },
+  {
+    "id": "10b6c6e0.20f149",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "split HR",
+    "func": "var payloads = [];\n\nfor (var hrname in msg.payload.hr) {\n    payloads.push(\n        {\n            'deviceType':  \"mote\",\n            'deviceId':    msg.payload.mac,\n            'payload':     msg.payload.hr[hrname],\n            'event':       'hr.'+hrname,\n        }\n    );\n}\n\nreturn {\"payload\": payloads};",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 433,
+    "y": 543,
+    "wires": [
+      [
+        "cfe79e81.05254"
+      ]
+    ]
+  },
+  {
+    "id": "5aef8012.e7203",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "create final hr",
+    "func": "var returnMsg = {};\nreturnMsg.deviceType = msg.payload.deviceType;\nreturnMsg.deviceId   = msg.payload.deviceId;\nreturnMsg.event      = msg.payload.event;\nreturnMsg.payload    = msg.payload.payload;\nreturn returnMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 759,
+    "y": 542,
+    "wires": [
+      [
+        "1cec78df.4cc417"
+      ]
+    ]
+  },
+  {
+    "id": "78029b62.346694",
+    "type": "comment",
+    "z": "8a9a84fa.c24858",
+    "name": "=== configure/check JsonServer",
+    "info": "",
+    "x": 150,
+    "y": 35,
+    "wires": []
+  },
+  {
+    "id": "81270b3f.321738",
+    "type": "inject",
+    "z": "8a9a84fa.c24858",
+    "name": "add manager",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 73,
+    "wires": [
+      [
+        "8693a5b6.a1aa78"
+      ]
+    ]
+  },
+  {
+    "id": "232e8dd7.428de2",
+    "type": "http request",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "method": "PUT",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8085/api/v1/config/managers",
+    "tls": "",
+    "x": 558,
+    "y": 69,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "9f2da009.e579c",
+    "type": "inject",
+    "z": "8a9a84fa.c24858",
+    "name": "get status",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 193,
+    "y": 113,
+    "wires": [
+      [
+        "63106ee.397209"
+      ]
+    ]
+  },
+  {
+    "id": "63106ee.397209",
+    "type": "http request",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8085/api/v1/status",
+    "tls": "",
+    "x": 559,
+    "y": 110,
+    "wires": [
+      [
+        "c4d6a6d7.fa8f58"
+      ]
+    ]
+  },
+  {
+    "id": "8693a5b6.a1aa78",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "func": "msg.payload = {\n    \"managers\": [\"/dev/ttyUSB3\"]\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 371,
+    "y": 71,
+    "wires": [
+      [
+        "232e8dd7.428de2"
+      ]
+    ]
+  },
+  {
+    "id": "85b90209.8ea4b",
+    "type": "inject",
+    "z": "8a9a84fa.c24858",
+    "name": "get serial ports",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 214,
+    "y": 154,
+    "wires": [
+      [
+        "e4cfec4e.f0317"
+      ]
+    ]
+  },
+  {
+    "id": "e4cfec4e.f0317",
+    "type": "http request",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8085/api/v1/helpers/serialports",
+    "tls": "",
+    "x": 565,
+    "y": 152,
+    "wires": [
+      [
+        "386b5e39.b72dd2"
+      ]
+    ]
+  },
+  {
+    "id": "c4d6a6d7.fa8f58",
+    "type": "debug",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 754,
+    "y": 110,
+    "wires": []
+  },
+  {
+    "id": "386b5e39.b72dd2",
+    "type": "debug",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 755,
+    "y": 152,
+    "wires": []
+  },
+  {
+    "id": "febd10db.6a411",
+    "type": "comment",
+    "z": "8a9a84fa.c24858",
+    "name": "=== events",
+    "info": "",
+    "x": 72,
+    "y": 190,
+    "wires": []
+  },
+  {
+    "id": "9f6ad641.9a84d8",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "msg.payload.mac",
+    "func": "msg.payload = {\n    'mac': msg.payload.mac,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 187,
+    "y": 676,
+    "wires": [
+      [
+        "a5483f3d.9351"
+      ]
+    ]
+  },
+  {
+    "id": "9f22b3f7.913bc",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "msg.payload.fields.macAddress",
+    "func": "msg.payload = {\n    'mac':   msg.payload.fields.macAddress,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 226,
+    "y": 722,
+    "wires": [
+      [
+        "a5483f3d.9351"
+      ]
+    ]
+  },
+  {
+    "id": "dd2fcfc5.e38e1",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "discovery events",
+    "func": "var alive;\nvar mac;\n\nswitch(msg.payload.name) {\n    case 'eventMoteDelete':\n    case 'eventMoteLost':\n    case 'eventMoteReset':\n        alive = false;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    case 'eventMoteCreate':\n    case 'eventMoteJoin':\n    case 'eventMoteOperational':\n        alive = true;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    default:\n        return;\n}\n\nmsg.payload = {\n    'mac':   mac,\n    'alive': alive\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 185,
+    "y": 768,
+    "wires": [
+      [
+        "a5483f3d.9351"
+      ]
+    ]
+  },
+  {
+    "id": "637fe941.afc968",
+    "type": "comment",
+    "z": "8a9a84fa.c24858",
+    "name": "maintain activeMotes list",
+    "info": "",
+    "x": 153,
+    "y": 634,
+    "wires": []
+  },
+  {
+    "id": "a5483f3d.9351",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "maintain active nodes list",
+    "func": "var activeMotes = flow.get('activeMotes');\nif (typeof activeMotes == 'undefined') {\n    activeMotes = [];\n}\n\nvar idx = activeMotes.indexOf(msg.payload.mac);\nif (msg.payload.alive===true) {\n    // mote is alive\n    \n    if (idx === -1) {\n        // NOT in the database: add\n        activeMotes.push(msg.payload.mac);\n    }\n} else {\n    // mote is NOT alive\n    \n    if (idx != -1) {\n        // in the database: remove\n        activeMotes.splice(activeMotes.indexOf(msg.payload.mac), 1);\n    }\n}\n\nflow.set('activeMotes',activeMotes)\n\nmsg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 638,
+    "y": 732,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "cfa81962.7862e8",
+    "type": "inject",
+    "z": "8a9a84fa.c24858",
+    "name": "get activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 196,
+    "y": 811,
+    "wires": [
+      [
+        "aee514fc.389a08"
+      ]
+    ]
+  },
+  {
+    "id": "aee514fc.389a08",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "get activeMotes list",
+    "func": "msg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 456,
+    "y": 811,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f846862.558ca78",
+    "type": "inject",
+    "z": "8a9a84fa.c24858",
+    "name": "reset activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 854,
+    "wires": [
+      [
+        "7bdd514a.a78a1"
+      ]
+    ]
+  },
+  {
+    "id": "7bdd514a.a78a1",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "reset activeMotes list",
+    "func": "flow.set('activeMotes',[]);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 468,
+    "y": 854,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "8ff8abc3.333cf8",
+    "type": "comment",
+    "z": "8a9a84fa.c24858",
+    "name": "manager commands",
+    "info": "",
+    "x": 210,
+    "y": 930,
+    "wires": []
+  },
+  {
+    "id": "8d6070d3.9baeb",
+    "type": "comment",
+    "z": "8a9a84fa.c24858",
+    "name": "mote commands",
+    "info": "",
+    "x": 222,
+    "y": 1052,
+    "wires": []
+  },
+  {
+    "id": "c57eca52.9335c8",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "for activeMotes?",
+    "func": "if (flow.get('activeMotes').indexOf(msg.deviceId) != -1) {\n    return msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 360,
+    "y": 1092,
+    "wires": [
+      [
+        "23c0fc2b.57ffb4"
+      ]
+    ]
+  },
+  {
+    "id": "d54496c5.9659f8",
+    "type": "wiotp in",
+    "z": "8a9a84fa.c24858",
+    "authType": "g",
+    "deviceKey": "e58003a5.b3ef3",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "activeMotes",
+    "commandType": "g",
+    "name": "gateway activeMotes commands",
+    "x": 173,
+    "y": 969,
+    "wires": [
+      [
+        "6761d514.e9fcdc"
+      ]
+    ]
+  },
+  {
+    "id": "6761d514.e9fcdc",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'activeMotesResponse'\nmqttMsg.payload           = {\n    \"token\":     msg.payload.token,\n    \"response\":  flow.get('activeMotes')\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 688,
+    "y": 969,
+    "wires": [
+      [
+        "1cec78df.4cc417"
+      ]
+    ]
+  },
+  {
+    "id": "e047e75e.2dea88",
+    "type": "wiotp in",
+    "z": "8a9a84fa.c24858",
+    "authType": "g",
+    "deviceKey": "e58003a5.b3ef3",
+    "deviceType": "mote",
+    "deviceId": "+",
+    "command": "oap",
+    "commandType": "d",
+    "name": "mote oap commands",
+    "x": 140,
+    "y": 1094,
+    "wires": [
+      [
+        "c57eca52.9335c8"
+      ]
+    ]
+  },
+  {
+    "id": "23c0fc2b.57ffb4",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8085/api/v1/oap/'+msg.deviceId+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 551,
+    "y": 1092,
+    "wires": [
+      [
+        "6dab17d.1794ee8"
+      ]
+    ]
+  },
+  {
+    "id": "6dab17d.1794ee8",
+    "type": "http request",
+    "z": "8a9a84fa.c24858",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 730,
+    "y": 1093,
+    "wires": [
+      [
+        "3402ef76.6b091"
+      ]
+    ]
+  },
+  {
+    "id": "3402ef76.6b091",
+    "type": "function",
+    "z": "8a9a84fa.c24858",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.deviceType        = 'mote'\nmqttMsg.deviceId          = msg.url.split('/')[6];\nmqttMsg.event             = 'oapResponse'\nmqttMsg.payload           = {\n    \"response\" :  msg.payload,\n    \"token\":      msg.headers['x-correlation-id'],\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 918,
+    "y": 1093,
+    "wires": [
+      [
+        "1cec78df.4cc417"
+      ]
+    ]
+  },
+  {
+    "id": "ed25ebda.3b47e8",
+    "type": "http in",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "url": "/manager6/hr",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 201,
+    "y": 545,
+    "wires": [
+      [
+        "e9237278.4cf1b",
+        "7c591b54.91a0d4",
+        "e8702106.ecc0f"
+      ]
+    ]
+  },
+  {
+    "id": "66df8354.1da32c",
+    "type": "wiotp out",
+    "z": "ffe584e6.6943d8",
+    "authType": "g",
+    "qs": "false",
+    "qsDeviceId": "",
+    "deviceKey": "94a74cd9.a0372",
+    "deviceType": "",
+    "deviceId": "",
+    "event": "",
+    "format": "json",
+    "name": "to IBM Watson IoT",
+    "x": 1045,
+    "y": 652,
+    "wires": []
+  },
+  {
+    "id": "3f0d48ce.8f0ad8",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "payload",
+    "func": "msg.payload    = {\"d\": msg.payload.fields}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 804,
+    "y": 382,
+    "wires": [
+      [
+        "66df8354.1da32c"
+      ]
+    ]
+  },
+  {
+    "id": "6de99dcb.81c644",
+    "type": "http in",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "url": "/manager6/notifData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 180,
+    "y": 388,
+    "wires": [
+      [
+        "e9237278.4cf1b",
+        "b68681f1.2620f",
+        "33a8322c.565e3e"
+      ]
+    ]
+  },
+  {
+    "id": "a33c4751.e10868",
+    "type": "http in",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "url": "/manager6/oap",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 202,
+    "y": 505,
+    "wires": [
+      [
+        "e9237278.4cf1b",
+        "a8aecb00.a53238",
+        "e8702106.ecc0f"
+      ]
+    ]
+  },
+  {
+    "id": "7c3472d3.2e31fc",
+    "type": "http in",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "url": "/manager6/notifLog",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 177,
+    "y": 268,
+    "wires": [
+      [
+        "e9237278.4cf1b",
+        "2e967877.4b8968"
+      ]
+    ]
+  },
+  {
+    "id": "9978087d.82c9f8",
+    "type": "http in",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "url": "/manager6/notifIpData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 170,
+    "y": 428,
+    "wires": [
+      [
+        "e9237278.4cf1b",
+        "b68681f1.2620f",
+        "33a8322c.565e3e"
+      ]
+    ]
+  },
+  {
+    "id": "2461cc07.9ff844",
+    "type": "http in",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "url": "/manager6/event",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 184,
+    "y": 305,
+    "wires": [
+      [
+        "e9237278.4cf1b",
+        "2e967877.4b8968",
+        "81b5b653.25adb8"
+      ]
+    ]
+  },
+  {
+    "id": "c1cf1d91.7a463",
+    "type": "http in",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "url": "/manager6/notifHealthReport",
+    "method": "get",
+    "swaggerDoc": "",
+    "x": 160,
+    "y": 466,
+    "wires": [
+      [
+        "e9237278.4cf1b",
+        "b68681f1.2620f",
+        "33a8322c.565e3e"
+      ]
+    ]
+  },
+  {
+    "id": "e9237278.4cf1b",
+    "type": "http response",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "x": 289,
+    "y": 598,
+    "wires": []
+  },
+  {
+    "id": "a8aecb00.a53238",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "[oap] deviceId event",
+    "func": "msg.deviceId   = msg.payload.mac\nmsg.event      = 'oap.'+msg.payload.fields.channel_str\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 429,
+    "y": 504,
+    "wires": [
+      [
+        "3150bf1.de9fb4"
+      ]
+    ]
+  },
+  {
+    "id": "b68681f1.2620f",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "deviceId event",
+    "func": "msg.deviceId   = msg.payload.fields.macAddress\nmsg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 441,
+    "y": 419,
+    "wires": [
+      [
+        "3150bf1.de9fb4"
+      ]
+    ]
+  },
+  {
+    "id": "3150bf1.de9fb4",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "deviceType",
+    "func": "msg.deviceType = \"mote\"\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 637,
+    "y": 454,
+    "wires": [
+      [
+        "3f0d48ce.8f0ad8"
+      ]
+    ]
+  },
+  {
+    "id": "ff17a85f.372da8",
+    "type": "comment",
+    "z": "ffe584e6.6943d8",
+    "name": "mote events",
+    "info": "",
+    "x": 185,
+    "y": 350,
+    "wires": []
+  },
+  {
+    "id": "79489d02.20e9d4",
+    "type": "comment",
+    "z": "ffe584e6.6943d8",
+    "name": "manager events",
+    "info": "",
+    "x": 177,
+    "y": 227,
+    "wires": []
+  },
+  {
+    "id": "2e967877.4b8968",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "event",
+    "func": "msg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 658,
+    "y": 314,
+    "wires": [
+      [
+        "3f0d48ce.8f0ad8"
+      ]
+    ]
+  },
+  {
+    "id": "b9fa6006.27f3",
+    "type": "wiotp in",
+    "z": "ffe584e6.6943d8",
+    "authType": "g",
+    "deviceKey": "94a74cd9.a0372",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "JsonServer",
+    "commandType": "g",
+    "name": "gateway JsonServer commands",
+    "x": 174,
+    "y": 1014,
+    "wires": [
+      [
+        "71f33029.74972"
+      ]
+    ]
+  },
+  {
+    "id": "389a41a2.816b9e",
+    "type": "comment",
+    "z": "ffe584e6.6943d8",
+    "name": "=== commands",
+    "info": "",
+    "x": 101,
+    "y": 891,
+    "wires": []
+  },
+  {
+    "id": "bb8a8884.dc0e98",
+    "type": "http request",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 597,
+    "y": 1020,
+    "wires": [
+      [
+        "3b77df17.2e97c"
+      ]
+    ]
+  },
+  {
+    "id": "71f33029.74972",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8086'+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 410,
+    "y": 1016,
+    "wires": [
+      [
+        "bb8a8884.dc0e98"
+      ]
+    ]
+  },
+  {
+    "id": "3b77df17.2e97c",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'JsonServerResponse'\nmqttMsg.payload           = {}\nmqttMsg.payload.token     = msg.headers['x-correlation-id']\nmqttMsg.payload.response  = msg.payload\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 781,
+    "y": 1017,
+    "wires": [
+      [
+        "66df8354.1da32c"
+      ]
+    ]
+  },
+  {
+    "id": "96ff0f63.8ce89",
+    "type": "split",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "splt": "\\n",
+    "x": 579,
+    "y": 540,
+    "wires": [
+      [
+        "a35edc7d.2c1cc"
+      ]
+    ]
+  },
+  {
+    "id": "7c591b54.91a0d4",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "split HR",
+    "func": "var payloads = [];\n\nfor (var hrname in msg.payload.hr) {\n    payloads.push(\n        {\n            'deviceType':  \"mote\",\n            'deviceId':    msg.payload.mac,\n            'payload':     msg.payload.hr[hrname],\n            'event':       'hr.'+hrname,\n        }\n    );\n}\n\nreturn {\"payload\": payloads};",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 433,
+    "y": 543,
+    "wires": [
+      [
+        "96ff0f63.8ce89"
+      ]
+    ]
+  },
+  {
+    "id": "a35edc7d.2c1cc",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "create final hr",
+    "func": "var returnMsg = {};\nreturnMsg.deviceType = msg.payload.deviceType;\nreturnMsg.deviceId   = msg.payload.deviceId;\nreturnMsg.event      = msg.payload.event;\nreturnMsg.payload    = msg.payload.payload;\nreturn returnMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 759,
+    "y": 542,
+    "wires": [
+      [
+        "66df8354.1da32c"
+      ]
+    ]
+  },
+  {
+    "id": "caa50d40.9df67",
+    "type": "comment",
+    "z": "ffe584e6.6943d8",
+    "name": "=== configure/check JsonServer",
+    "info": "",
+    "x": 150,
+    "y": 35,
+    "wires": []
+  },
+  {
+    "id": "2fa16e0f.e6e3f2",
+    "type": "inject",
+    "z": "ffe584e6.6943d8",
+    "name": "add manager",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 73,
+    "wires": [
+      [
+        "1c2e15a6.13bf4a"
+      ]
+    ]
+  },
+  {
+    "id": "86c8c742.0cc668",
+    "type": "http request",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "method": "PUT",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8086/api/v1/config/managers",
+    "tls": "",
+    "x": 558,
+    "y": 69,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "732a75d8.a9983c",
+    "type": "inject",
+    "z": "ffe584e6.6943d8",
+    "name": "get status",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 193,
+    "y": 113,
+    "wires": [
+      [
+        "bb04a675.c36ed8"
+      ]
+    ]
+  },
+  {
+    "id": "bb04a675.c36ed8",
+    "type": "http request",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8086/api/v1/status",
+    "tls": "",
+    "x": 559,
+    "y": 110,
+    "wires": [
+      [
+        "5f8559bd.217ca8"
+      ]
+    ]
+  },
+  {
+    "id": "1c2e15a6.13bf4a",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "func": "msg.payload = {\n    \"managers\": [\"/dev/ttyUSB3\"]\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 371,
+    "y": 71,
+    "wires": [
+      [
+        "86c8c742.0cc668"
+      ]
+    ]
+  },
+  {
+    "id": "843191c4.aad3e",
+    "type": "inject",
+    "z": "ffe584e6.6943d8",
+    "name": "get serial ports",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 214,
+    "y": 154,
+    "wires": [
+      [
+        "c4d0ff56.57129"
+      ]
+    ]
+  },
+  {
+    "id": "c4d0ff56.57129",
+    "type": "http request",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8086/api/v1/helpers/serialports",
+    "tls": "",
+    "x": 565,
+    "y": 152,
+    "wires": [
+      [
+        "fa2b48b3.5fb568"
+      ]
+    ]
+  },
+  {
+    "id": "5f8559bd.217ca8",
+    "type": "debug",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 754,
+    "y": 110,
+    "wires": []
+  },
+  {
+    "id": "fa2b48b3.5fb568",
+    "type": "debug",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 755,
+    "y": 152,
+    "wires": []
+  },
+  {
+    "id": "61e93a6c.ae0f74",
+    "type": "comment",
+    "z": "ffe584e6.6943d8",
+    "name": "=== events",
+    "info": "",
+    "x": 72,
+    "y": 190,
+    "wires": []
+  },
+  {
+    "id": "e8702106.ecc0f",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "msg.payload.mac",
+    "func": "msg.payload = {\n    'mac': msg.payload.mac,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 187,
+    "y": 676,
+    "wires": [
+      [
+        "ae4db5e4.2628d8"
+      ]
+    ]
+  },
+  {
+    "id": "33a8322c.565e3e",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "msg.payload.fields.macAddress",
+    "func": "msg.payload = {\n    'mac':   msg.payload.fields.macAddress,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 226,
+    "y": 722,
+    "wires": [
+      [
+        "ae4db5e4.2628d8"
+      ]
+    ]
+  },
+  {
+    "id": "81b5b653.25adb8",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "discovery events",
+    "func": "var alive;\nvar mac;\n\nswitch(msg.payload.name) {\n    case 'eventMoteDelete':\n    case 'eventMoteLost':\n    case 'eventMoteReset':\n        alive = false;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    case 'eventMoteCreate':\n    case 'eventMoteJoin':\n    case 'eventMoteOperational':\n        alive = true;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    default:\n        return;\n}\n\nmsg.payload = {\n    'mac':   mac,\n    'alive': alive\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 185,
+    "y": 768,
+    "wires": [
+      [
+        "ae4db5e4.2628d8"
+      ]
+    ]
+  },
+  {
+    "id": "210b9c5f.5e6864",
+    "type": "comment",
+    "z": "ffe584e6.6943d8",
+    "name": "maintain activeMotes list",
+    "info": "",
+    "x": 153,
+    "y": 634,
+    "wires": []
+  },
+  {
+    "id": "ae4db5e4.2628d8",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "maintain active nodes list",
+    "func": "var activeMotes = flow.get('activeMotes');\nif (typeof activeMotes == 'undefined') {\n    activeMotes = [];\n}\n\nvar idx = activeMotes.indexOf(msg.payload.mac);\nif (msg.payload.alive===true) {\n    // mote is alive\n    \n    if (idx === -1) {\n        // NOT in the database: add\n        activeMotes.push(msg.payload.mac);\n    }\n} else {\n    // mote is NOT alive\n    \n    if (idx != -1) {\n        // in the database: remove\n        activeMotes.splice(activeMotes.indexOf(msg.payload.mac), 1);\n    }\n}\n\nflow.set('activeMotes',activeMotes)\n\nmsg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 638,
+    "y": 732,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "c8d3fb49.ba28b8",
+    "type": "inject",
+    "z": "ffe584e6.6943d8",
+    "name": "get activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 196,
+    "y": 811,
+    "wires": [
+      [
+        "ffe35302.6bf1d"
+      ]
+    ]
+  },
+  {
+    "id": "ffe35302.6bf1d",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "get activeMotes list",
+    "func": "msg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 456,
+    "y": 811,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "247ed415.ae7b3c",
+    "type": "inject",
+    "z": "ffe584e6.6943d8",
+    "name": "reset activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 854,
+    "wires": [
+      [
+        "960a1adf.ce5818"
+      ]
+    ]
+  },
+  {
+    "id": "960a1adf.ce5818",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "reset activeMotes list",
+    "func": "flow.set('activeMotes',[]);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 468,
+    "y": 854,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "ee97b100.a0095",
+    "type": "comment",
+    "z": "ffe584e6.6943d8",
+    "name": "manager commands",
+    "info": "",
+    "x": 210,
+    "y": 930,
+    "wires": []
+  },
+  {
+    "id": "c47bfd55.b1b04",
+    "type": "comment",
+    "z": "ffe584e6.6943d8",
+    "name": "mote commands",
+    "info": "",
+    "x": 222,
+    "y": 1052,
+    "wires": []
+  },
+  {
+    "id": "a6074d56.92d6b",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "for activeMotes?",
+    "func": "if (flow.get('activeMotes').indexOf(msg.deviceId) != -1) {\n    return msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 360,
+    "y": 1092,
+    "wires": [
+      [
+        "597ee4f6.3a6edc"
+      ]
+    ]
+  },
+  {
+    "id": "955002a7.493da",
+    "type": "wiotp in",
+    "z": "ffe584e6.6943d8",
+    "authType": "g",
+    "deviceKey": "94a74cd9.a0372",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "activeMotes",
+    "commandType": "g",
+    "name": "gateway activeMotes commands",
+    "x": 173,
+    "y": 969,
+    "wires": [
+      [
+        "f4883407.ff62e8"
+      ]
+    ]
+  },
+  {
+    "id": "f4883407.ff62e8",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'activeMotesResponse'\nmqttMsg.payload           = {\n    \"token\":     msg.payload.token,\n    \"response\":  flow.get('activeMotes')\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 688,
+    "y": 969,
+    "wires": [
+      [
+        "66df8354.1da32c"
+      ]
+    ]
+  },
+  {
+    "id": "d7dd48f1.4d68e8",
+    "type": "wiotp in",
+    "z": "ffe584e6.6943d8",
+    "authType": "g",
+    "deviceKey": "94a74cd9.a0372",
+    "deviceType": "mote",
+    "deviceId": "+",
+    "command": "oap",
+    "commandType": "d",
+    "name": "mote oap commands",
+    "x": 140,
+    "y": 1094,
+    "wires": [
+      [
+        "a6074d56.92d6b"
+      ]
+    ]
+  },
+  {
+    "id": "597ee4f6.3a6edc",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8086/api/v1/oap/'+msg.deviceId+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 551,
+    "y": 1092,
+    "wires": [
+      [
+        "5ee425c4.bc92dc"
+      ]
+    ]
+  },
+  {
+    "id": "5ee425c4.bc92dc",
+    "type": "http request",
+    "z": "ffe584e6.6943d8",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 730,
+    "y": 1093,
+    "wires": [
+      [
+        "6ebea2ac.4aedfc"
+      ]
+    ]
+  },
+  {
+    "id": "6ebea2ac.4aedfc",
+    "type": "function",
+    "z": "ffe584e6.6943d8",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.deviceType        = 'mote'\nmqttMsg.deviceId          = msg.url.split('/')[6];\nmqttMsg.event             = 'oapResponse'\nmqttMsg.payload           = {\n    \"response\" :  msg.payload,\n    \"token\":      msg.headers['x-correlation-id'],\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 918,
+    "y": 1093,
+    "wires": [
+      [
+        "66df8354.1da32c"
+      ]
+    ]
+  },
+  {
+    "id": "da73bd3b.02732",
+    "type": "http in",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "url": "/manager7/hr",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 201,
+    "y": 545,
+    "wires": [
+      [
+        "8c79033b.c1ffa",
+        "550615f6.662a1c",
+        "81bc1410.c58c08"
+      ]
+    ]
+  },
+  {
+    "id": "c6ecea6.fce6b18",
+    "type": "wiotp out",
+    "z": "ab88960c.4bc948",
+    "authType": "g",
+    "qs": "false",
+    "qsDeviceId": "",
+    "deviceKey": "e03a482.057d9b8",
+    "deviceType": "",
+    "deviceId": "",
+    "event": "",
+    "format": "json",
+    "name": "to IBM Watson IoT",
+    "x": 1045,
+    "y": 652,
+    "wires": []
+  },
+  {
+    "id": "ec9510ad.f9743",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "payload",
+    "func": "msg.payload    = {\"d\": msg.payload.fields}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 804,
+    "y": 382,
+    "wires": [
+      [
+        "c6ecea6.fce6b18"
+      ]
+    ]
+  },
+  {
+    "id": "23b8987b.5a7288",
+    "type": "http in",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "url": "/manager7/notifData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 180,
+    "y": 388,
+    "wires": [
+      [
+        "8c79033b.c1ffa",
+        "937d7648.fec038",
+        "4eef30b0.0e565"
+      ]
+    ]
+  },
+  {
+    "id": "536f99cc.6c2f48",
+    "type": "http in",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "url": "/manager7/oap",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 202,
+    "y": 505,
+    "wires": [
+      [
+        "8c79033b.c1ffa",
+        "38e43b8a.8cfb54",
+        "81bc1410.c58c08"
+      ]
+    ]
+  },
+  {
+    "id": "b559a2fa.05598",
+    "type": "http in",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "url": "/manager7/notifLog",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 177,
+    "y": 268,
+    "wires": [
+      [
+        "8c79033b.c1ffa",
+        "1759b361.12275d"
+      ]
+    ]
+  },
+  {
+    "id": "d3a6ace0.fe463",
+    "type": "http in",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "url": "/manager7/notifIpData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 170,
+    "y": 428,
+    "wires": [
+      [
+        "8c79033b.c1ffa",
+        "937d7648.fec038",
+        "4eef30b0.0e565"
+      ]
+    ]
+  },
+  {
+    "id": "76243f7d.dacf",
+    "type": "http in",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "url": "/manager7/event",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 184,
+    "y": 305,
+    "wires": [
+      [
+        "8c79033b.c1ffa",
+        "1759b361.12275d",
+        "f61bb5b8.54c2d8"
+      ]
+    ]
+  },
+  {
+    "id": "9c6ae5c7.441d38",
+    "type": "http in",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "url": "/manager7/notifHealthReport",
+    "method": "get",
+    "swaggerDoc": "",
+    "x": 160,
+    "y": 466,
+    "wires": [
+      [
+        "8c79033b.c1ffa",
+        "937d7648.fec038",
+        "4eef30b0.0e565"
+      ]
+    ]
+  },
+  {
+    "id": "8c79033b.c1ffa",
+    "type": "http response",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "x": 289,
+    "y": 598,
+    "wires": []
+  },
+  {
+    "id": "38e43b8a.8cfb54",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "[oap] deviceId event",
+    "func": "msg.deviceId   = msg.payload.mac\nmsg.event      = 'oap.'+msg.payload.fields.channel_str\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 429,
+    "y": 504,
+    "wires": [
+      [
+        "15a47577.450bab"
+      ]
+    ]
+  },
+  {
+    "id": "937d7648.fec038",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "deviceId event",
+    "func": "msg.deviceId   = msg.payload.fields.macAddress\nmsg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 441,
+    "y": 419,
+    "wires": [
+      [
+        "15a47577.450bab"
+      ]
+    ]
+  },
+  {
+    "id": "15a47577.450bab",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "deviceType",
+    "func": "msg.deviceType = \"mote\"\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 637,
+    "y": 454,
+    "wires": [
+      [
+        "ec9510ad.f9743"
+      ]
+    ]
+  },
+  {
+    "id": "d3558aa9.b42558",
+    "type": "comment",
+    "z": "ab88960c.4bc948",
+    "name": "mote events",
+    "info": "",
+    "x": 185,
+    "y": 350,
+    "wires": []
+  },
+  {
+    "id": "d8c6ff3c.a3e09",
+    "type": "comment",
+    "z": "ab88960c.4bc948",
+    "name": "manager events",
+    "info": "",
+    "x": 177,
+    "y": 227,
+    "wires": []
+  },
+  {
+    "id": "1759b361.12275d",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "event",
+    "func": "msg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 658,
+    "y": 314,
+    "wires": [
+      [
+        "ec9510ad.f9743"
+      ]
+    ]
+  },
+  {
+    "id": "dd156132.a5a95",
+    "type": "wiotp in",
+    "z": "ab88960c.4bc948",
+    "authType": "g",
+    "deviceKey": "e03a482.057d9b8",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "JsonServer",
+    "commandType": "g",
+    "name": "gateway JsonServer commands",
+    "x": 174,
+    "y": 1014,
+    "wires": [
+      [
+        "45fb6772.3ab758"
+      ]
+    ]
+  },
+  {
+    "id": "ae715193.6432c",
+    "type": "comment",
+    "z": "ab88960c.4bc948",
+    "name": "=== commands",
+    "info": "",
+    "x": 101,
+    "y": 891,
+    "wires": []
+  },
+  {
+    "id": "37e55cd9.119474",
+    "type": "http request",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 597,
+    "y": 1020,
+    "wires": [
+      [
+        "bdb7b35f.f645d"
+      ]
+    ]
+  },
+  {
+    "id": "45fb6772.3ab758",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8087'+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 410,
+    "y": 1016,
+    "wires": [
+      [
+        "37e55cd9.119474"
+      ]
+    ]
+  },
+  {
+    "id": "bdb7b35f.f645d",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'JsonServerResponse'\nmqttMsg.payload           = {}\nmqttMsg.payload.token     = msg.headers['x-correlation-id']\nmqttMsg.payload.response  = msg.payload\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 781,
+    "y": 1017,
+    "wires": [
+      [
+        "c6ecea6.fce6b18"
+      ]
+    ]
+  },
+  {
+    "id": "1225ccba.186833",
+    "type": "split",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "splt": "\\n",
+    "x": 579,
+    "y": 540,
+    "wires": [
+      [
+        "f8fb5a4.b7c2da8"
+      ]
+    ]
+  },
+  {
+    "id": "550615f6.662a1c",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "split HR",
+    "func": "var payloads = [];\n\nfor (var hrname in msg.payload.hr) {\n    payloads.push(\n        {\n            'deviceType':  \"mote\",\n            'deviceId':    msg.payload.mac,\n            'payload':     msg.payload.hr[hrname],\n            'event':       'hr.'+hrname,\n        }\n    );\n}\n\nreturn {\"payload\": payloads};",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 433,
+    "y": 543,
+    "wires": [
+      [
+        "1225ccba.186833"
+      ]
+    ]
+  },
+  {
+    "id": "f8fb5a4.b7c2da8",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "create final hr",
+    "func": "var returnMsg = {};\nreturnMsg.deviceType = msg.payload.deviceType;\nreturnMsg.deviceId   = msg.payload.deviceId;\nreturnMsg.event      = msg.payload.event;\nreturnMsg.payload    = msg.payload.payload;\nreturn returnMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 759,
+    "y": 542,
+    "wires": [
+      [
+        "c6ecea6.fce6b18"
+      ]
+    ]
+  },
+  {
+    "id": "f2aefbd0.eaa2d8",
+    "type": "comment",
+    "z": "ab88960c.4bc948",
+    "name": "=== configure/check JsonServer",
+    "info": "",
+    "x": 150,
+    "y": 35,
+    "wires": []
+  },
+  {
+    "id": "8c2fc528.befd98",
+    "type": "inject",
+    "z": "ab88960c.4bc948",
+    "name": "add manager",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 73,
+    "wires": [
+      [
+        "202e8863.37f1b8"
+      ]
+    ]
+  },
+  {
+    "id": "aa6341d9.b0d43",
+    "type": "http request",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "method": "PUT",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8087/api/v1/config/managers",
+    "tls": "",
+    "x": 558,
+    "y": 69,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "4fd0e813.5900d8",
+    "type": "inject",
+    "z": "ab88960c.4bc948",
+    "name": "get status",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 193,
+    "y": 113,
+    "wires": [
+      [
+        "947573d2.4ea3c"
+      ]
+    ]
+  },
+  {
+    "id": "947573d2.4ea3c",
+    "type": "http request",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8087/api/v1/status",
+    "tls": "",
+    "x": 559,
+    "y": 110,
+    "wires": [
+      [
+        "d598f7dc.7d6118"
+      ]
+    ]
+  },
+  {
+    "id": "202e8863.37f1b8",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "func": "msg.payload = {\n    \"managers\": [\"/dev/ttyUSB3\"]\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 371,
+    "y": 71,
+    "wires": [
+      [
+        "aa6341d9.b0d43"
+      ]
+    ]
+  },
+  {
+    "id": "630594c6.13e8dc",
+    "type": "inject",
+    "z": "ab88960c.4bc948",
+    "name": "get serial ports",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 214,
+    "y": 154,
+    "wires": [
+      [
+        "46085e71.3a6ec"
+      ]
+    ]
+  },
+  {
+    "id": "46085e71.3a6ec",
+    "type": "http request",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8087/api/v1/helpers/serialports",
+    "tls": "",
+    "x": 565,
+    "y": 152,
+    "wires": [
+      [
+        "61b723d6.9812fc"
+      ]
+    ]
+  },
+  {
+    "id": "d598f7dc.7d6118",
+    "type": "debug",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 754,
+    "y": 110,
+    "wires": []
+  },
+  {
+    "id": "61b723d6.9812fc",
+    "type": "debug",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 755,
+    "y": 152,
+    "wires": []
+  },
+  {
+    "id": "daf836e1.d401b8",
+    "type": "comment",
+    "z": "ab88960c.4bc948",
+    "name": "=== events",
+    "info": "",
+    "x": 72,
+    "y": 190,
+    "wires": []
+  },
+  {
+    "id": "81bc1410.c58c08",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "msg.payload.mac",
+    "func": "msg.payload = {\n    'mac': msg.payload.mac,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 187,
+    "y": 676,
+    "wires": [
+      [
+        "e985f4f5.881978"
+      ]
+    ]
+  },
+  {
+    "id": "4eef30b0.0e565",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "msg.payload.fields.macAddress",
+    "func": "msg.payload = {\n    'mac':   msg.payload.fields.macAddress,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 226,
+    "y": 722,
+    "wires": [
+      [
+        "e985f4f5.881978"
+      ]
+    ]
+  },
+  {
+    "id": "f61bb5b8.54c2d8",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "discovery events",
+    "func": "var alive;\nvar mac;\n\nswitch(msg.payload.name) {\n    case 'eventMoteDelete':\n    case 'eventMoteLost':\n    case 'eventMoteReset':\n        alive = false;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    case 'eventMoteCreate':\n    case 'eventMoteJoin':\n    case 'eventMoteOperational':\n        alive = true;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    default:\n        return;\n}\n\nmsg.payload = {\n    'mac':   mac,\n    'alive': alive\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 185,
+    "y": 768,
+    "wires": [
+      [
+        "e985f4f5.881978"
+      ]
+    ]
+  },
+  {
+    "id": "5d43d570.31e30c",
+    "type": "comment",
+    "z": "ab88960c.4bc948",
+    "name": "maintain activeMotes list",
+    "info": "",
+    "x": 153,
+    "y": 634,
+    "wires": []
+  },
+  {
+    "id": "e985f4f5.881978",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "maintain active nodes list",
+    "func": "var activeMotes = flow.get('activeMotes');\nif (typeof activeMotes == 'undefined') {\n    activeMotes = [];\n}\n\nvar idx = activeMotes.indexOf(msg.payload.mac);\nif (msg.payload.alive===true) {\n    // mote is alive\n    \n    if (idx === -1) {\n        // NOT in the database: add\n        activeMotes.push(msg.payload.mac);\n    }\n} else {\n    // mote is NOT alive\n    \n    if (idx != -1) {\n        // in the database: remove\n        activeMotes.splice(activeMotes.indexOf(msg.payload.mac), 1);\n    }\n}\n\nflow.set('activeMotes',activeMotes)\n\nmsg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 638,
+    "y": 732,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "37fd9ae0.440116",
+    "type": "inject",
+    "z": "ab88960c.4bc948",
+    "name": "get activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 196,
+    "y": 811,
+    "wires": [
+      [
+        "b1aa0117.565d1"
+      ]
+    ]
+  },
+  {
+    "id": "b1aa0117.565d1",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "get activeMotes list",
+    "func": "msg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 456,
+    "y": 811,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "8c892edb.ffa3f",
+    "type": "inject",
+    "z": "ab88960c.4bc948",
+    "name": "reset activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 854,
+    "wires": [
+      [
+        "762ef334.a2fc8c"
+      ]
+    ]
+  },
+  {
+    "id": "762ef334.a2fc8c",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "reset activeMotes list",
+    "func": "flow.set('activeMotes',[]);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 468,
+    "y": 854,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "c31bb47.92d3a48",
+    "type": "comment",
+    "z": "ab88960c.4bc948",
+    "name": "manager commands",
+    "info": "",
+    "x": 210,
+    "y": 930,
+    "wires": []
+  },
+  {
+    "id": "f2a28d3.70e2d7",
+    "type": "comment",
+    "z": "ab88960c.4bc948",
+    "name": "mote commands",
+    "info": "",
+    "x": 222,
+    "y": 1052,
+    "wires": []
+  },
+  {
+    "id": "f08753ed.4b99f",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "for activeMotes?",
+    "func": "if (flow.get('activeMotes').indexOf(msg.deviceId) != -1) {\n    return msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 360,
+    "y": 1092,
+    "wires": [
+      [
+        "65910cbf.627c84"
+      ]
+    ]
+  },
+  {
+    "id": "bb219649.3c69a8",
+    "type": "wiotp in",
+    "z": "ab88960c.4bc948",
+    "authType": "g",
+    "deviceKey": "e03a482.057d9b8",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "activeMotes",
+    "commandType": "g",
+    "name": "gateway activeMotes commands",
+    "x": 173,
+    "y": 969,
+    "wires": [
+      [
+        "5ef2890.8bcf478"
+      ]
+    ]
+  },
+  {
+    "id": "5ef2890.8bcf478",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'activeMotesResponse'\nmqttMsg.payload           = {\n    \"token\":     msg.payload.token,\n    \"response\":  flow.get('activeMotes')\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 688,
+    "y": 969,
+    "wires": [
+      [
+        "c6ecea6.fce6b18"
+      ]
+    ]
+  },
+  {
+    "id": "1102da48.877b36",
+    "type": "wiotp in",
+    "z": "ab88960c.4bc948",
+    "authType": "g",
+    "deviceKey": "e03a482.057d9b8",
+    "deviceType": "mote",
+    "deviceId": "+",
+    "command": "oap",
+    "commandType": "d",
+    "name": "mote oap commands",
+    "x": 140,
+    "y": 1094,
+    "wires": [
+      [
+        "f08753ed.4b99f"
+      ]
+    ]
+  },
+  {
+    "id": "65910cbf.627c84",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8087/api/v1/oap/'+msg.deviceId+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 551,
+    "y": 1092,
+    "wires": [
+      [
+        "1cbc3c9a.f2b243"
+      ]
+    ]
+  },
+  {
+    "id": "1cbc3c9a.f2b243",
+    "type": "http request",
+    "z": "ab88960c.4bc948",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 730,
+    "y": 1093,
+    "wires": [
+      [
+        "1159a6d0.464599"
+      ]
+    ]
+  },
+  {
+    "id": "1159a6d0.464599",
+    "type": "function",
+    "z": "ab88960c.4bc948",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.deviceType        = 'mote'\nmqttMsg.deviceId          = msg.url.split('/')[6];\nmqttMsg.event             = 'oapResponse'\nmqttMsg.payload           = {\n    \"response\" :  msg.payload,\n    \"token\":      msg.headers['x-correlation-id'],\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 918,
+    "y": 1093,
+    "wires": [
+      [
+        "c6ecea6.fce6b18"
+      ]
+    ]
+  },
+  {
+    "id": "aa38a30b.fd6bd",
+    "type": "http in",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "url": "/manager8/hr",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 201,
+    "y": 545,
+    "wires": [
+      [
+        "8ff734a0.e85938",
+        "7e2ead7e.879064",
+        "630c33cb.7482bc"
+      ]
+    ]
+  },
+  {
+    "id": "a7e3df4d.08e0f",
+    "type": "wiotp out",
+    "z": "a9df3bdc.1c1798",
+    "authType": "g",
+    "qs": "false",
+    "qsDeviceId": "",
+    "deviceKey": "a7c94d54.a431f",
+    "deviceType": "",
+    "deviceId": "",
+    "event": "",
+    "format": "json",
+    "name": "to IBM Watson IoT",
+    "x": 1045,
+    "y": 652,
+    "wires": []
+  },
+  {
+    "id": "da6c96c3.104b48",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "payload",
+    "func": "msg.payload    = {\"d\": msg.payload.fields}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 804,
+    "y": 382,
+    "wires": [
+      [
+        "a7e3df4d.08e0f"
+      ]
+    ]
+  },
+  {
+    "id": "4fba1456.45759c",
+    "type": "http in",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "url": "/manager8/notifData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 180,
+    "y": 388,
+    "wires": [
+      [
+        "8ff734a0.e85938",
+        "8c1edf87.fd68a",
+        "b48ff004.fb1e2"
+      ]
+    ]
+  },
+  {
+    "id": "fc36bd30.7dc66",
+    "type": "http in",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "url": "/manager8/oap",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 202,
+    "y": 505,
+    "wires": [
+      [
+        "8ff734a0.e85938",
+        "53aca69d.eff8d8",
+        "630c33cb.7482bc"
+      ]
+    ]
+  },
+  {
+    "id": "5ed088a9.1ca528",
+    "type": "http in",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "url": "/manager8/notifLog",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 177,
+    "y": 268,
+    "wires": [
+      [
+        "8ff734a0.e85938",
+        "6d142a8d.e17fc4"
+      ]
+    ]
+  },
+  {
+    "id": "aaaab5ef.9c44b8",
+    "type": "http in",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "url": "/manager8/notifIpData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 170,
+    "y": 428,
+    "wires": [
+      [
+        "8ff734a0.e85938",
+        "8c1edf87.fd68a",
+        "b48ff004.fb1e2"
+      ]
+    ]
+  },
+  {
+    "id": "4928c215.461fac",
+    "type": "http in",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "url": "/manager8/event",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 184,
+    "y": 305,
+    "wires": [
+      [
+        "8ff734a0.e85938",
+        "6d142a8d.e17fc4",
+        "8af6536b.0f8a"
+      ]
+    ]
+  },
+  {
+    "id": "de4a4de.e73d1b",
+    "type": "http in",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "url": "/manager8/notifHealthReport",
+    "method": "get",
+    "swaggerDoc": "",
+    "x": 160,
+    "y": 466,
+    "wires": [
+      [
+        "8ff734a0.e85938",
+        "8c1edf87.fd68a",
+        "b48ff004.fb1e2"
+      ]
+    ]
+  },
+  {
+    "id": "8ff734a0.e85938",
+    "type": "http response",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "x": 289,
+    "y": 598,
+    "wires": []
+  },
+  {
+    "id": "53aca69d.eff8d8",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "[oap] deviceId event",
+    "func": "msg.deviceId   = msg.payload.mac\nmsg.event      = 'oap.'+msg.payload.fields.channel_str\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 429,
+    "y": 504,
+    "wires": [
+      [
+        "69d7fd65.871584"
+      ]
+    ]
+  },
+  {
+    "id": "8c1edf87.fd68a",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "deviceId event",
+    "func": "msg.deviceId   = msg.payload.fields.macAddress\nmsg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 441,
+    "y": 419,
+    "wires": [
+      [
+        "69d7fd65.871584"
+      ]
+    ]
+  },
+  {
+    "id": "69d7fd65.871584",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "deviceType",
+    "func": "msg.deviceType = \"mote\"\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 637,
+    "y": 454,
+    "wires": [
+      [
+        "da6c96c3.104b48"
+      ]
+    ]
+  },
+  {
+    "id": "2776bd94.102d62",
+    "type": "comment",
+    "z": "a9df3bdc.1c1798",
+    "name": "mote events",
+    "info": "",
+    "x": 185,
+    "y": 350,
+    "wires": []
+  },
+  {
+    "id": "ae20915e.f6f1b",
+    "type": "comment",
+    "z": "a9df3bdc.1c1798",
+    "name": "manager events",
+    "info": "",
+    "x": 177,
+    "y": 227,
+    "wires": []
+  },
+  {
+    "id": "6d142a8d.e17fc4",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "event",
+    "func": "msg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 658,
+    "y": 314,
+    "wires": [
+      [
+        "da6c96c3.104b48"
+      ]
+    ]
+  },
+  {
+    "id": "d561239e.d8dec",
+    "type": "wiotp in",
+    "z": "a9df3bdc.1c1798",
+    "authType": "g",
+    "deviceKey": "a7c94d54.a431f",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "JsonServer",
+    "commandType": "g",
+    "name": "gateway JsonServer commands",
+    "x": 174,
+    "y": 1014,
+    "wires": [
+      [
+        "38ce361d.e7783a"
+      ]
+    ]
+  },
+  {
+    "id": "9a75b260.e5515",
+    "type": "comment",
+    "z": "a9df3bdc.1c1798",
+    "name": "=== commands",
+    "info": "",
+    "x": 101,
+    "y": 891,
+    "wires": []
+  },
+  {
+    "id": "c4737a05.8e1e28",
+    "type": "http request",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 597,
+    "y": 1020,
+    "wires": [
+      [
+        "ae926e75.d2f3e"
+      ]
+    ]
+  },
+  {
+    "id": "38ce361d.e7783a",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8088'+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 410,
+    "y": 1016,
+    "wires": [
+      [
+        "c4737a05.8e1e28"
+      ]
+    ]
+  },
+  {
+    "id": "ae926e75.d2f3e",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'JsonServerResponse'\nmqttMsg.payload           = {}\nmqttMsg.payload.token     = msg.headers['x-correlation-id']\nmqttMsg.payload.response  = msg.payload\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 781,
+    "y": 1017,
+    "wires": [
+      [
+        "a7e3df4d.08e0f"
+      ]
+    ]
+  },
+  {
+    "id": "e9f00eaa.f6d94",
+    "type": "split",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "splt": "\\n",
+    "x": 579,
+    "y": 540,
+    "wires": [
+      [
+        "88445228.2ba9a"
+      ]
+    ]
+  },
+  {
+    "id": "7e2ead7e.879064",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "split HR",
+    "func": "var payloads = [];\n\nfor (var hrname in msg.payload.hr) {\n    payloads.push(\n        {\n            'deviceType':  \"mote\",\n            'deviceId':    msg.payload.mac,\n            'payload':     msg.payload.hr[hrname],\n            'event':       'hr.'+hrname,\n        }\n    );\n}\n\nreturn {\"payload\": payloads};",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 433,
+    "y": 543,
+    "wires": [
+      [
+        "e9f00eaa.f6d94"
+      ]
+    ]
+  },
+  {
+    "id": "88445228.2ba9a",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "create final hr",
+    "func": "var returnMsg = {};\nreturnMsg.deviceType = msg.payload.deviceType;\nreturnMsg.deviceId   = msg.payload.deviceId;\nreturnMsg.event      = msg.payload.event;\nreturnMsg.payload    = msg.payload.payload;\nreturn returnMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 759,
+    "y": 542,
+    "wires": [
+      [
+        "a7e3df4d.08e0f"
+      ]
+    ]
+  },
+  {
+    "id": "a24d4937.d05248",
+    "type": "comment",
+    "z": "a9df3bdc.1c1798",
+    "name": "=== configure/check JsonServer",
+    "info": "",
+    "x": 150,
+    "y": 35,
+    "wires": []
+  },
+  {
+    "id": "f0a194d8.2c2b18",
+    "type": "inject",
+    "z": "a9df3bdc.1c1798",
+    "name": "add manager",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 73,
+    "wires": [
+      [
+        "da51af51.9ee33"
+      ]
+    ]
+  },
+  {
+    "id": "a24d32a6.4b3ea",
+    "type": "http request",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "method": "PUT",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8088/api/v1/config/managers",
+    "tls": "",
+    "x": 558,
+    "y": 69,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "c35494f.612f468",
+    "type": "inject",
+    "z": "a9df3bdc.1c1798",
+    "name": "get status",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 193,
+    "y": 113,
+    "wires": [
+      [
+        "3cc75866.180ab8"
+      ]
+    ]
+  },
+  {
+    "id": "3cc75866.180ab8",
+    "type": "http request",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8088/api/v1/status",
+    "tls": "",
+    "x": 559,
+    "y": 110,
+    "wires": [
+      [
+        "cb5504b5.2cf1d8"
+      ]
+    ]
+  },
+  {
+    "id": "da51af51.9ee33",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "func": "msg.payload = {\n    \"managers\": [\"/dev/ttyUSB3\"]\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 371,
+    "y": 71,
+    "wires": [
+      [
+        "a24d32a6.4b3ea"
+      ]
+    ]
+  },
+  {
+    "id": "2d690521.1b982a",
+    "type": "inject",
+    "z": "a9df3bdc.1c1798",
+    "name": "get serial ports",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 214,
+    "y": 154,
+    "wires": [
+      [
+        "176b4a80.c42996"
+      ]
+    ]
+  },
+  {
+    "id": "176b4a80.c42996",
+    "type": "http request",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8088/api/v1/helpers/serialports",
+    "tls": "",
+    "x": 565,
+    "y": 152,
+    "wires": [
+      [
+        "69ee4d70.41f714"
+      ]
+    ]
+  },
+  {
+    "id": "cb5504b5.2cf1d8",
+    "type": "debug",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 754,
+    "y": 110,
+    "wires": []
+  },
+  {
+    "id": "69ee4d70.41f714",
+    "type": "debug",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 755,
+    "y": 152,
+    "wires": []
+  },
+  {
+    "id": "aa240f99.1ff79",
+    "type": "comment",
+    "z": "a9df3bdc.1c1798",
+    "name": "=== events",
+    "info": "",
+    "x": 72,
+    "y": 190,
+    "wires": []
+  },
+  {
+    "id": "630c33cb.7482bc",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "msg.payload.mac",
+    "func": "msg.payload = {\n    'mac': msg.payload.mac,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 187,
+    "y": 676,
+    "wires": [
+      [
+        "a39f562d.0edcb8"
+      ]
+    ]
+  },
+  {
+    "id": "b48ff004.fb1e2",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "msg.payload.fields.macAddress",
+    "func": "msg.payload = {\n    'mac':   msg.payload.fields.macAddress,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 226,
+    "y": 722,
+    "wires": [
+      [
+        "a39f562d.0edcb8"
+      ]
+    ]
+  },
+  {
+    "id": "8af6536b.0f8a",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "discovery events",
+    "func": "var alive;\nvar mac;\n\nswitch(msg.payload.name) {\n    case 'eventMoteDelete':\n    case 'eventMoteLost':\n    case 'eventMoteReset':\n        alive = false;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    case 'eventMoteCreate':\n    case 'eventMoteJoin':\n    case 'eventMoteOperational':\n        alive = true;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    default:\n        return;\n}\n\nmsg.payload = {\n    'mac':   mac,\n    'alive': alive\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 185,
+    "y": 768,
+    "wires": [
+      [
+        "a39f562d.0edcb8"
+      ]
+    ]
+  },
+  {
+    "id": "cc51d84e.44edb8",
+    "type": "comment",
+    "z": "a9df3bdc.1c1798",
+    "name": "maintain activeMotes list",
+    "info": "",
+    "x": 153,
+    "y": 634,
+    "wires": []
+  },
+  {
+    "id": "a39f562d.0edcb8",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "maintain active nodes list",
+    "func": "var activeMotes = flow.get('activeMotes');\nif (typeof activeMotes == 'undefined') {\n    activeMotes = [];\n}\n\nvar idx = activeMotes.indexOf(msg.payload.mac);\nif (msg.payload.alive===true) {\n    // mote is alive\n    \n    if (idx === -1) {\n        // NOT in the database: add\n        activeMotes.push(msg.payload.mac);\n    }\n} else {\n    // mote is NOT alive\n    \n    if (idx != -1) {\n        // in the database: remove\n        activeMotes.splice(activeMotes.indexOf(msg.payload.mac), 1);\n    }\n}\n\nflow.set('activeMotes',activeMotes)\n\nmsg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 638,
+    "y": 732,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "80fd140e.614828",
+    "type": "inject",
+    "z": "a9df3bdc.1c1798",
+    "name": "get activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 196,
+    "y": 811,
+    "wires": [
+      [
+        "9244d28b.d3308"
+      ]
+    ]
+  },
+  {
+    "id": "9244d28b.d3308",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "get activeMotes list",
+    "func": "msg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 456,
+    "y": 811,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "5ab8af62.bf3e2",
+    "type": "inject",
+    "z": "a9df3bdc.1c1798",
+    "name": "reset activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 854,
+    "wires": [
+      [
+        "694bd3b9.211bcc"
+      ]
+    ]
+  },
+  {
+    "id": "694bd3b9.211bcc",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "reset activeMotes list",
+    "func": "flow.set('activeMotes',[]);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 468,
+    "y": 854,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "11a877fb.59e718",
+    "type": "comment",
+    "z": "a9df3bdc.1c1798",
+    "name": "manager commands",
+    "info": "",
+    "x": 210,
+    "y": 930,
+    "wires": []
+  },
+  {
+    "id": "ac4ee7f8.0e8068",
+    "type": "comment",
+    "z": "a9df3bdc.1c1798",
+    "name": "mote commands",
+    "info": "",
+    "x": 222,
+    "y": 1052,
+    "wires": []
+  },
+  {
+    "id": "7c9dec43.db6c84",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "for activeMotes?",
+    "func": "if (flow.get('activeMotes').indexOf(msg.deviceId) != -1) {\n    return msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 360,
+    "y": 1092,
+    "wires": [
+      [
+        "998c181f.abfbb8"
+      ]
+    ]
+  },
+  {
+    "id": "9208c28a.ccfb2",
+    "type": "wiotp in",
+    "z": "a9df3bdc.1c1798",
+    "authType": "g",
+    "deviceKey": "a7c94d54.a431f",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "activeMotes",
+    "commandType": "g",
+    "name": "gateway activeMotes commands",
+    "x": 173,
+    "y": 969,
+    "wires": [
+      [
+        "1ec8fbbb.d1bbc4"
+      ]
+    ]
+  },
+  {
+    "id": "1ec8fbbb.d1bbc4",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'activeMotesResponse'\nmqttMsg.payload           = {\n    \"token\":     msg.payload.token,\n    \"response\":  flow.get('activeMotes')\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 688,
+    "y": 969,
+    "wires": [
+      [
+        "a7e3df4d.08e0f"
+      ]
+    ]
+  },
+  {
+    "id": "a9244352.7bf3c",
+    "type": "wiotp in",
+    "z": "a9df3bdc.1c1798",
+    "authType": "g",
+    "deviceKey": "a7c94d54.a431f",
+    "deviceType": "mote",
+    "deviceId": "+",
+    "command": "oap",
+    "commandType": "d",
+    "name": "mote oap commands",
+    "x": 140,
+    "y": 1094,
+    "wires": [
+      [
+        "7c9dec43.db6c84"
+      ]
+    ]
+  },
+  {
+    "id": "998c181f.abfbb8",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8088/api/v1/oap/'+msg.deviceId+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 551,
+    "y": 1092,
+    "wires": [
+      [
+        "1e5298a7.4ff4c7"
+      ]
+    ]
+  },
+  {
+    "id": "1e5298a7.4ff4c7",
+    "type": "http request",
+    "z": "a9df3bdc.1c1798",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 730,
+    "y": 1093,
+    "wires": [
+      [
+        "4bb211ee.d6ec5"
+      ]
+    ]
+  },
+  {
+    "id": "4bb211ee.d6ec5",
+    "type": "function",
+    "z": "a9df3bdc.1c1798",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.deviceType        = 'mote'\nmqttMsg.deviceId          = msg.url.split('/')[6];\nmqttMsg.event             = 'oapResponse'\nmqttMsg.payload           = {\n    \"response\" :  msg.payload,\n    \"token\":      msg.headers['x-correlation-id'],\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 918,
+    "y": 1093,
+    "wires": [
+      [
+        "a7e3df4d.08e0f"
+      ]
+    ]
+  },
+  {
+    "id": "81c6bad8.400a48",
+    "type": "http in",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "url": "/manager9/hr",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 201,
+    "y": 545,
+    "wires": [
+      [
+        "beccb80d.479e18",
+        "62250741.88f158",
+        "9c9c5f54.6326b"
+      ]
+    ]
+  },
+  {
+    "id": "843732af.70dc4",
+    "type": "wiotp out",
+    "z": "a6b29d0e.41136",
+    "authType": "g",
+    "qs": "false",
+    "qsDeviceId": "",
+    "deviceKey": "d29a13b5.e7e8e",
+    "deviceType": "",
+    "deviceId": "",
+    "event": "",
+    "format": "json",
+    "name": "to IBM Watson IoT",
+    "x": 1045,
+    "y": 652,
+    "wires": []
+  },
+  {
+    "id": "2fbf3f9c.fe55f",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "payload",
+    "func": "msg.payload    = {\"d\": msg.payload.fields}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 804,
+    "y": 382,
+    "wires": [
+      [
+        "843732af.70dc4"
+      ]
+    ]
+  },
+  {
+    "id": "df5b02ea.09a86",
+    "type": "http in",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "url": "/manager9/notifData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 180,
+    "y": 388,
+    "wires": [
+      [
+        "beccb80d.479e18",
+        "d37752c8.5bc52",
+        "f9769d2d.6a325"
+      ]
+    ]
+  },
+  {
+    "id": "4c815152.1f579",
+    "type": "http in",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "url": "/manager9/oap",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 202,
+    "y": 505,
+    "wires": [
+      [
+        "beccb80d.479e18",
+        "30f9b339.0ec4fc",
+        "9c9c5f54.6326b"
+      ]
+    ]
+  },
+  {
+    "id": "27c34975.6394b6",
+    "type": "http in",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "url": "/manager9/notifLog",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 177,
+    "y": 268,
+    "wires": [
+      [
+        "beccb80d.479e18",
+        "2967f47b.487d5c"
+      ]
+    ]
+  },
+  {
+    "id": "8daaba57.2f1fe8",
+    "type": "http in",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "url": "/manager9/notifIpData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 170,
+    "y": 428,
+    "wires": [
+      [
+        "beccb80d.479e18",
+        "d37752c8.5bc52",
+        "f9769d2d.6a325"
+      ]
+    ]
+  },
+  {
+    "id": "c5956142.f4fb5",
+    "type": "http in",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "url": "/manager9/event",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 184,
+    "y": 305,
+    "wires": [
+      [
+        "beccb80d.479e18",
+        "2967f47b.487d5c",
+        "40b1e1d7.c6d82"
+      ]
+    ]
+  },
+  {
+    "id": "6fb3ba70.3da7a4",
+    "type": "http in",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "url": "/manager9/notifHealthReport",
+    "method": "get",
+    "swaggerDoc": "",
+    "x": 160,
+    "y": 466,
+    "wires": [
+      [
+        "beccb80d.479e18",
+        "d37752c8.5bc52",
+        "f9769d2d.6a325"
+      ]
+    ]
+  },
+  {
+    "id": "beccb80d.479e18",
+    "type": "http response",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "x": 289,
+    "y": 598,
+    "wires": []
+  },
+  {
+    "id": "30f9b339.0ec4fc",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "[oap] deviceId event",
+    "func": "msg.deviceId   = msg.payload.mac\nmsg.event      = 'oap.'+msg.payload.fields.channel_str\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 429,
+    "y": 504,
+    "wires": [
+      [
+        "d23613e9.320e8"
+      ]
+    ]
+  },
+  {
+    "id": "d37752c8.5bc52",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "deviceId event",
+    "func": "msg.deviceId   = msg.payload.fields.macAddress\nmsg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 441,
+    "y": 419,
+    "wires": [
+      [
+        "d23613e9.320e8"
+      ]
+    ]
+  },
+  {
+    "id": "d23613e9.320e8",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "deviceType",
+    "func": "msg.deviceType = \"mote\"\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 637,
+    "y": 454,
+    "wires": [
+      [
+        "2fbf3f9c.fe55f"
+      ]
+    ]
+  },
+  {
+    "id": "13c7ec11.4c8754",
+    "type": "comment",
+    "z": "a6b29d0e.41136",
+    "name": "mote events",
+    "info": "",
+    "x": 185,
+    "y": 350,
+    "wires": []
+  },
+  {
+    "id": "d441cf20.9fb3a",
+    "type": "comment",
+    "z": "a6b29d0e.41136",
+    "name": "manager events",
+    "info": "",
+    "x": 177,
+    "y": 227,
+    "wires": []
+  },
+  {
+    "id": "2967f47b.487d5c",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "event",
+    "func": "msg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 658,
+    "y": 314,
+    "wires": [
+      [
+        "2fbf3f9c.fe55f"
+      ]
+    ]
+  },
+  {
+    "id": "f31d4046.a5658",
+    "type": "wiotp in",
+    "z": "a6b29d0e.41136",
+    "authType": "g",
+    "deviceKey": "d29a13b5.e7e8e",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "JsonServer",
+    "commandType": "g",
+    "name": "gateway JsonServer commands",
+    "x": 174,
+    "y": 1014,
+    "wires": [
+      [
+        "f41cab3c.139c08"
+      ]
+    ]
+  },
+  {
+    "id": "dae117de.059338",
+    "type": "comment",
+    "z": "a6b29d0e.41136",
+    "name": "=== commands",
+    "info": "",
+    "x": 101,
+    "y": 891,
+    "wires": []
+  },
+  {
+    "id": "8c7a5533.f46318",
+    "type": "http request",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 597,
+    "y": 1020,
+    "wires": [
+      [
+        "1e51a0b0.74a17f"
+      ]
+    ]
+  },
+  {
+    "id": "f41cab3c.139c08",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8089'+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 410,
+    "y": 1016,
+    "wires": [
+      [
+        "8c7a5533.f46318"
+      ]
+    ]
+  },
+  {
+    "id": "1e51a0b0.74a17f",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'JsonServerResponse'\nmqttMsg.payload           = {}\nmqttMsg.payload.token     = msg.headers['x-correlation-id']\nmqttMsg.payload.response  = msg.payload\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 781,
+    "y": 1017,
+    "wires": [
+      [
+        "843732af.70dc4"
+      ]
+    ]
+  },
+  {
+    "id": "d49bdd2c.83c01",
+    "type": "split",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "splt": "\\n",
+    "x": 579,
+    "y": 540,
+    "wires": [
+      [
+        "991708c.e336bf8"
+      ]
+    ]
+  },
+  {
+    "id": "62250741.88f158",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "split HR",
+    "func": "var payloads = [];\n\nfor (var hrname in msg.payload.hr) {\n    payloads.push(\n        {\n            'deviceType':  \"mote\",\n            'deviceId':    msg.payload.mac,\n            'payload':     msg.payload.hr[hrname],\n            'event':       'hr.'+hrname,\n        }\n    );\n}\n\nreturn {\"payload\": payloads};",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 433,
+    "y": 543,
+    "wires": [
+      [
+        "d49bdd2c.83c01"
+      ]
+    ]
+  },
+  {
+    "id": "991708c.e336bf8",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "create final hr",
+    "func": "var returnMsg = {};\nreturnMsg.deviceType = msg.payload.deviceType;\nreturnMsg.deviceId   = msg.payload.deviceId;\nreturnMsg.event      = msg.payload.event;\nreturnMsg.payload    = msg.payload.payload;\nreturn returnMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 759,
+    "y": 542,
+    "wires": [
+      [
+        "843732af.70dc4"
+      ]
+    ]
+  },
+  {
+    "id": "dc1a676f.558a38",
+    "type": "comment",
+    "z": "a6b29d0e.41136",
+    "name": "=== configure/check JsonServer",
+    "info": "",
+    "x": 150,
+    "y": 35,
+    "wires": []
+  },
+  {
+    "id": "8523a272.34135",
+    "type": "inject",
+    "z": "a6b29d0e.41136",
+    "name": "add manager",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 73,
+    "wires": [
+      [
+        "1c5e752a.63f3ab"
+      ]
+    ]
+  },
+  {
+    "id": "45ca1935.6d7bd8",
+    "type": "http request",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "method": "PUT",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8089/api/v1/config/managers",
+    "tls": "",
+    "x": 558,
+    "y": 69,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f30e196b.710528",
+    "type": "inject",
+    "z": "a6b29d0e.41136",
+    "name": "get status",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 193,
+    "y": 113,
+    "wires": [
+      [
+        "b96261a6.40715"
+      ]
+    ]
+  },
+  {
+    "id": "b96261a6.40715",
+    "type": "http request",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8089/api/v1/status",
+    "tls": "",
+    "x": 559,
+    "y": 110,
+    "wires": [
+      [
+        "f5e48712.f2e408"
+      ]
+    ]
+  },
+  {
+    "id": "1c5e752a.63f3ab",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "func": "msg.payload = {\n    \"managers\": [\"/dev/ttyUSB3\"]\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 371,
+    "y": 71,
+    "wires": [
+      [
+        "45ca1935.6d7bd8"
+      ]
+    ]
+  },
+  {
+    "id": "89761a2b.392f88",
+    "type": "inject",
+    "z": "a6b29d0e.41136",
+    "name": "get serial ports",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 214,
+    "y": 154,
+    "wires": [
+      [
+        "efbcf2f9.a2375"
+      ]
+    ]
+  },
+  {
+    "id": "efbcf2f9.a2375",
+    "type": "http request",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8089/api/v1/helpers/serialports",
+    "tls": "",
+    "x": 565,
+    "y": 152,
+    "wires": [
+      [
+        "689836a4.7ec488"
+      ]
+    ]
+  },
+  {
+    "id": "f5e48712.f2e408",
+    "type": "debug",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 754,
+    "y": 110,
+    "wires": []
+  },
+  {
+    "id": "689836a4.7ec488",
+    "type": "debug",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 755,
+    "y": 152,
+    "wires": []
+  },
+  {
+    "id": "4af64bb2.9e2594",
+    "type": "comment",
+    "z": "a6b29d0e.41136",
+    "name": "=== events",
+    "info": "",
+    "x": 72,
+    "y": 190,
+    "wires": []
+  },
+  {
+    "id": "9c9c5f54.6326b",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "msg.payload.mac",
+    "func": "msg.payload = {\n    'mac': msg.payload.mac,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 187,
+    "y": 676,
+    "wires": [
+      [
+        "7817105a.2d8c2"
+      ]
+    ]
+  },
+  {
+    "id": "f9769d2d.6a325",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "msg.payload.fields.macAddress",
+    "func": "msg.payload = {\n    'mac':   msg.payload.fields.macAddress,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 226,
+    "y": 722,
+    "wires": [
+      [
+        "7817105a.2d8c2"
+      ]
+    ]
+  },
+  {
+    "id": "40b1e1d7.c6d82",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "discovery events",
+    "func": "var alive;\nvar mac;\n\nswitch(msg.payload.name) {\n    case 'eventMoteDelete':\n    case 'eventMoteLost':\n    case 'eventMoteReset':\n        alive = false;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    case 'eventMoteCreate':\n    case 'eventMoteJoin':\n    case 'eventMoteOperational':\n        alive = true;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    default:\n        return;\n}\n\nmsg.payload = {\n    'mac':   mac,\n    'alive': alive\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 185,
+    "y": 768,
+    "wires": [
+      [
+        "7817105a.2d8c2"
+      ]
+    ]
+  },
+  {
+    "id": "89e28286.4caa",
+    "type": "comment",
+    "z": "a6b29d0e.41136",
+    "name": "maintain activeMotes list",
+    "info": "",
+    "x": 153,
+    "y": 634,
+    "wires": []
+  },
+  {
+    "id": "7817105a.2d8c2",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "maintain active nodes list",
+    "func": "var activeMotes = flow.get('activeMotes');\nif (typeof activeMotes == 'undefined') {\n    activeMotes = [];\n}\n\nvar idx = activeMotes.indexOf(msg.payload.mac);\nif (msg.payload.alive===true) {\n    // mote is alive\n    \n    if (idx === -1) {\n        // NOT in the database: add\n        activeMotes.push(msg.payload.mac);\n    }\n} else {\n    // mote is NOT alive\n    \n    if (idx != -1) {\n        // in the database: remove\n        activeMotes.splice(activeMotes.indexOf(msg.payload.mac), 1);\n    }\n}\n\nflow.set('activeMotes',activeMotes)\n\nmsg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 638,
+    "y": 732,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "30ece349.2bf24c",
+    "type": "inject",
+    "z": "a6b29d0e.41136",
+    "name": "get activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 196,
+    "y": 811,
+    "wires": [
+      [
+        "a1fdc20e.68fc2"
+      ]
+    ]
+  },
+  {
+    "id": "a1fdc20e.68fc2",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "get activeMotes list",
+    "func": "msg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 456,
+    "y": 811,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "26791973.8585f6",
+    "type": "inject",
+    "z": "a6b29d0e.41136",
+    "name": "reset activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 854,
+    "wires": [
+      [
+        "1005db9f.e4f9d4"
+      ]
+    ]
+  },
+  {
+    "id": "1005db9f.e4f9d4",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "reset activeMotes list",
+    "func": "flow.set('activeMotes',[]);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 468,
+    "y": 854,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "473f642.b975f9c",
+    "type": "comment",
+    "z": "a6b29d0e.41136",
+    "name": "manager commands",
+    "info": "",
+    "x": 210,
+    "y": 930,
+    "wires": []
+  },
+  {
+    "id": "7d8c92d1.bf279c",
+    "type": "comment",
+    "z": "a6b29d0e.41136",
+    "name": "mote commands",
+    "info": "",
+    "x": 222,
+    "y": 1052,
+    "wires": []
+  },
+  {
+    "id": "bed58764.e92148",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "for activeMotes?",
+    "func": "if (flow.get('activeMotes').indexOf(msg.deviceId) != -1) {\n    return msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 360,
+    "y": 1092,
+    "wires": [
+      [
+        "ad003793.14c358"
+      ]
+    ]
+  },
+  {
+    "id": "ff6b4f7c.73fab",
+    "type": "wiotp in",
+    "z": "a6b29d0e.41136",
+    "authType": "g",
+    "deviceKey": "d29a13b5.e7e8e",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "activeMotes",
+    "commandType": "g",
+    "name": "gateway activeMotes commands",
+    "x": 173,
+    "y": 969,
+    "wires": [
+      [
+        "3e4b7806.d7f7e8"
+      ]
+    ]
+  },
+  {
+    "id": "3e4b7806.d7f7e8",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'activeMotesResponse'\nmqttMsg.payload           = {\n    \"token\":     msg.payload.token,\n    \"response\":  flow.get('activeMotes')\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 688,
+    "y": 969,
+    "wires": [
+      [
+        "843732af.70dc4"
+      ]
+    ]
+  },
+  {
+    "id": "436c47ee.068e88",
+    "type": "wiotp in",
+    "z": "a6b29d0e.41136",
+    "authType": "g",
+    "deviceKey": "d29a13b5.e7e8e",
+    "deviceType": "mote",
+    "deviceId": "+",
+    "command": "oap",
+    "commandType": "d",
+    "name": "mote oap commands",
+    "x": 140,
+    "y": 1094,
+    "wires": [
+      [
+        "bed58764.e92148"
+      ]
+    ]
+  },
+  {
+    "id": "ad003793.14c358",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8089/api/v1/oap/'+msg.deviceId+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 551,
+    "y": 1092,
+    "wires": [
+      [
+        "3b0cb59e.082aca"
+      ]
+    ]
+  },
+  {
+    "id": "3b0cb59e.082aca",
+    "type": "http request",
+    "z": "a6b29d0e.41136",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 730,
+    "y": 1093,
+    "wires": [
+      [
+        "a454a0da.ddd25"
+      ]
+    ]
+  },
+  {
+    "id": "a454a0da.ddd25",
+    "type": "function",
+    "z": "a6b29d0e.41136",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.deviceType        = 'mote'\nmqttMsg.deviceId          = msg.url.split('/')[6];\nmqttMsg.event             = 'oapResponse'\nmqttMsg.payload           = {\n    \"response\" :  msg.payload,\n    \"token\":      msg.headers['x-correlation-id'],\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 918,
+    "y": 1093,
+    "wires": [
+      [
+        "843732af.70dc4"
+      ]
+    ]
+  },
+  {
+    "id": "f4748062.b449f",
+    "type": "http in",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "url": "/manager10/hr",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 201,
+    "y": 545,
+    "wires": [
+      [
+        "e8a1fb27.a1f958",
+        "755c2e5f.dbdaf",
+        "3af9c8b0.5e8c68"
+      ]
+    ]
+  },
+  {
+    "id": "ea029fb8.ecb3e",
+    "type": "wiotp out",
+    "z": "125c3ab4.fcc445",
+    "authType": "g",
+    "qs": "false",
+    "qsDeviceId": "",
+    "deviceKey": "5299434d.60d2ec",
+    "deviceType": "",
+    "deviceId": "",
+    "event": "",
+    "format": "json",
+    "name": "to IBM Watson IoT",
+    "x": 1045,
+    "y": 652,
+    "wires": []
+  },
+  {
+    "id": "3c976399.62468c",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "payload",
+    "func": "msg.payload    = {\"d\": msg.payload.fields}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 804,
+    "y": 382,
+    "wires": [
+      [
+        "ea029fb8.ecb3e"
+      ]
+    ]
+  },
+  {
+    "id": "6e61fbd5.bb7e24",
+    "type": "http in",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "url": "/manager10/notifData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 180,
+    "y": 388,
+    "wires": [
+      [
+        "e8a1fb27.a1f958",
+        "6519cf4f.a55a8",
+        "e18d81ce.b8f29"
+      ]
+    ]
+  },
+  {
+    "id": "e6cb0b8c.00cf28",
+    "type": "http in",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "url": "/manager10/oap",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 202,
+    "y": 505,
+    "wires": [
+      [
+        "e8a1fb27.a1f958",
+        "948eb7a3.e53dc8",
+        "3af9c8b0.5e8c68"
+      ]
+    ]
+  },
+  {
+    "id": "2a3dc153.d3f3ae",
+    "type": "http in",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "url": "/manager10/notifLog",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 177,
+    "y": 268,
+    "wires": [
+      [
+        "e8a1fb27.a1f958",
+        "bc0780f7.5dc34"
+      ]
+    ]
+  },
+  {
+    "id": "cf9a9f20.0c3de",
+    "type": "http in",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "url": "/manager10/notifIpData",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 170,
+    "y": 428,
+    "wires": [
+      [
+        "e8a1fb27.a1f958",
+        "6519cf4f.a55a8",
+        "e18d81ce.b8f29"
+      ]
+    ]
+  },
+  {
+    "id": "ecd41cbd.1b809",
+    "type": "http in",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "url": "/manager10/event",
+    "method": "post",
+    "swaggerDoc": "",
+    "x": 184,
+    "y": 305,
+    "wires": [
+      [
+        "e8a1fb27.a1f958",
+        "bc0780f7.5dc34",
+        "fd65add1.6d171"
+      ]
+    ]
+  },
+  {
+    "id": "2fd4a224.b94a1e",
+    "type": "http in",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "url": "/manager10/notifHealthReport",
+    "method": "get",
+    "swaggerDoc": "",
+    "x": 160,
+    "y": 466,
+    "wires": [
+      [
+        "e8a1fb27.a1f958",
+        "6519cf4f.a55a8",
+        "e18d81ce.b8f29"
+      ]
+    ]
+  },
+  {
+    "id": "e8a1fb27.a1f958",
+    "type": "http response",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "x": 289,
+    "y": 598,
+    "wires": []
+  },
+  {
+    "id": "948eb7a3.e53dc8",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "[oap] deviceId event",
+    "func": "msg.deviceId   = msg.payload.mac\nmsg.event      = 'oap.'+msg.payload.fields.channel_str\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 429,
+    "y": 504,
+    "wires": [
+      [
+        "97020e75.4c92c"
+      ]
+    ]
+  },
+  {
+    "id": "6519cf4f.a55a8",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "deviceId event",
+    "func": "msg.deviceId   = msg.payload.fields.macAddress\nmsg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 441,
+    "y": 419,
+    "wires": [
+      [
+        "97020e75.4c92c"
+      ]
+    ]
+  },
+  {
+    "id": "97020e75.4c92c",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "deviceType",
+    "func": "msg.deviceType = \"mote\"\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 637,
+    "y": 454,
+    "wires": [
+      [
+        "3c976399.62468c"
+      ]
+    ]
+  },
+  {
+    "id": "6be3e769.3e4708",
+    "type": "comment",
+    "z": "125c3ab4.fcc445",
+    "name": "mote events",
+    "info": "",
+    "x": 185,
+    "y": 350,
+    "wires": []
+  },
+  {
+    "id": "a9c1c196.d7d3a",
+    "type": "comment",
+    "z": "125c3ab4.fcc445",
+    "name": "manager events",
+    "info": "",
+    "x": 177,
+    "y": 227,
+    "wires": []
+  },
+  {
+    "id": "bc0780f7.5dc34",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "event",
+    "func": "msg.event      = msg.payload.name\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 658,
+    "y": 314,
+    "wires": [
+      [
+        "3c976399.62468c"
+      ]
+    ]
+  },
+  {
+    "id": "c760d771.918b58",
+    "type": "wiotp in",
+    "z": "125c3ab4.fcc445",
+    "authType": "g",
+    "deviceKey": "5299434d.60d2ec",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "JsonServer",
+    "commandType": "g",
+    "name": "gateway JsonServer commands",
+    "x": 174,
+    "y": 1014,
+    "wires": [
+      [
+        "51e5a7dc.4beac8"
+      ]
+    ]
+  },
+  {
+    "id": "f8f352cf.58fd1",
+    "type": "comment",
+    "z": "125c3ab4.fcc445",
+    "name": "=== commands",
+    "info": "",
+    "x": 101,
+    "y": 891,
+    "wires": []
+  },
+  {
+    "id": "bd0822cb.5cf17",
+    "type": "http request",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 597,
+    "y": 1020,
+    "wires": [
+      [
+        "53dc8e81.e690e"
+      ]
+    ]
+  },
+  {
+    "id": "51e5a7dc.4beac8",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8090'+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 410,
+    "y": 1016,
+    "wires": [
+      [
+        "bd0822cb.5cf17"
+      ]
+    ]
+  },
+  {
+    "id": "53dc8e81.e690e",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'JsonServerResponse'\nmqttMsg.payload           = {}\nmqttMsg.payload.token     = msg.headers['x-correlation-id']\nmqttMsg.payload.response  = msg.payload\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 781,
+    "y": 1017,
+    "wires": [
+      [
+        "ea029fb8.ecb3e"
+      ]
+    ]
+  },
+  {
+    "id": "f9b6f9fe.06d288",
+    "type": "split",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "splt": "\\n",
+    "x": 579,
+    "y": 540,
+    "wires": [
+      [
+        "84ac1bd8.a4c338"
+      ]
+    ]
+  },
+  {
+    "id": "755c2e5f.dbdaf",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "split HR",
+    "func": "var payloads = [];\n\nfor (var hrname in msg.payload.hr) {\n    payloads.push(\n        {\n            'deviceType':  \"mote\",\n            'deviceId':    msg.payload.mac,\n            'payload':     msg.payload.hr[hrname],\n            'event':       'hr.'+hrname,\n        }\n    );\n}\n\nreturn {\"payload\": payloads};",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 433,
+    "y": 543,
+    "wires": [
+      [
+        "f9b6f9fe.06d288"
+      ]
+    ]
+  },
+  {
+    "id": "84ac1bd8.a4c338",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "create final hr",
+    "func": "var returnMsg = {};\nreturnMsg.deviceType = msg.payload.deviceType;\nreturnMsg.deviceId   = msg.payload.deviceId;\nreturnMsg.event      = msg.payload.event;\nreturnMsg.payload    = msg.payload.payload;\nreturn returnMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 759,
+    "y": 542,
+    "wires": [
+      [
+        "ea029fb8.ecb3e"
+      ]
+    ]
+  },
+  {
+    "id": "a855e331.77e39",
+    "type": "comment",
+    "z": "125c3ab4.fcc445",
+    "name": "=== configure/check JsonServer",
+    "info": "",
+    "x": 150,
+    "y": 35,
+    "wires": []
+  },
+  {
+    "id": "352f8ca9.808cf4",
+    "type": "inject",
+    "z": "125c3ab4.fcc445",
+    "name": "add manager",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 73,
+    "wires": [
+      [
+        "e5984e29.a52b3"
+      ]
+    ]
+  },
+  {
+    "id": "7af249e0.93b9f8",
+    "type": "http request",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "method": "PUT",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8090/api/v1/config/managers",
+    "tls": "",
+    "x": 558,
+    "y": 69,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "d4ab508e.e1403",
+    "type": "inject",
+    "z": "125c3ab4.fcc445",
+    "name": "get status",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 193,
+    "y": 113,
+    "wires": [
+      [
+        "ceb3c2e2.f5fb8"
+      ]
+    ]
+  },
+  {
+    "id": "ceb3c2e2.f5fb8",
+    "type": "http request",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8090/api/v1/status",
+    "tls": "",
+    "x": 559,
+    "y": 110,
+    "wires": [
+      [
+        "70774e91.bb5dd"
+      ]
+    ]
+  },
+  {
+    "id": "e5984e29.a52b3",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "func": "msg.payload = {\n    \"managers\": [\"/dev/ttyUSB3\"]\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 371,
+    "y": 71,
+    "wires": [
+      [
+        "7af249e0.93b9f8"
+      ]
+    ]
+  },
+  {
+    "id": "9680c54d.7625e8",
+    "type": "inject",
+    "z": "125c3ab4.fcc445",
+    "name": "get serial ports",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 214,
+    "y": 154,
+    "wires": [
+      [
+        "6bcf1d83.253604"
+      ]
+    ]
+  },
+  {
+    "id": "6bcf1d83.253604",
+    "type": "http request",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "url": "http://127.0.0.1:8090/api/v1/helpers/serialports",
+    "tls": "",
+    "x": 565,
+    "y": 152,
+    "wires": [
+      [
+        "6f1a2328.8ed0cc"
+      ]
+    ]
+  },
+  {
+    "id": "70774e91.bb5dd",
+    "type": "debug",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 754,
+    "y": 110,
+    "wires": []
+  },
+  {
+    "id": "6f1a2328.8ed0cc",
+    "type": "debug",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 755,
+    "y": 152,
+    "wires": []
+  },
+  {
+    "id": "915a45.e3bff5b8",
+    "type": "comment",
+    "z": "125c3ab4.fcc445",
+    "name": "=== events",
+    "info": "",
+    "x": 72,
+    "y": 190,
+    "wires": []
+  },
+  {
+    "id": "3af9c8b0.5e8c68",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "msg.payload.mac",
+    "func": "msg.payload = {\n    'mac': msg.payload.mac,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 187,
+    "y": 676,
+    "wires": [
+      [
+        "bf33908.287187"
+      ]
+    ]
+  },
+  {
+    "id": "e18d81ce.b8f29",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "msg.payload.fields.macAddress",
+    "func": "msg.payload = {\n    'mac':   msg.payload.fields.macAddress,\n    'alive': true\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 226,
+    "y": 722,
+    "wires": [
+      [
+        "bf33908.287187"
+      ]
+    ]
+  },
+  {
+    "id": "fd65add1.6d171",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "discovery events",
+    "func": "var alive;\nvar mac;\n\nswitch(msg.payload.name) {\n    case 'eventMoteDelete':\n    case 'eventMoteLost':\n    case 'eventMoteReset':\n        alive = false;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    case 'eventMoteCreate':\n    case 'eventMoteJoin':\n    case 'eventMoteOperational':\n        alive = true;\n        mac   = msg.payload.fields.macAddress;\n        break;\n    default:\n        return;\n}\n\nmsg.payload = {\n    'mac':   mac,\n    'alive': alive\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 185,
+    "y": 768,
+    "wires": [
+      [
+        "bf33908.287187"
+      ]
+    ]
+  },
+  {
+    "id": "848b5f51.0f1b7",
+    "type": "comment",
+    "z": "125c3ab4.fcc445",
+    "name": "maintain activeMotes list",
+    "info": "",
+    "x": 153,
+    "y": 634,
+    "wires": []
+  },
+  {
+    "id": "bf33908.287187",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "maintain active nodes list",
+    "func": "var activeMotes = flow.get('activeMotes');\nif (typeof activeMotes == 'undefined') {\n    activeMotes = [];\n}\n\nvar idx = activeMotes.indexOf(msg.payload.mac);\nif (msg.payload.alive===true) {\n    // mote is alive\n    \n    if (idx === -1) {\n        // NOT in the database: add\n        activeMotes.push(msg.payload.mac);\n    }\n} else {\n    // mote is NOT alive\n    \n    if (idx != -1) {\n        // in the database: remove\n        activeMotes.splice(activeMotes.indexOf(msg.payload.mac), 1);\n    }\n}\n\nflow.set('activeMotes',activeMotes)\n\nmsg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 638,
+    "y": 732,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "d6486d5d.a141",
+    "type": "inject",
+    "z": "125c3ab4.fcc445",
+    "name": "get activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 196,
+    "y": 811,
+    "wires": [
+      [
+        "fe8be863.963918"
+      ]
+    ]
+  },
+  {
+    "id": "fe8be863.963918",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "get activeMotes list",
+    "func": "msg.payload = flow.get('activeMotes');\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 456,
+    "y": 811,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "40ed67d7.ba3728",
+    "type": "inject",
+    "z": "125c3ab4.fcc445",
+    "name": "reset activeMotes list",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 208,
+    "y": 854,
+    "wires": [
+      [
+        "5bd006c5.487358"
+      ]
+    ]
+  },
+  {
+    "id": "5bd006c5.487358",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "reset activeMotes list",
+    "func": "flow.set('activeMotes',[]);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 468,
+    "y": 854,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "d3ac9e8d.eb41",
+    "type": "comment",
+    "z": "125c3ab4.fcc445",
+    "name": "manager commands",
+    "info": "",
+    "x": 210,
+    "y": 930,
+    "wires": []
+  },
+  {
+    "id": "a9827b1c.454408",
+    "type": "comment",
+    "z": "125c3ab4.fcc445",
+    "name": "mote commands",
+    "info": "",
+    "x": 222,
+    "y": 1052,
+    "wires": []
+  },
+  {
+    "id": "90be8b7e.374fb8",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "for activeMotes?",
+    "func": "if (flow.get('activeMotes').indexOf(msg.deviceId) != -1) {\n    return msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 360,
+    "y": 1092,
+    "wires": [
+      [
+        "b38bf017.1c4e3"
+      ]
+    ]
+  },
+  {
+    "id": "9cfea48c.9e08b8",
+    "type": "wiotp in",
+    "z": "125c3ab4.fcc445",
+    "authType": "g",
+    "deviceKey": "5299434d.60d2ec",
+    "deviceType": "",
+    "deviceId": "",
+    "command": "activeMotes",
+    "commandType": "g",
+    "name": "gateway activeMotes commands",
+    "x": 173,
+    "y": 969,
+    "wires": [
+      [
+        "c2ee7c8f.541a3"
+      ]
+    ]
+  },
+  {
+    "id": "c2ee7c8f.541a3",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.event             = 'activeMotesResponse'\nmqttMsg.payload           = {\n    \"token\":     msg.payload.token,\n    \"response\":  flow.get('activeMotes')\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 688,
+    "y": 969,
+    "wires": [
+      [
+        "ea029fb8.ecb3e"
+      ]
+    ]
+  },
+  {
+    "id": "2a34840c.49414c",
+    "type": "wiotp in",
+    "z": "125c3ab4.fcc445",
+    "authType": "g",
+    "deviceKey": "5299434d.60d2ec",
+    "deviceType": "mote",
+    "deviceId": "+",
+    "command": "oap",
+    "commandType": "d",
+    "name": "mote oap commands",
+    "x": 140,
+    "y": 1094,
+    "wires": [
+      [
+        "90be8b7e.374fb8"
+      ]
+    ]
+  },
+  {
+    "id": "b38bf017.1c4e3",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "create request",
+    "func": "// create HTTP request\nhttpMsg = {}\nhttpMsg.method          = msg.payload.method\nhttpMsg.url             = 'http://127.0.0.1:8090/api/v1/oap/'+msg.deviceId+msg.payload.url\nhttpMsg.headers         = {\n    'X-Correlation-ID': msg.payload.token\n}\nhttpMsg.payload         = msg.payload.body\n\nreturn httpMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 551,
+    "y": 1092,
+    "wires": [
+      [
+        "83a1a5fa.5391f8"
+      ]
+    ]
+  },
+  {
+    "id": "83a1a5fa.5391f8",
+    "type": "http request",
+    "z": "125c3ab4.fcc445",
+    "name": "",
+    "method": "use",
+    "ret": "obj",
+    "url": "",
+    "tls": "",
+    "x": 730,
+    "y": 1093,
+    "wires": [
+      [
+        "d8615216.bbced"
+      ]
+    ]
+  },
+  {
+    "id": "d8615216.bbced",
+    "type": "function",
+    "z": "125c3ab4.fcc445",
+    "name": "format response",
+    "func": "mqttMsg = {}\nmqttMsg.deviceType        = 'mote'\nmqttMsg.deviceId          = msg.url.split('/')[6];\nmqttMsg.event             = 'oapResponse'\nmqttMsg.payload           = {\n    \"response\" :  msg.payload,\n    \"token\":      msg.headers['x-correlation-id'],\n}\n\nreturn mqttMsg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 918,
+    "y": 1093,
+    "wires": [
+      [
+        "ea029fb8.ecb3e"
+      ]
+    ]
+  }
+]

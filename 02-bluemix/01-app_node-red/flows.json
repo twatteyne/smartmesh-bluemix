@@ -17,7 +17,7 @@
     "eventType": "+",
     "commandType": "",
     "format": "json",
-    "name": "status all devices",
+    "name": "all device status",
     "service": "registered",
     "allDevices": true,
     "allApplications": "",
@@ -42,8 +42,8 @@
     "active": false,
     "console": "false",
     "complete": "payload",
-    "x": 428,
-    "y": 116,
+    "x": 462,
+    "y": 111,
     "wires": []
   },
   {
@@ -59,7 +59,7 @@
     "eventType": "+",
     "commandType": "",
     "format": "json",
-    "name": "status all applications",
+    "name": "all applications status",
     "service": "registered",
     "allDevices": true,
     "allApplications": true,
@@ -68,8 +68,8 @@
     "allCommands": "",
     "allFormats": "",
     "qos": 0,
-    "x": 174,
-    "y": 171,
+    "x": 180,
+    "y": 227,
     "wires": [
       [
         "a3b9a815.a4e8f8"
@@ -84,8 +84,8 @@
     "active": false,
     "console": "false",
     "complete": "payload",
-    "x": 430,
-    "y": 171,
+    "x": 474,
+    "y": 232,
     "wires": []
   },
   {
@@ -104,8 +104,8 @@
     "z": "83c64010.34e6f",
     "name": "update metadata motes",
     "info": "",
-    "x": 143,
-    "y": 242,
+    "x": 109,
+    "y": 401.0000457763672,
     "wires": []
   },
   {
@@ -121,7 +121,7 @@
     "eventType": "hr.Device",
     "commandType": "",
     "format": "json",
-    "name": "all hr.Device events",
+    "name": "all devuce hr.Device",
     "service": "registered",
     "allDevices": true,
     "allApplications": "",
@@ -130,8 +130,8 @@
     "allCommands": "",
     "allFormats": "",
     "qos": 0,
-    "x": 189,
-    "y": 289,
+    "x": 172.00001525878906,
+    "y": 461.0000457763672,
     "wires": [
       [
         "d8f1735f.64b9d"
@@ -146,8 +146,8 @@
     "func": "msg.url     = \"https://0o6f49.internetofthings.ibmcloud.com/api/v0002/device/types/mote/devices/\"+msg.deviceId\nmsg.payload = {\n    \"metadata\": msg.payload['d']\n}\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
-    "x": 432,
-    "y": 288,
+    "x": 415.00001525878906,
+    "y": 460.0000457763672,
     "wires": [
       [
         "d4eab625.663898"
@@ -163,8 +163,8 @@
     "ret": "txt",
     "url": "",
     "tls": "",
-    "x": 635,
-    "y": 286,
+    "x": 618.0000152587891,
+    "y": 458.0000457763672,
     "wires": [
       [
         "681474f4.4bf68c"
@@ -176,11 +176,125 @@
     "type": "debug",
     "z": "83c64010.34e6f",
     "name": "",
-    "active": true,
+    "active": false,
     "console": "false",
     "complete": "statusCode",
-    "x": 830,
-    "y": 287,
+    "x": 813.0000152587891,
+    "y": 459.0000457763672,
     "wires": []
+  },
+  {
+    "id": "fe8ad602.29ce78",
+    "type": "ibmiot in",
+    "z": "83c64010.34e6f",
+    "authentication": "boundService",
+    "apiKey": "",
+    "inputType": "cmd",
+    "deviceId": "",
+    "applicationId": "",
+    "deviceType": "manager",
+    "eventType": "+",
+    "commandType": "",
+    "format": "json",
+    "name": "all manager commands",
+    "service": "registered",
+    "allDevices": true,
+    "allApplications": "",
+    "allDeviceTypes": true,
+    "allEvents": true,
+    "allCommands": true,
+    "allFormats": true,
+    "qos": 0,
+    "x": 181,
+    "y": 169,
+    "wires": [
+      [
+        "809eb5f5.b53ff8"
+      ]
+    ]
+  },
+  {
+    "id": "809eb5f5.b53ff8",
+    "type": "debug",
+    "z": "83c64010.34e6f",
+    "name": "status all devices",
+    "active": false,
+    "console": "false",
+    "complete": "payload",
+    "x": 462,
+    "y": 170,
+    "wires": []
+  },
+  {
+    "id": "785d44e9.bfa6bc",
+    "type": "ibmiot in",
+    "z": "83c64010.34e6f",
+    "authentication": "boundService",
+    "apiKey": "",
+    "inputType": "cmd",
+    "deviceId": "",
+    "applicationId": "",
+    "deviceType": "manager",
+    "eventType": "+",
+    "commandType": "JsonServer",
+    "format": "json",
+    "name": "JsonServer",
+    "service": "registered",
+    "allDevices": true,
+    "allApplications": "",
+    "allDeviceTypes": false,
+    "allEvents": true,
+    "allCommands": false,
+    "allFormats": false,
+    "qos": 0,
+    "x": 136.1999969482422,
+    "y": 280.2000274658203,
+    "wires": [
+      [
+        "359a2d5b.3c1422"
+      ]
+    ]
+  },
+  {
+    "id": "359a2d5b.3c1422",
+    "type": "debug",
+    "z": "83c64010.34e6f",
+    "name": "JsonServer",
+    "active": true,
+    "console": "false",
+    "complete": "payload",
+    "x": 455.2000274658203,
+    "y": 311.2000274658203,
+    "wires": []
+  },
+  {
+    "id": "3bc052ce.bc4e4e",
+    "type": "ibmiot in",
+    "z": "83c64010.34e6f",
+    "authentication": "boundService",
+    "apiKey": "",
+    "inputType": "evt",
+    "deviceId": "",
+    "applicationId": "",
+    "deviceType": "manager",
+    "eventType": "JsonServerResponse",
+    "commandType": "JsonServerResponse",
+    "format": "json",
+    "name": "JsonServerResponse",
+    "service": "registered",
+    "allDevices": true,
+    "allApplications": "",
+    "allDeviceTypes": false,
+    "allEvents": false,
+    "allCommands": false,
+    "allFormats": false,
+    "qos": 0,
+    "x": 169.1999969482422,
+    "y": 334.2000274658203,
+    "wires": [
+      [
+        "359a2d5b.3c1422"
+      ]
+    ]
   }
 ]

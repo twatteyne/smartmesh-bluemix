@@ -68,8 +68,8 @@
     "allCommands": "",
     "allFormats": "",
     "qos": 0,
-    "x": 180,
-    "y": 227,
+    "x": 177,
+    "y": 301,
     "wires": [
       [
         "a3b9a815.a4e8f8"
@@ -84,8 +84,8 @@
     "active": false,
     "console": "false",
     "complete": "payload",
-    "x": 474,
-    "y": 232,
+    "x": 471,
+    "y": 306,
     "wires": []
   },
   {
@@ -104,8 +104,8 @@
     "z": "83c64010.34e6f",
     "name": "update metadata motes",
     "info": "",
-    "x": 109,
-    "y": 401.0000457763672,
+    "x": 106,
+    "y": 475.0000457763672,
     "wires": []
   },
   {
@@ -121,7 +121,7 @@
     "eventType": "hr.Device",
     "commandType": "",
     "format": "json",
-    "name": "all devuce hr.Device",
+    "name": "all device hr.Device",
     "service": "registered",
     "allDevices": true,
     "allApplications": "",
@@ -130,8 +130,8 @@
     "allCommands": "",
     "allFormats": "",
     "qos": 0,
-    "x": 172.00001525878906,
-    "y": 461.0000457763672,
+    "x": 169.00001525878906,
+    "y": 535.0000457763672,
     "wires": [
       [
         "d8f1735f.64b9d"
@@ -146,8 +146,8 @@
     "func": "msg.url     = \"https://0o6f49.internetofthings.ibmcloud.com/api/v0002/device/types/mote/devices/\"+msg.deviceId\nmsg.payload = {\n    \"metadata\": msg.payload['d']\n}\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
-    "x": 415.00001525878906,
-    "y": 460.0000457763672,
+    "x": 412.00001525878906,
+    "y": 534.0000457763672,
     "wires": [
       [
         "d4eab625.663898"
@@ -163,8 +163,8 @@
     "ret": "txt",
     "url": "",
     "tls": "",
-    "x": 618.0000152587891,
-    "y": 458.0000457763672,
+    "x": 615.0000152587891,
+    "y": 532.0000457763672,
     "wires": [
       [
         "681474f4.4bf68c"
@@ -179,8 +179,8 @@
     "active": false,
     "console": "false",
     "complete": "statusCode",
-    "x": 813.0000152587891,
-    "y": 459.0000457763672,
+    "x": 810.0000152587891,
+    "y": 533.0000457763672,
     "wires": []
   },
   {
@@ -247,8 +247,8 @@
     "allCommands": false,
     "allFormats": false,
     "qos": 0,
-    "x": 136.1999969482422,
-    "y": 280.2000274658203,
+    "x": 133.1999969482422,
+    "y": 354.2000274658203,
     "wires": [
       [
         "359a2d5b.3c1422"
@@ -260,11 +260,11 @@
     "type": "debug",
     "z": "83c64010.34e6f",
     "name": "JsonServer",
-    "active": true,
+    "active": false,
     "console": "false",
     "complete": "payload",
-    "x": 455.2000274658203,
-    "y": 311.2000274658203,
+    "x": 452.2000274658203,
+    "y": 385.2000274658203,
     "wires": []
   },
   {
@@ -289,12 +289,54 @@
     "allCommands": false,
     "allFormats": false,
     "qos": 0,
-    "x": 169.1999969482422,
-    "y": 334.2000274658203,
+    "x": 166.1999969482422,
+    "y": 408.2000274658203,
     "wires": [
       [
         "359a2d5b.3c1422"
       ]
     ]
+  },
+  {
+    "id": "91f29bd4.7e2758",
+    "type": "ibmiot in",
+    "z": "83c64010.34e6f",
+    "authentication": "boundService",
+    "apiKey": "",
+    "inputType": "cmd",
+    "deviceId": "",
+    "applicationId": "",
+    "deviceType": "mote",
+    "eventType": "+",
+    "commandType": "",
+    "format": "json",
+    "name": "all mote commands",
+    "service": "registered",
+    "allDevices": true,
+    "allApplications": "",
+    "allDeviceTypes": false,
+    "allEvents": true,
+    "allCommands": true,
+    "allFormats": true,
+    "qos": 0,
+    "x": 167,
+    "y": 230,
+    "wires": [
+      [
+        "3c156c6d.f47de4"
+      ]
+    ]
+  },
+  {
+    "id": "3c156c6d.f47de4",
+    "type": "debug",
+    "z": "83c64010.34e6f",
+    "name": "all mote commands",
+    "active": true,
+    "console": "false",
+    "complete": "payload",
+    "x": 468,
+    "y": 231,
+    "wires": []
   }
 ]

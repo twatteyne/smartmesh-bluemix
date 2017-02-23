@@ -24,18 +24,7 @@ unzip -q ~/smartmeshsdk-master.zip
 printf "done.\n"
 
 printf "    starting new JsonServer in a screen session... "
-screen -S jsonserver -d -m python ~/smartmeshsdk-master/app/JsonServer/JsonServer.py
-printf "done.\n"
-
-printf "    waiting for JsonServer to run"
-until $(curl --output /dev/null --silent --head --fail http://127.0.0.1:8080/api/v1/status); do
-    printf '.'
-    sleep 1
-done
-printf "done.\n"
-
-printf "    configuring JsonServer... "
-curl -H 'Content-Type: application/json' -X PUT -d '{ "managers": ["/dev/ttyUSB3"] }' http://127.0.0.1:8080/api/v1/config/managers
+screen -S jsonserver -d -m python python /home/pi/smartmeshsdk-master/app/JsonServer/JsonServer.py --serialport=/dev/ttyUSB3
 printf "done.\n"
 
 #============================

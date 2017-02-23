@@ -185,7 +185,7 @@
     "type": "function",
     "z": "90125f1d.7cf8e8",
     "name": "[oap] deviceId event",
-    "func": "msg.deviceId   = msg.payload.mac\nmsg.event      = 'oap.'+msg.payload.fields.channel_str\n\nreturn msg;",
+    "func": "msg.deviceId   = msg.payload.mac\nmsg.event      = 'oap.'+msg.payload.fields.channel_str.replace('/','.')\n\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
     "x": 429,
